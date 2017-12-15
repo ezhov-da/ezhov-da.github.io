@@ -1,4 +1,3 @@
-//аМаАббаИаВ аВбаЕб бббаЛаОаК, аКаОбаОббаЕ аЗаАаГббаЗаИаЛаИбб
 var consoleLog = false;
 
 var originalMass;
@@ -14,53 +13,46 @@ function logger(data) {
 
 function firstNoteSelect() {
     var el = $(".go").first();
-    //  logger(el);
+    logger(el);
     el.click();
 }
 
-//аЗаАаГббаЖаАаЕаМ баПаИбаОаК
 function loadList() {
-
-            // logger(data);
             var menu = "";
             var lastSelectedFinder;
 
             source.forEach(function (item, i, arr) {
-                if (typeof lastNoteSelected !== "undefined") {
-                    // logger(item.id);
-                    // logger(lastNoteSelected.attr("id"));
-                    var idFinder = lastNoteSelected.attr("id");
-                    //logger(item.id + " : " + idFinder);
-                    if (item.id == idFinder) {
-                        lastSelectedFinder = lastNoteSelected;
-                    }
-                }
-                menu = menu + item.html;
+//                if (typeof lastNoteSelected !== "undefined") {
+//                    logger(item.id);
+//                    logger(lastNoteSelected.attr("id"));
+//                    var idFinder = lastNoteSelected.attr("id");
+//                    logger(item.id + " : " + idFinder);
+//                    if (item.id == idFinder) {
+//                        lastSelectedFinder = lastNoteSelected;
+//                    }
+//                }
+//                menu = menu +  "<li><a class=\"go\" id = \"495\">-app-circle-app-zip<\/a><\/li>";
+                menu = menu + "<li><a class=\"go\" href=\"" + item.url + "\">" + item.name + "</a></li>";
             });
-            //   logger(menu);
+            logger(menu);
             $("#menu").html(menu);
-            //аПаОаЛббаАаЕаМ баПаИбаОаК
             originalMass = $("li>.go");
-            //  logger(originalMass);
+            logger(originalMass);
 
-            //баИаЛббббаЕаМ баПаИбаОаК, аЕбаЛаИ аПаОаЛаЕ аЗаАаПаОаЛаНаЕаНаО
-            var valFromFindeField = $("#find")[0].value;
-            if (valFromFindeField !== "") {
-                filterList(valFromFindeField);
-            }
+//            var valFromFindeField = $("#find")[0].value;
+//            if (valFromFindeField !== "") {
+//                filterList(valFromFindeField);
+//            }
 
-            if (typeof lastSelectedFinder === "undefined") {
-                firstNoteSelect();
-            } else {
-                lastNoteSelected = $("a[id$='" + lastNoteSelected.attr("id"));
-                $(lastNoteSelected).parent().addClass("active");
-                logger(lastSelectedFinder);
-            }
-   
-
+//            if (typeof lastSelectedFinder === "undefined") {
+//                firstNoteSelect();
+//            } else {
+//                lastNoteSelected = $("a[id$='" + lastNoteSelected.attr("id"));
+//                $(lastNoteSelected).parent().addClass("active");
+//                logger(lastSelectedFinder);
+//            }
 }
 
-//аЗаАаГббаЖаАаЕаМ аВбаБбаАаНаНбб бббаЛаКб
 function loadSelectedLink(id) {
     var url = 'responseToMyPage?id=' + id;
     $.ajax({
@@ -68,7 +60,7 @@ function loadSelectedLink(id) {
         dataType: 'json',
         type: 'GET',
         success: function (data) {
-            //   logger(data);
+            logger(data);
             nowNoteSelected = data;
             $("#info").html(nowNoteSelected.html);
             $('pre code').each(function (i, block) {
@@ -78,37 +70,35 @@ function loadSelectedLink(id) {
     });
 }
 
-/**
- * аЄбаНаКбаИб аДаЛб аОбаПбаАаВаКаИ баОбаМб ббаЕаДббаВаАаМаИ Ajax
- * @author ааИаЗаАаЙаН бббаДаИб ox2.ru
- **/
 function ajaxFormRequest(form_id, url, functionExecute) {
     jQuery.ajax({
-        url: url, //ааДбаЕб аПаОаДаГббаЖаАаЕаМаОаЙ бббаАаНаИбб
-        type: "POST", //аЂаИаП аЗаАаПбаОбаА
-        dataType: "html", //аЂаИаП аДаАаНаНбб
+        url: url,
+        type: "POST",
+        dataType: "html",
         data: jQuery("#" + form_id).serialize(),
-        success: function (response) { //абаЛаИ аВбаЕ аНаОбаМаАаЛбаНаО
+        success: function (response) {
             functionExecute();
         }
     });
 }
 
-
 function filterList(textFilter) {
     var textHtml = "";
     for (var i = 0; i < originalMass.size(); i++) {
         var textOnPage = originalMass[i].innerHTML;
+        logger("textOnPage: " + textOnPage);
         var textToPage = originalMass[i].outerHTML;
+        logger("textToPage: " + textToPage);
         var booleanContains = textOnPage.indexOf(textFilter) !== -1;
         if (booleanContains) {
             textHtml = textHtml + '<li>' + textToPage + '</li>';
         }
     }
+
+    logger(textHtml);
     $('#menu').html(textHtml);
 }
 
-//аПаОаЛббаАаЕаМ аДаАбб аИ аВбаЕаМб аДаЛб аВаНаЕбаЕаНаИб аВ аа
 function getDateTimeNowStr() {
     var dateNow = new Date();
     var year = dateNow.getFullYear();
@@ -131,32 +121,31 @@ function getDateTimeNowStr() {
 $(document).ready(function () {
     loadList();
 
-    //баЛббаАбаЕаЛб аДаЛб аПаОаИбаКаА
     $('#find').keyup(function () {
         var textForFind = $(this)[0].value;
+        logger(textForFind);
         filterList(textForFind);
     });
-    //баЛббаАбаЕаЛб аНаА бббаЛаКаЕ
+
     $(document).on('click', 'li>.go', function () {
         var id = $(this).attr("id");
 
-        //  logger(lastNoteSelected);
+        logger(lastNoteSelected);
         if (typeof lastNoteSelected !== "undefined") {
             lastNoteSelected.parent().removeClass("active");
         }
 
-        // logger($(this).parent());
+        logger($(this).parent());
         $(this).parent().addClass("active");
 
         lastSelectedId = id;
         lastNoteSelected = $(this);
-        //  logger(lastSelectedId);
+        logger(lastSelectedId);
         loadSelectedLink(id);
     });
 
-    //баЛббаАбаЕаЛб аНаА баЕаДаАаКбаИбаОаВаАаНаИаЕ
     $(document).on('click', '#buttonEdit', function () {
-        // logger(nowNoteSelected);
+        logger(nowNoteSelected);
         $('#nameEdit').val(nowNoteSelected.name);
         //$('#texEdit').summernote('code', nowNoteSelected.rawText);
         $('#texEdit').val(nowNoteSelected.rawText);
@@ -177,9 +166,6 @@ $(document).ready(function () {
             });
         }
     });
-
-
-
 
     $.fn.extend({
         insertAtCaret: function (myValue) {
@@ -206,7 +192,6 @@ $(document).ready(function () {
         }
     });
 
-
     $(document).on('click', '#insertCodeToTextAdd',
             function () {
                 $('#textInsert').insertAtCaret('[code:]LANG[:code]\n\n[/code]');
@@ -215,10 +200,6 @@ $(document).ready(function () {
             function () {
                 $('#texEdit').insertAtCaret('[code:]LANG[:code]\n\n[/code]');
             });
-
-
-
-
 });
 
 
