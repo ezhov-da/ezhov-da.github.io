@@ -18,10 +18,17 @@ function firstNoteSelect() {
 }
 
 function loadList() {
+    $.ajax({
+        url: 'http://prog-tools.ru:64646/git',
+        // url: 'source.json',
+        dataType: 'json',
+        type: 'GET',
+        success: function (data) {
+            logger(data);
             var menu = "";
             var lastSelectedFinder;
 
-            source.forEach(function (item, i, arr) {
+            data.knowledges.forEach(function (item, i, arr) {
 //                if (typeof lastNoteSelected !== "undefined") {
 //                    logger(item.id);
 //                    logger(lastNoteSelected.attr("id"));
@@ -34,25 +41,29 @@ function loadList() {
 //                menu = menu +  "<li><a class=\"go\" id = \"495\">-app-circle-app-zip<\/a><\/li>";
                 menu = menu + "<li><a class=\"go\" href=\"" + item.url + "\">" + item.name + "</a></li>";
             });
-            logger(menu);
+
+            $("#lastUpdate").html("<p>Last update: " + data.lastUpdate + "</p>");
+
+            //   logger(menu);
             $("#menu").html(menu);
             originalMass = $("li>.go");
             logger(originalMass);
 
-//            var valFromFindeField = $("#find")[0].value;
-//            if (valFromFindeField !== "") {
-//                filterList(valFromFindeField);
-//            }
-
-//            if (typeof lastSelectedFinder === "undefined") {
-//                firstNoteSelect();
-//            } else {
-//                lastNoteSelected = $("a[id$='" + lastNoteSelected.attr("id"));
-//                $(lastNoteSelected).parent().addClass("active");
-//                logger(lastSelectedFinder);
-//            }
+            // var valFromFindeField = $("#find")[0].value;
+            // if (valFromFindeField !== "") {
+            //     filterList(valFromFindeField);
+            // }
+            //
+            // if (typeof lastSelectedFinder === "undefined") {
+            //     firstNoteSelect();
+            // } else {
+            //     lastNoteSelected = $("a[id$='" + lastNoteSelected.attr("id"));
+            //     $(lastNoteSelected).parent().addClass("active");
+            //     logger(lastSelectedFinder);
+            // }
+        }
+    });
 }
-
 function loadSelectedLink(id) {
     var url = 'responseToMyPage?id=' + id;
     $.ajax({
@@ -70,18 +81,6 @@ function loadSelectedLink(id) {
     });
 }
 
-function ajaxFormRequest(form_id, url, functionExecute) {
-    jQuery.ajax({
-        url: url,
-        type: "POST",
-        dataType: "html",
-        data: jQuery("#" + form_id).serialize(),
-        success: function (response) {
-            functionExecute();
-        }
-    });
-}
-
 function filterList(textFilter) {
     var textHtml = "";
     for (var i = 0; i < originalMass.size(); i++) {
@@ -89,7 +88,7 @@ function filterList(textFilter) {
         logger("textOnPage: " + textOnPage);
         var textToPage = originalMass[i].outerHTML;
         logger("textToPage: " + textToPage);
-        var booleanContains = textOnPage.indexOf(textFilter) !== -1;
+        var booleanContains = textOnPage.toLowerCase().indexOf(textFilter.toLowerCase()) !== -1;
         if (booleanContains) {
             textHtml = textHtml + '<li>' + textToPage + '</li>';
         }
@@ -193,13 +192,13 @@ $(document).ready(function () {
     });
 
     $(document).on('click', '#insertCodeToTextAdd',
-            function () {
-                $('#textInsert').insertAtCaret('[code:]LANG[:code]\n\n[/code]');
-            });
+        function () {
+            $('#textInsert').insertAtCaret('[code:]LANG[:code]\n\n[/code]');
+        });
     $(document).on('click', '#insertCodeToTextEdit',
-            function () {
-                $('#texEdit').insertAtCaret('[code:]LANG[:code]\n\n[/code]');
-            });
+        function () {
+            $('#texEdit').insertAtCaret('[code:]LANG[:code]\n\n[/code]');
+        });
 });
 
 
