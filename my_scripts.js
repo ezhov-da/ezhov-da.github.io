@@ -19,6 +19,7 @@ function firstNoteSelect() {
 
 function loadList() {
     $.ajax({
+        //change to https
         url: 'https://www.prog-tools.ru:64646/git',
         // url: 'source.json',
         dataType: 'json',
