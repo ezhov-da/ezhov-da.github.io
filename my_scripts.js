@@ -19,7 +19,7 @@ function firstNoteSelect() {
 
 function loadList() {
     $.ajax({
-        url: 'http://prog-tools.ru:64646/git',
+        url: 'https://www.prog-tools.ru:64646/git',
         // url: 'source.json',
         dataType: 'json',
         type: 'GET',
