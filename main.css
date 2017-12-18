@@ -1,0 +1,33 @@
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+ul li.block{
+    border: solid 1px #ddd;
+    position: relative;
+    margin: 3px;
+}
+ul li.block .name-link, ul li.block .raw-url{
+    display: inline-block;
+}
+ul li.block .name-link{
+    font-weight: bold;
+    margin-left: 50px;
+}
+ul li.block .name-link:after{
+    content: ":";
+}
+
+ul li.block .descr{
+    margin-left: 50px;
+}
+ul li.block .private-img{
+    position: absolute;
+    top: 25%;
+    left: 16px;
+    background-image: url(lock-icon.png);
+    background-size: contain;
+    height: 16px;
+    width: 16px;
+}

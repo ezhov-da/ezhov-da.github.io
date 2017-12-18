@@ -40,14 +40,14 @@ function loadList() {
 //                    }
 //                }
 //                menu = menu +  "<li><a class=\"go\" id = \"495\">-app-circle-app-zip<\/a><\/li>";
-                menu = menu + "<li><a class=\"go\" href=\"" + item.url + "\">" + item.name + "</a></li>";
+                menu = menu + generateLink(item);
             });
 
             $("#lastUpdate").html("<p>Last update: " + data.lastUpdate + "</p>");
 
-            //   logger(menu);
+            logger(menu);
             $("#menu").html(menu);
-            originalMass = $("li>.go");
+            originalMass = data.knowledges;
             logger(originalMass);
 
             // var valFromFindeField = $("#find")[0].value;
@@ -65,6 +65,31 @@ function loadList() {
         }
     });
 }
+
+function generateLink(item) {
+    var text = "";
+    if (item.public) {
+        text =
+            '<li class="block go">' +
+            '   <div class="name-link"><a href="' + item.url + '">' + item.name + '</a></div>' +
+            '   <div class="raw-url"><a href="' + item.rawUrl + '">[raw url]</a></div>' +
+            '   <div class="descr">' + item.description + '</div>' +
+            '</li>';
+    } else {
+        text =
+            '<li class="block go">' +
+            '   <div class="private-img"></div>' +
+            '   <div class="name-link"><a href="' + item.url + '">' + item.name + '</a></div>' +
+            '   <div class="raw-url"><a href="' + item.rawUrl + '">[raw url]</a></div>' +
+            '   <div class="descr">' + item.description + '</div>' +
+            '</li>';
+
+    }
+
+    return text;
+}
+
+
 function loadSelectedLink(id) {
     var url = 'responseToMyPage?id=' + id;
     $.ajax({
@@ -84,14 +109,17 @@ function loadSelectedLink(id) {
 
 function filterList(textFilter) {
     var textHtml = "";
-    for (var i = 0; i < originalMass.size(); i++) {
-        var textOnPage = originalMass[i].innerHTML;
+    for (var i = 0; i < originalMass.length; i++) {
+        var textOnPage = originalMass[i];
         logger("textOnPage: " + textOnPage);
-        var textToPage = originalMass[i].outerHTML;
-        logger("textToPage: " + textToPage);
-        var booleanContains = textOnPage.toLowerCase().indexOf(textFilter.toLowerCase()) !== -1;
+        var booleanContains =
+            textOnPage
+                .name
+                .toLowerCase()
+                .indexOf(textFilter.toLowerCase()) !== -1;
         if (booleanContains) {
-            textHtml = textHtml + '<li>' + textToPage + '</li>';
+            var val = originalMass[i];
+            textHtml = textHtml + generateLink(val);
         }
     }
 
