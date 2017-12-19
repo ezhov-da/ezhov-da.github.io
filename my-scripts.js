@@ -18,7 +18,7 @@ function firstNoteSelect() {
 }
 
 function loadList() {
-    changeInfo("<p>Retrieve data...</p>");
+    changeInfo('<img src="wait.gif"/> <label>Retrieve data...</label>');
 
     $.ajax({
         //change to https
