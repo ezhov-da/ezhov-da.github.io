@@ -18,10 +18,12 @@ function firstNoteSelect() {
 }
 
 function loadList() {
+    changeInfo("<p>Retrieve data...</p>");
+
     $.ajax({
         //change to https
         url: 'https://www.prog-tools.ru:64646/git',
-        // url: 'source.json',
+        //url: 'source.json',
         dataType: 'json',
         type: 'GET',
         success: function (data) {
@@ -43,7 +45,7 @@ function loadList() {
                 menu = menu + generateLink(item);
             });
 
-            $("#lastUpdate").html("<p>Last update: " + data.lastUpdate + "</p>");
+            changeInfo("<p>Last update: " + data.lastUpdate + "</p>");
 
             logger(menu);
             $("#menu").html(menu);
@@ -64,6 +66,10 @@ function loadList() {
             // }
         }
     });
+}
+
+function changeInfo(msgInfo){
+    $("#lastUpdate").html(msgInfo);
 }
 
 function generateLink(item) {
@@ -229,13 +235,3 @@ $(document).ready(function () {
             $('#texEdit').insertAtCaret('[code:]LANG[:code]\n\n[/code]');
         });
 });
-
-
-
-
-
-
-
-
-
-
