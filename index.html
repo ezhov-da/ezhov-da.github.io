@@ -85,12 +85,14 @@
             <label>Fast searching in <a href="https://gist.github.com/ezhov-da">my
                 Git
                 Gist</a>: </label>
+            <label class="radio-inline">
+                <input type="radio" name="optradio" id="radioAll"
+                       checked="checked" onclick="filterList();"/>All</label>
             <label class="radio-inline"><input type="radio"
-                                               name="optradio">All</label>
+                                               name="optradio" id="radioPublic" onclick="filterList();">Public</label>
             <label class="radio-inline"><input type="radio"
-                                               name="optradio">Public</label>
-            <label class="radio-inline"><input type="radio"
-                                               name="optradio">Private</label>
+                                               name="optradio"
+                                               id="radioPrivate" onclick="filterList();">Private</label>
         </div>
         <div class="col-lg-4">
             <label class="radio-inline" id="lastUpdate"></label>
@@ -102,14 +104,15 @@
             <input type="text" class="form-control" id="find">
         </div>
         <div class="col-lg-1">
-            <button type="button" class="btn btn-default" onclick="logger('action reload'); loadList();">reload</button>
+            <button type="button" class="btn btn-default"
+                    onclick="logger('action reload'); loadList();">reload
+            </button>
         </div>
     </div>
 
     <ul class="nav nav-sidebar" id="menu"></ul>
 
 </div>
-
 
 </body>
 </html>
