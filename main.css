@@ -1,3 +1,4 @@
+
 ul{
     list-style: none;
     padding: 0;
@@ -10,6 +11,7 @@ ul li.block{
 }
 ul li.block .name-link, ul li.block .raw-url{
     display: inline-block;
+    text-align: right;
 }
 ul li.block .name-link{
     font-weight: bold;

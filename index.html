@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+    <link rel="shortcut icon" href="tool.ico">
 
     <title>TOOLS</title>
 
@@ -19,7 +19,8 @@
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]>
-    <script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie8-responsive-file-warning.js"></script>
+    <![endif]-->
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -40,13 +41,15 @@
 <div class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target=".navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Tools</a>
+            <a class="navbar-brand" href="#">
+                <img src="tool.png" alt="Tools">Tools</a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
@@ -79,23 +82,37 @@
 
     <div class="row">
         <div class="col-lg-8">
-            <p>Fast searching in <a href="https://gist.github.com/ezhov-da">Git Gist</a>:</p>
-        </div><!-- /.col-lg-11 -->
-        <div id="lastUpdate" class="col-lg-4">
-
-        </div><!-- /.col-lg-1 -->
-    </div><!-- /.row -->
+            <label>Fast searching in <a href="https://gist.github.com/ezhov-da">my
+                Git
+                Gist</a>: </label>
+            <label class="radio-inline">
+                <input type="radio" name="optradio" id="radioAll"
+                       checked="checked" onclick="filterList();"/>All</label>
+            <label class="radio-inline"><input type="radio"
+                                               name="optradio" id="radioPublic" onclick="filterList();">Public</label>
+            <label class="radio-inline"><input type="radio"
+                                               name="optradio"
+                                               id="radioPrivate" onclick="filterList();">Private</label>
+        </div>
+        <div class="col-lg-4">
+            <label class="radio-inline" id="lastUpdate"></label>
+        </div>
+    </div>
 
     <div class="row">
-        <div class="col-lg-12">
+        <div class="col-lg-11">
             <input type="text" class="form-control" id="find">
-        </div><!-- /.col-lg-6 -->
-    </div><!-- /.row -->
+        </div>
+        <div class="col-lg-1">
+            <button type="button" class="btn btn-default"
+                    onclick="logger('action reload'); loadList();">reload
+            </button>
+        </div>
+    </div>
 
     <ul class="nav nav-sidebar" id="menu"></ul>
 
-</div> <!-- /container -->
-
+</div>
 
 </body>
 </html>
