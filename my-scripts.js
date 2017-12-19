@@ -1,4 +1,10 @@
-var consoleLog = false;
+var b_CONSOLE_LOG = false;
+var s_URL_GET = 'https://www.prog-tools.ru:64646/git';
+//var s_URL_GET = 'source.json';
+
+var RADIO_ALL = 'ALL';
+var RADIO_PUBLIC = 'PUBLIC';
+var RADIO_PRIVATE = 'PRIVATE';
 
 var originalMass;
 var lastSelectedId;
@@ -6,24 +12,18 @@ var lastNoteSelected;
 var nowNoteSelected;
 
 function logger(data) {
-    if (consoleLog) {
+    if (b_CONSOLE_LOG) {
         console.log(data);
     }
 }
 
-function firstNoteSelect() {
-    var el = $(".go").first();
-    logger(el);
-    el.click();
-}
-
 function loadList() {
+    logger("execute");
     changeInfo('<img src="wait.gif"/> <label>Retrieve data...</label>');
 
+
     $.ajax({
-        //change to https
-        url: 'https://www.prog-tools.ru:64646/git',
-        //url: 'source.json',
+        url: s_URL_GET,
         dataType: 'json',
         type: 'GET',
         success: function (data) {
@@ -32,16 +32,6 @@ function loadList() {
             var lastSelectedFinder;
 
             data.knowledges.forEach(function (item, i, arr) {
-//                if (typeof lastNoteSelected !== "undefined") {
-//                    logger(item.id);
-//                    logger(lastNoteSelected.attr("id"));
-//                    var idFinder = lastNoteSelected.attr("id");
-//                    logger(item.id + " : " + idFinder);
-//                    if (item.id == idFinder) {
-//                        lastSelectedFinder = lastNoteSelected;
-//                    }
-//                }
-//                menu = menu +  "<li><a class=\"go\" id = \"495\">-app-circle-app-zip<\/a><\/li>";
                 menu = menu + generateLink(item);
             });
 
@@ -52,18 +42,7 @@ function loadList() {
             originalMass = data.knowledges;
             logger(originalMass);
 
-            // var valFromFindeField = $("#find")[0].value;
-            // if (valFromFindeField !== "") {
-            //     filterList(valFromFindeField);
-            // }
-            //
-            // if (typeof lastSelectedFinder === "undefined") {
-            //     firstNoteSelect();
-            // } else {
-            //     lastNoteSelected = $("a[id$='" + lastNoteSelected.attr("id"));
-            //     $(lastNoteSelected).parent().addClass("active");
-            //     logger(lastSelectedFinder);
-            // }
+            filterList();
         }
     });
 }
@@ -113,24 +92,46 @@ function loadSelectedLink(id) {
     });
 }
 
-function filterList(textFilter) {
+function filterList() {
     var textHtml = "";
+    var filterObject = createFilterObject();
     for (var i = 0; i < originalMass.length; i++) {
-        var textOnPage = originalMass[i];
-        logger("textOnPage: " + textOnPage);
-        var booleanContains =
-            textOnPage
-                .name
-                .toLowerCase()
-                .indexOf(textFilter.toLowerCase()) !== -1;
-        if (booleanContains) {
-            var val = originalMass[i];
-            textHtml = textHtml + generateLink(val);
+        var objectValue = originalMass[i];
+        logger(objectValue);
+
+        var bNameContains = isNameContains(objectValue, filterObject);
+        var bScopeRepo= isShowAsRepoState(objectValue, filterObject);
+
+        if (bNameContains && bScopeRepo) {
+            textHtml = textHtml + generateLink(objectValue);
         }
     }
 
     logger(textHtml);
     $('#menu').html(textHtml);
+}
+
+function isNameContains(objectValue, filterObject){
+    var booleanContains =
+        objectValue
+            .name
+            .toLowerCase()
+            .indexOf(filterObject.text.toLowerCase()) !== -1 || filterObject.text == '';
+
+    return booleanContains;
+}
+
+function isShowAsRepoState(objectValue, filterObject){
+    var bFlag = false;
+    if (filterObject.radio == RADIO_ALL){
+        bFlag = true;
+    } else if (filterObject.radio == RADIO_PUBLIC && objectValue.public){
+        bFlag = true;
+    } else if (filterObject.radio == RADIO_PRIVATE && !objectValue.public){
+        bFlag = true;
+    }
+
+    return bFlag;
 }
 
 function getDateTimeNowStr() {
@@ -151,87 +152,34 @@ function getDateTimeNowStr() {
     return text;
 }
 
-
 $(document).ready(function () {
     loadList();
 
     $('#find').keyup(function () {
         var textForFind = $(this)[0].value;
-        logger(textForFind);
-        filterList(textForFind);
+
+
+
+
+        filterList();
     });
-
-    $(document).on('click', 'li>.go', function () {
-        var id = $(this).attr("id");
-
-        logger(lastNoteSelected);
-        if (typeof lastNoteSelected !== "undefined") {
-            lastNoteSelected.parent().removeClass("active");
-        }
-
-        logger($(this).parent());
-        $(this).parent().addClass("active");
-
-        lastSelectedId = id;
-        lastNoteSelected = $(this);
-        logger(lastSelectedId);
-        loadSelectedLink(id);
-    });
-
-    $(document).on('click', '#buttonEdit', function () {
-        logger(nowNoteSelected);
-        $('#nameEdit').val(nowNoteSelected.name);
-        //$('#texEdit').summernote('code', nowNoteSelected.rawText);
-        $('#texEdit').val(nowNoteSelected.rawText);
-        $('#linkEdit').val(nowNoteSelected.link);
-        $('#idForEdit').val(nowNoteSelected.id);
-    });
-
-    $(document).on('click', '#buttonDeleteNote', function () {
-        result = confirm("Are you sure you want to delete a note?");
-        if (result) {
-            $.ajax({
-                url: 'hideNote?id=' + nowNoteSelected.id,
-                type: 'GET',
-                success: function () {
-                    loadList();
-                    firstNoteSelect();
-                }
-            });
-        }
-    });
-
-    $.fn.extend({
-        insertAtCaret: function (myValue) {
-            return this.each(function (i) {
-                if (document.selection) {
-                    //For browsers like Internet Explorer
-                    this.focus();
-                    var sel = document.selection.createRange();
-                    sel.text = myValue;
-                } else if (this.selectionStart || this.selectionStart === '0') {
-                    //For browsers like Firefox and Webkit based
-                    var startPos = this.selectionStart;
-                    var endPos = this.selectionEnd;
-                    var scrollTop = this.scrollTop;
-                    this.value = this.value.substring(0, startPos) + myValue + this.value.substring(endPos, this.value.length);
-                    this.focus();
-                    this.selectionStart = startPos + myValue.length;
-                    this.selectionEnd = startPos + myValue.length;
-                    this.scrollTop = scrollTop;
-                } else {
-                    this.value += myValue;
-                }
-            });
-        }
-    });
-
-    $(document).on('click', '#insertCodeToTextAdd',
-        function () {
-            $('#textInsert').insertAtCaret('[code:]LANG[:code]\n\n[/code]');
-        });
-    $(document).on('click', '#insertCodeToTextEdit',
-        function () {
-            $('#texEdit').insertAtCaret('[code:]LANG[:code]\n\n[/code]');
-        });
 });
+
+function createFilterObject(){
+        logger($('#find')[0].value);
+        logger($('#radioAll').is(':checked'));
+        logger($('#radioPublic').is(':checked'));
+        logger($('#radioPrivate').is(':checked'));
+
+        var filterData = new Object();
+        filterData.radio =
+            $('#radioAll').is(':checked') ?
+                RADIO_ALL :
+                    $('#radioPublic').is(':checked') ?
+                        RADIO_PUBLIC : RADIO_PRIVATE ;
+        filterData.text = $('#find')[0].value;
+
+        logger(filterData);
+
+        return filterData;
+}
