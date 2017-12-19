@@ -21,7 +21,6 @@ function loadList() {
     logger("execute");
     changeInfo('<img src="wait.gif"/> <label>Retrieve data...</label>');
 
-
     $.ajax({
         url: s_URL_GET,
         dataType: 'json',
@@ -73,7 +72,6 @@ function generateLink(item) {
 
     return text;
 }
-
 
 function loadSelectedLink(id) {
     var url = 'responseToMyPage?id=' + id;
@@ -157,10 +155,6 @@ $(document).ready(function () {
 
     $('#find').keyup(function () {
         var textForFind = $(this)[0].value;
-
-
-
-
         filterList();
     });
 });
