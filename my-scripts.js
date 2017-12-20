@@ -1,15 +1,15 @@
-var b_CONSOLE_LOG = false;
-var s_URL_GET = 'https://www.prog-tools.ru:64646/git';
-//var s_URL_GET = 'source.json';
+var b_CONSOLE_LOG = true;
+// var s_URL_GET = 'https://www.prog-tools.ru:64646/git';
+// var s_URL_GET = 'http://localhost:64646/git';
+var s_URL_GET = 'source.json';
+
+var s_URL_POST_RAW = 'http://localhost:64646/git/raw';
 
 var RADIO_ALL = 'ALL';
 var RADIO_PUBLIC = 'PUBLIC';
 var RADIO_PRIVATE = 'PRIVATE';
 
 var originalMass;
-var lastSelectedId;
-var lastNoteSelected;
-var nowNoteSelected;
 
 function logger(data) {
     if (b_CONSOLE_LOG) {
@@ -46,7 +46,7 @@ function loadList() {
     });
 }
 
-function changeInfo(msgInfo){
+function changeInfo(msgInfo) {
     $("#lastUpdate").html(msgInfo);
 }
 
@@ -73,19 +73,20 @@ function generateLink(item) {
     return text;
 }
 
-function loadSelectedLink(id) {
-    var url = 'responseToMyPage?id=' + id;
+function loadRaw(hashData) {
+    logger(hashData);
     $.ajax({
-        url: url,
+        url: s_URL_POST_RAW,
         dataType: 'json',
-        type: 'GET',
+        data: {'hash':hashData},
+        type: 'POST',
         success: function (data) {
             logger(data);
-            nowNoteSelected = data;
-            $("#info").html(nowNoteSelected.html);
-            $('pre code').each(function (i, block) {
-                hljs.highlightBlock(block);
-            });
+            // nowNoteSelected = data;
+            // $("#info").html(nowNoteSelected.html);
+            // $('pre code').each(function (i, block) {
+            //     hljs.highlightBlock(block);
+            // });
         }
     });
 }
@@ -98,7 +99,7 @@ function filterList() {
         logger(objectValue);
 
         var bNameContains = isNameContains(objectValue, filterObject);
-        var bScopeRepo= isShowAsRepoState(objectValue, filterObject);
+        var bScopeRepo = isShowAsRepoState(objectValue, filterObject);
 
         if (bNameContains && bScopeRepo) {
             textHtml = textHtml + generateLink(objectValue);
@@ -109,7 +110,7 @@ function filterList() {
     $('#menu').html(textHtml);
 }
 
-function isNameContains(objectValue, filterObject){
+function isNameContains(objectValue, filterObject) {
     var booleanContains =
         objectValue
             .name
@@ -119,13 +120,13 @@ function isNameContains(objectValue, filterObject){
     return booleanContains;
 }
 
-function isShowAsRepoState(objectValue, filterObject){
+function isShowAsRepoState(objectValue, filterObject) {
     var bFlag = false;
-    if (filterObject.radio == RADIO_ALL){
+    if (filterObject.radio == RADIO_ALL) {
         bFlag = true;
-    } else if (filterObject.radio == RADIO_PUBLIC && objectValue.public){
+    } else if (filterObject.radio == RADIO_PUBLIC && objectValue.public) {
         bFlag = true;
-    } else if (filterObject.radio == RADIO_PRIVATE && !objectValue.public){
+    } else if (filterObject.radio == RADIO_PRIVATE && !objectValue.public) {
         bFlag = true;
     }
 
@@ -159,21 +160,21 @@ $(document).ready(function () {
     });
 });
 
-function createFilterObject(){
-        logger($('#find')[0].value);
-        logger($('#radioAll').is(':checked'));
-        logger($('#radioPublic').is(':checked'));
-        logger($('#radioPrivate').is(':checked'));
+function createFilterObject() {
+    logger($('#find')[0].value);
+    logger($('#radioAll').is(':checked'));
+    logger($('#radioPublic').is(':checked'));
+    logger($('#radioPrivate').is(':checked'));
 
-        var filterData = new Object();
-        filterData.radio =
-            $('#radioAll').is(':checked') ?
-                RADIO_ALL :
-                    $('#radioPublic').is(':checked') ?
-                        RADIO_PUBLIC : RADIO_PRIVATE ;
-        filterData.text = $('#find')[0].value;
+    var filterData = new Object();
+    filterData.radio =
+        $('#radioAll').is(':checked') ?
+            RADIO_ALL :
+            $('#radioPublic').is(':checked') ?
+                RADIO_PUBLIC : RADIO_PRIVATE;
+    filterData.text = $('#find')[0].value;
 
-        logger(filterData);
+    logger(filterData);
 
-        return filterData;
+    return filterData;
 }
