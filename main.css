@@ -24,6 +24,19 @@ ul li.block .name-link:after{
 ul li.block .descr{
     margin-left: 50px;
 }
+
+ul li.block .show-raw{
+    margin-left: 50px;
+}
+
+ul li.block .show-raw-collapse{
+    margin-left: 50px;
+}
+
+ul li.block .hide-raw{
+    margin-left: 50px;
+}
+
 ul li.block .private-img{
     position: absolute;
     top: 25%;
