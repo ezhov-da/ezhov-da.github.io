@@ -31,7 +31,7 @@ function loadList() {
             var lastSelectedFinder;
 
             data.knowledges.forEach(function (item, i, arr) {
-                menu = menu + generateLink(item);
+                menu = menu + generateLink(item, i);
             });
 
             changeInfo("<p>Last update: " + data.lastUpdate + "</p>");
@@ -50,7 +50,7 @@ function changeInfo(msgInfo) {
     $("#lastUpdate").html(msgInfo);
 }
 
-function generateLink(item) {
+function generateLink(item, id) {
     var text = "";
     if (item.public) {
         text =
@@ -58,6 +58,13 @@ function generateLink(item) {
             '   <div class="name-link"><a href="' + item.url + '">' + item.name + '</a></div>' +
             '   <div class="raw-url"><a href="' + item.rawUrl + '">[raw url]</a></div>' +
             '   <div class="descr">' + item.description + '</div>' +
+            '<div class="show-raw" data-toggle="collapse"' +
+            'data-target="#collapse' + id + '" ' +
+            'onclick="loadRaw(\'' + item.rawUrl + '\', \'collapse' + id + '\');">' +
+            '&gt; show raw' +
+            '</div>' +
+            '<div id="collapse' + id + '" class="show-raw-collapse collapse">' +
+            '</div>' +
             '</li>';
     } else {
         text =
@@ -73,20 +80,18 @@ function generateLink(item) {
     return text;
 }
 
-function loadRaw(hashData) {
+function loadRaw(hashData, idComponentToRender) {
     logger(hashData);
+    logger(idComponentToRender);
     $.ajax({
         url: s_URL_POST_RAW,
         dataType: 'json',
-        data: {'hash':hashData},
+        data: {'hash': hashData},
         type: 'POST',
         success: function (data) {
             logger(data);
-            // nowNoteSelected = data;
-            // $("#info").html(nowNoteSelected.html);
-            // $('pre code').each(function (i, block) {
-            //     hljs.highlightBlock(block);
-            // });
+            logger($(idComponentToRender));
+            $(idComponentToRender).html(data.text);
         }
     });
 }
@@ -102,7 +107,7 @@ function filterList() {
         var bScopeRepo = isShowAsRepoState(objectValue, filterObject);
 
         if (bNameContains && bScopeRepo) {
-            textHtml = textHtml + generateLink(objectValue);
+            textHtml = textHtml + generateLink(objectValue, i);
         }
     }
 
