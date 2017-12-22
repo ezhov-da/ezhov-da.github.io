@@ -9,9 +9,15 @@ ul li.block{
     position: relative;
     margin: 3px;
 }
-ul li.block .name-link, ul li.block .raw-url{
+ul li.block .name-link{
     display: inline-block;
-    text-align: right;
+}
+
+ul li.block .raw-url{
+    display: inline-block;
+    position: absolute;
+    top: 3px;
+    right: 5px;
 }
 ul li.block .name-link{
     font-weight: bold;
@@ -27,6 +33,11 @@ ul li.block .descr{
 
 ul li.block .show-raw{
     margin-left: 50px;
+    background-image: url("../img/if_arrow_down_1814087.png");
+    background-repeat: no-repeat;
+    background-size: 20px auto;
+    padding-left: 20px;
+    cursor: pointer;
 }
 
 ul li.block .show-raw-collapse{
@@ -41,8 +52,18 @@ ul li.block .private-img{
     position: absolute;
     top: 25%;
     left: 16px;
-    background-image: url(lock-icon.png);
+    background-image: url(../img/lock-icon.png);
     background-size: contain;
     height: 16px;
     width: 16px;
+    cursor: pointer;
+}
+.btn-reload{
+    width: 100%;
+}
+#img_fork_me{
+    position: absolute;
+    top: 50px;
+    right: 0;
+    border: 0;
 }

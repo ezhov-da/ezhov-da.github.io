@@ -1,7 +1,7 @@
-var b_CONSOLE_LOG = true;
-var s_URL_GET = 'https://www.prog-tools.ru:64646/git';
+var b_CONSOLE_LOG = false;
+//var s_URL_GET = 'https://www.prog-tools.ru:64646/git';
 // var s_URL_GET = 'http://localhost:64646/git';
-// var s_URL_GET = 'source.json';
+var s_URL_GET = 'source.json';
 
 // var s_URL_POST_RAW = 'http://localhost:64646/git/raw';
 var s_URL_POST_RAW = 'https://www.prog-tools.ru:64646/git/raw';
@@ -20,7 +20,7 @@ function logger(data) {
 
 function loadList() {
     logger("execute");
-    changeInfo('<img src="wait.gif"/> <label>Retrieve data...</label>');
+    changeInfo('<img src="../img/wait.gif"/> <label>Retrieve data...</label>');
 
     $.ajax({
         url: s_URL_GET,
@@ -29,13 +29,11 @@ function loadList() {
         success: function (data) {
             logger(data);
             var menu = "";
-            var lastSelectedFinder;
 
             data.knowledges.forEach(function (item, i, arr) {
                 menu = menu + generateLink(item, i);
             });
-
-            changeInfo("<p>Last update: " + data.lastUpdate + "</p>");
+            changeInfo("<p>Last update: " + new Date(data.lastUpdate).toDateString() + "</p>");
 
             logger(menu);
             $("#menu").html(menu);
@@ -59,17 +57,16 @@ function generateLink(item, id) {
             '   <div class="name-link"><a href="' + item.url + '">' + item.name + '</a></div>' +
             '   <div class="raw-url"><a href="' + item.rawUrl + '">[raw url]</a></div>' +
             '   <div class="descr">' + item.description + '</div>' +
-            '<div class="show-raw" onclick="loadRaw(\'' + item.rawUrl + '\', \'collapse' + id + '\');">' +
-            '&gt; show raw' +
+            '<div class="show-raw" id="show_raw'+ id +'" onclick="loadRaw(\'' + item.rawUrl + '\', \'#collapse' + id + '\',\'#show_raw'+id+'\');">' +
+            'show raw' +
             '</div>' +
-            '<div class="hide-raw" onclick="clearRaw(\'collapse' + id + '\');">&lt; hide raw</div>' +
-            '<div id="collapse' + id + '" class="show-raw-collapse">' +
+            '<div id="collapse' + id + '" class="show-raw-collapse" style="display: none">' +
             '</div>' +
             '</li>';
     } else {
         text =
             '<li class="block go">' +
-            '   <div class="private-img"></div>' +
+            '   <div class="private-img" onclick="dgKeyboard.showOrHide(this);"></div>' +
             '   <div class="name-link"><a href="' + item.url + '">' + item.name + '</a></div>' +
             '   <div class="raw-url"><a href="' + item.rawUrl + '">[raw url]</a></div>' +
             '   <div class="descr">' + item.description + '</div>' +
@@ -77,39 +74,39 @@ function generateLink(item, id) {
 
     }
 
+
     return text;
 }
 
-function loadRaw(hashData, idComponentToRender) {
-    var idCol = '#' + idComponentToRender;
-    $(idCol).html('<img src="wait.gif"/> <label>Retrieve data...</label>');
+function loadRaw(hashData, idComponentToRender, idButtonShow) {
+    var idCol = document.querySelector(idComponentToRender);
+    var idButton = document.querySelector(idButtonShow);
+    if(idCol.style.display == "none"){
+        idCol.style.display = "block";
+        idButton.innerHTML = "hide raw";
+        idButton.style.backgroundImage = "url(./img/if_arrow_up2_1814087.png)";
+    }else {
+        idCol.style.display = "none";
+        idButton.innerHTML = "show raw";
+        idButton.style.backgroundImage = "url(./img/if_arrow_down_1814087.png)";
+        clearRaw(idComponentToRender);
+    }
+    idCol.innerHTML = '<img src="../img/wait.gif"/> <label>Retrieve data...</label>';
 
-    logger(hashData);
-    logger(idComponentToRender);
     $.ajax({
         url: s_URL_POST_RAW,
         dataType: 'json',
         data: {'hash': hashData},
         type: 'POST',
         success: function (data) {
-            logger(data);
-            logger(data.text);
-            logger($(idComponentToRender));
-            logger(idCol);
-            logger($(idCol).html());
-
-            $(idCol).html('<pre>' + data.text + '</pre>');
-
-            logger($(idCol).html());
-
+            idCol.innerHTML = '<pre>' + data.text + '</pre>';
         }
     });
 }
 
 function clearRaw(idComponentToRender) {
-    logger(idComponentToRender);
-    var idCol = '#' + idComponentToRender;
-    $(idCol).html('');
+    var idCol = document.querySelector(idComponentToRender);
+    idCol.innerHTML = '';
 }
 
 function filterList() {
