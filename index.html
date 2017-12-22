@@ -11,32 +11,38 @@
     <title>TOOLS</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="bootstrap.min.css" rel="stylesheet">
-    <link href="main.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="navbar-fixed-top.css" rel="stylesheet">
+    <link href="css/navbar-fixed-top.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]>
-    <script src="../../assets/js/ie8-responsive-file-warning.js"></script>
+    <!--<script src="../../assets/js/ie8-responsive-file-warning.js"></script>-->
     <![endif]-->
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <!--<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>-->
+    <!--<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>-->
     <![endif]-->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
-    <script src="source.json"></script>
-    <script src="my-scripts.js"></script>
+    <!--<script src="source.json"></script>-->
+    <script src="js/my-scripts.js"></script>
+    <script src="js/DigitalKeyboard.js"></script>
+    <link href="css/DigitalKeyboard.css" rel="stylesheet">
 </head>
 
 <body>
-
+<a href="https://github.com/ezhov-da/git-rest-service">
+    <img id="img_fork_me" src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67"
+         alt="Fork me on GitHub"
+         data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png">
+</a>
 <!-- Fixed navbar -->
 <div class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
@@ -81,12 +87,11 @@
 <div class="container">
 
     <div class="row">
-        <div class="col-lg-8">
-            <label>Fast searching in <a href="https://gist.github.com/ezhov-da">my
-                Git
-                Gist</a>: </label>
+        <div class="col-lg-8 col-md-8 col-sm-8">
+            <label>Fast searching in <a href="https://gist.github.com/ezhov-da">
+                my Git Gist</a>:
+            </label>
             <label class="radio-inline">
-
                 <input type="radio" name="optradio" id="radioAll"
                        checked="checked" onclick="filterList();"/>All</label>
             <label class="radio-inline"><input type="radio"
@@ -95,26 +100,36 @@
                                                name="optradio"
                                                id="radioPrivate" onclick="filterList();">Private</label>
         </div>
-        <div class="col-lg-4">
+        <div class="col-lg-4 col-md-4 col-sm-4">
             <label class="radio-inline" id="lastUpdate"></label>
         </div>
     </div>
 
     <div class="row">
-        <div class="col-lg-11">
+        <div class="col-lg-11 col-md-10 col-sm-10">
             <input type="text" class="form-control" id="find">
         </div>
-        <div class="col-lg-1">
-            <button type="button" class="btn btn-default"
+        <div class="col-lg-1 col-md-2 col-sm-2">
+            <button type="button" class="btn btn-default btn-reload"
                     onclick="logger('action reload'); loadList();">reload
             </button>
         </div>
     </div>
-
-    <ul class="nav nav-sidebar" id="menu"></ul>
-
-
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <ul class="nav nav-sidebar" id="menu"></ul>
+        </div>
+    </div>
 </div>
+<div id="keyboard"></div>
+<script>
+    var dgKeyboard = DigitalKeyboard;
+    var fnc = function(elem){
+        alert(elem.value);
+    };
+    dgKeyboard.init("#keyboard");
+    dgKeyboard.setActionOnEnter(fnc);
 
+</script>
 </body>
 </html>
