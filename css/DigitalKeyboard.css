@@ -1,0 +1,46 @@
+.dgkbg-block{
+    width: 150px;
+    height: 200px;
+    border: solid 1px #DCDCDC;
+    position: absolute;
+    z-index: 99999;
+    background: #ffffff;
+}
+.dgkbg-block div{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    margin: 3px;
+    border: solid 2px #008B8B;
+    border-radius: 50%;
+    line-height: 40px;
+    padding: 13px;
+    cursor: pointer;
+}
+.dgkbg-block div span{
+    height: 10px;
+    width: 10px;
+    background: #20B2AA;
+    display: block;
+    border-radius: 50%;
+    border: hidden;
+}
+.dgkbg-block div:not(#dgkbg_clear):not(#dgkbg_enter) span:hover{
+    background: #008B8B;
+}
+.dgkbg-block .dgkbg-hidden{
+    border: none;
+    background: none;
+}
+.dgkbg-block div span.dgkbg-clear{
+    background-color: #DC143C;
+}
+.dgkbg-block div.dgkbg-clear{
+    border-color:  #DC143C;
+}
+.dgkbg-block div span.dgkbg-enter{
+    background-color: #32CD32;
+}
+.dgkbg-block div.dgkbg-enter{
+    border-color:  #32CD32;
+}
