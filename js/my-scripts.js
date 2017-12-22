@@ -29,7 +29,6 @@ function loadList() {
         success: function (data) {
             logger(data);
             var menu = "";
-            var lastSelectedFinder;
 
             data.knowledges.forEach(function (item, i, arr) {
                 menu = menu + generateLink(item, i);
