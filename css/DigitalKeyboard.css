@@ -31,6 +31,10 @@
 .dgkbg-block .dgkbg-hidden{
     border: none;
     background: none;
+    cursor: default;
+}
+.dgkbg-block .dgkbg-hide{
+    display: none;
 }
 .dgkbg-block div span.dgkbg-clear{
     background-color: #DC143C;
