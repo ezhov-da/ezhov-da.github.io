@@ -42,10 +42,12 @@ ul li.block .show-raw{
 
 ul li.block .show-raw-collapse{
     margin-left: 50px;
+    margin-right: 50px;
 }
 
 ul li.block .hide-raw{
     margin-left: 50px;
+    margin-right: 50px;
 }
 
 ul li.block .private-img{
