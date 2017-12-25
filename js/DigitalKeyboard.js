@@ -1,10 +1,11 @@
 ;(function (){    
     "use strict";
     
-    let version = '0.0.3'
-        ,lastUpdateDate = '21.12.2017';         
+    let version = '0.0.4'
+        ,lastUpdateDate = '23.12.2017';
     var isDebug = true                        //Flag debug mode
         ,mainClass = "dgkbg-block"            //Class on main block
+        ,targetElementId                      //Id element for inset keyboard
     ;
     
     /*
@@ -46,7 +47,7 @@
             <div data-number="9"><span></span></div>\
             <div id="dgkbg_clear" class="dgkbg-hidden"><span class="dgkbg-hidden"></span></div>\
             <div data-number="0"><span></span></div>\
-            <div id="dgkbg_enter" class="dgkbg-hidden"><span class="dgkbg-hidden"></span></div>\
+            <div id="dgkbg_enter" class="dgkbg-hide"><span class="dgkbg-hide"></span></div>\
         </div>'
     }
     function _observeInput(elem){
@@ -64,13 +65,13 @@
         }else{
             elemClear.className =  "dgkbg-hidden";
             elemClearS.className = "dgkbg-hidden";
-            elemEnter.className = "dgkbg-hidden";
-            elemEnterS.className = "dgkbg-hidden";
+            elemEnter.className = "dgkbg-hide";
+            elemEnterS.className = "dgkbg-hide";
         }
 
     }
     function _setListeners(){
-        let sourceElement = document.querySelectorAll(".dgkbg-block div:not(.dgkbg-hidden)");
+        let sourceElement = document.querySelectorAll(".dgkbg-block div:not(.dgkbg-hidden):not(.dgkbg-hide)");
         let action = "click";
         sourceElement.forEach( 
           function(currentValue, currentIndex, listObj) { 
@@ -97,25 +98,22 @@
             fnc(dgkbgPass);
             dgkbgPass.value = "";
             _observeInput(dgkbgPass);
+            showOrHide(this);
         }, true);
     }
-    
-    function _closeOuterClickListener(){
-        document.body.onclick = function (e) {
-            e = e || event;
-            let target = e.target || e.srcElement;
-            console.log(target.className);
-        }
-    }
-    
+        
     function showOrHide(elem){
             let el = getKeyboardElement();
-            console.log(elem);
             if(el.style.display=="none"){
                 el.style.left = elem.getBoundingClientRect().left + "px";
                 let cl = document.documentElement;
                 if(cl.clientHeight < elem.getBoundingClientRect().bottom + 202){
-                    el.style.top = (elem.getBoundingClientRect().top - 202) + "px"; 
+                    if((elem.getBoundingClientRect().top - 202)<0){
+                        el.style.top = "2px";
+                        el.style.left = (elem.getBoundingClientRect().right + 2) + "px";
+                    }else {
+                        el.style.top = (elem.getBoundingClientRect().top - 202) + "px";
+                    }
                 }else{
                     el.style.top = elem.getBoundingClientRect().bottom+2 +"px";
                 }
@@ -141,7 +139,7 @@
         }
     
     function init(targetId){
-        console.log(targetId);
+        this.targetElementId = targetId;
         document.querySelector(targetId).innerHTML = _templateHTML();
         _setListeners();
     }
@@ -153,8 +151,6 @@
     DigitalKeyboard.setActionOnEnter = setActionOnEnter;
     DigitalKeyboard.getKeyboardElement = getKeyboardElement;
     DigitalKeyboard.showOrHide = showOrHide;
-    //DigitalKeyboard.addShowListener = addShowListener;
-    
     
     /*
         "Export" the ColorCode to the outside of the module
