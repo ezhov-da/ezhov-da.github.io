@@ -1,10 +1,10 @@
 var b_CONSOLE_LOG = false;
-var s_URL_GET = 'https://www.prog-tools.ru:64646/git';
+var s_URL_GET = 'https://prog-tools.ru:64646/git';
 // var s_URL_GET = 'http://localhost:64646/git';
 // var s_URL_GET = 'source.json';
 
 // var s_URL_POST_RAW = 'http://localhost:64646/git/raw';
-var s_URL_POST_RAW = 'https://www.prog-tools.ru:64646/git/raw';
+var s_URL_POST_RAW = 'https://prog-tools.ru:64646/git/raw';
 
 var RADIO_ALL = 'ALL';
 var RADIO_PUBLIC = 'PUBLIC';
