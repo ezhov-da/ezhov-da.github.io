@@ -1,7 +1,7 @@
 var b_CONSOLE_LOG = false;
-//var s_URL_GET = 'https://www.prog-tools.ru:64646/git';
+var s_URL_GET_PROD = 'https://www.prog-tools.ru:64646/git';
 // var s_URL_GET = 'http://localhost:64646/git';
-var s_URL_GET = 'source.json';
+var s_URL_GET_DEV = 'source.json';
 
 // var s_URL_POST_RAW = 'http://localhost:64646/git/raw';
 var s_URL_POST_RAW = 'https://www.prog-tools.ru:64646/git/raw';
@@ -17,13 +17,19 @@ function logger(data) {
         console.log(data);
     }
 }
+/*
+    Return json url for git
+*/
+function getURLGit(){
+    return (window.location.host.indexOf('prog-tools.ru')>0) ? s_URL_GET_PROD : s_URL_GET_DEV;
+}
 
 function loadList() {
     logger("execute");
     changeInfo('<img src="../img/wait.gif"/> <label>Retrieve data...</label>');
 
     $.ajax({
-        url: s_URL_GET,
+        url: getURLGit(),
         dataType: 'json',
         type: 'GET',
         success: function (data) {
