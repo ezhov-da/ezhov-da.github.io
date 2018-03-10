@@ -1,7 +1,7 @@
 var b_CONSOLE_LOG = false;
-var s_URL_GET_PROD = 'https://www.prog-tools.ru:64646/git';
+//var s_URL_GET = 'https://www.prog-tools.ru:64646/git';
 // var s_URL_GET = 'http://localhost:64646/git';
-var s_URL_GET_DEV = 'source.json';
+var s_URL_GET = 'source.json';
 
 // var s_URL_POST_RAW = 'http://localhost:64646/git/raw';
 var s_URL_POST_RAW = 'https://www.prog-tools.ru:64646/git/raw';
@@ -9,6 +9,18 @@ var s_URL_POST_RAW = 'https://www.prog-tools.ru:64646/git/raw';
 var RADIO_ALL = 'ALL';
 var RADIO_PUBLIC = 'PUBLIC';
 var RADIO_PRIVATE = 'PRIVATE';
+
+//экранирование сырых данных
+var entityMap = {
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#39;',
+    '/': '&#x2F;',
+    '`': '&#x60;',
+    '=': '&#x3D;'
+};
 
 var originalMass;
 
@@ -63,7 +75,7 @@ function generateLink(item, id) {
             '   <div class="name-link"><a href="' + item.url + '">' + item.name + '</a></div>' +
             '   <div class="raw-url"><a href="' + item.rawUrl + '">[raw url]</a></div>' +
             '   <div class="descr">' + item.description + '</div>' +
-            '<div class="show-raw" id="show_raw'+ id +'" onclick="loadRaw(\'' + item.rawUrl + '\', \'#collapse' + id + '\',\'#show_raw'+id+'\');">' +
+            '<div class="show-raw" id="show_raw' + id + '" onclick="loadRaw(\'' + item.rawUrl + '\', \'#collapse' + id + '\',\'#show_raw' + id + '\');">' +
             'show raw' +
             '</div>' +
             '<div id="collapse' + id + '" class="show-raw-collapse" style="display: none">' +
@@ -87,11 +99,11 @@ function generateLink(item, id) {
 function loadRaw(hashData, idComponentToRender, idButtonShow) {
     var idCol = document.querySelector(idComponentToRender);
     var idButton = document.querySelector(idButtonShow);
-    if(idCol.style.display == "none"){
+    if (idCol.style.display == "none") {
         idCol.style.display = "block";
         idButton.innerHTML = "hide raw";
         idButton.style.backgroundImage = "url(./img/if_arrow_up2_1814087.png)";
-    }else {
+    } else {
         idCol.style.display = "none";
         idButton.innerHTML = "show raw";
         idButton.style.backgroundImage = "url(./img/if_arrow_down_1814087.png)";
@@ -105,8 +117,14 @@ function loadRaw(hashData, idComponentToRender, idButtonShow) {
         data: {'hash': hashData},
         type: 'POST',
         success: function (data) {
-            idCol.innerHTML = '<pre>' + data.text + '</pre>';
+            idCol.innerHTML = '<pre>' + escapeHtml(data.text) + '</pre>';
         }
+    });
+}
+
+function escapeHtml(string) {
+    return String(string).replace(/[&<>"'`=\/]/g, function (s) {
+        return entityMap[s];
     });
 }
 
