@@ -146,13 +146,35 @@ function filterList() {
 }
 
 function isNameContains(objectValue, filterObject) {
-    var booleanContains =
-        objectValue
-            .name
-            .toLowerCase()
-            .indexOf(filterObject.text.toLowerCase()) !== -1 || filterObject.text == '';
+	var filterText = filterObject.text;
+	var booleanContains = false;
+	if (filterText != ''){
+		var sObjectName = objectValue.name;
+		if (filterText.indexOf(' ') !== -1){
+			//получаем массив слов
+			var arrayFindWords = filterText.trim().split(' ');
 
-    return booleanContains;
+			booleanContains = true;
+			for(findWord of arrayFindWords) {
+				if (findWord != ''){
+					if (sObjectName.indexOf(findWord) == -1){
+						booleanContains = false;
+						break;
+					}
+				}
+			}
+		} else {
+			booleanContains =
+                    objectValue
+                        .name
+                        .toLowerCase()
+                        .indexOf(filterObject.text.toLowerCase()) !== -1;
+		}
+	} else {
+		booleanContains = true;
+	}
+
+	return booleanContains;
 }
 
 function isShowAsRepoState(objectValue, filterObject) {
