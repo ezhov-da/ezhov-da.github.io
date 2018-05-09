@@ -1,7 +1,7 @@
-var b_CONSOLE_LOG = false;
-var s_URL_GET = 'https://prog-tools.ru:64646/git';
+var b_CONSOLE_LOG = true;
+// var s_URL_GET = 'https://prog-tools.ru:64646/git';
 // var s_URL_GET = 'http://localhost:64646/git';
-// var s_URL_GET = 'source.json';
+var s_URL_GET = 'source.json';
 
 // var s_URL_POST_RAW = 'http://localhost:64646/git/raw';
 var s_URL_POST_RAW = 'https://prog-tools.ru:64646/git/raw';
@@ -52,6 +52,7 @@ function loadList() {
             originalMass = data.knowledges;
             logger(originalMass);
 
+            statistic();
             filterList();
         }
     });
@@ -146,35 +147,35 @@ function filterList() {
 }
 
 function isNameContains(objectValue, filterObject) {
-	var filterText = filterObject.text;
-	var booleanContains = false;
-	if (filterText != ''){
-		var sObjectName = objectValue.name;
-		if (filterText.indexOf(' ') !== -1){
-			//получаем массив слов
-			var arrayFindWords = filterText.trim().split(' ');
+    var filterText = filterObject.text;
+    var booleanContains = false;
+    if (filterText != '') {
+        var sObjectName = objectValue.name;
+        if (filterText.indexOf(' ') !== -1) {
+            //получаем массив слов
+            var arrayFindWords = filterText.trim().split(' ');
 
-			booleanContains = true;
-			for(findWord of arrayFindWords) {
-				if (findWord != ''){
-					if (sObjectName.indexOf(findWord) == -1){
-						booleanContains = false;
-						break;
-					}
-				}
-			}
-		} else {
-			booleanContains =
-                    objectValue
-                        .name
-                        .toLowerCase()
-                        .indexOf(filterObject.text.toLowerCase()) !== -1;
-		}
-	} else {
-		booleanContains = true;
-	}
+            booleanContains = true;
+            for (findWord of arrayFindWords) {
+                if (findWord != '') {
+                    if (sObjectName.indexOf(findWord) == -1) {
+                        booleanContains = false;
+                        break;
+                    }
+                }
+            }
+        } else {
+            booleanContains =
+                objectValue
+                    .name
+                    .toLowerCase()
+                    .indexOf(filterObject.text.toLowerCase()) !== -1;
+        }
+    } else {
+        booleanContains = true;
+    }
 
-	return booleanContains;
+    return booleanContains;
 }
 
 function isShowAsRepoState(objectValue, filterObject) {
@@ -216,6 +217,74 @@ $(document).ready(function () {
         filterList();
     });
 });
+
+function statistic() {
+    var statisticHtml = "";
+    var sortObjects = getSortObjectStatistics(getMapCount());
+    sortObjects.forEach(function (item, i, arr) {
+        statisticHtml = statisticHtml + generateStatisticHtml(item.name, item.count);
+    });
+
+    $('#statistic').html(statisticHtml);
+}
+
+function generateStatisticHtml(text, count) {
+    return "<a href=\"#\" onclick=\"clickLinkFunc(this);\" id=\"" + "link-" + text + "\">" + text + "<span class=\"badge\">" + count + "</span></a> ";
+}
+
+function clickLinkFunc(obj) {
+    var id = $(obj).attr('id');
+    var text = $(obj).text();
+    logger("click link: id-" + id + " text-" + text);
+    $('#find')[0].value = id.replace("link-", "");
+    filterList();
+}
+
+function getRootNameFromName(name) {
+    var nameResult = name.split("-")[1];
+    logger("from: [" + name + "] result name: [" + nameResult + "]");
+    return nameResult;
+}
+
+function getMapCount() {
+    var map = new Map();
+    originalMass.forEach(function (item, i, arr) {
+        var rootName = getRootNameFromName(item.name);
+        var count = 1;
+        if (map.has(rootName)) {
+            count = map.get(rootName);
+            count = count + 1;
+        }
+        logger(rootName + ": " + count);
+        map.set(rootName, count)
+    });
+    return map;
+}
+
+function getSortObjectStatistics(mapCount) {
+    var array = [];
+    for (var key of mapCount.keys()) {
+        array.push(
+            {
+                name: key,
+                count: mapCount.get(key)
+            }
+        );
+    }
+    array.sort(compare);
+    return array;
+}
+
+function compare(a, b) {
+    logger("compare: " + a.name + " and " + b.name);
+    var countA = a.count;
+    var countB = b.count;
+    if (countB < countA)
+        return -1;
+    if (countB > countA)
+        return 1;
+    return 0;
+}
 
 function createFilterObject() {
     logger($('#find')[0].value);
