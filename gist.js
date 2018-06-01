@@ -79,6 +79,18 @@ function isNameContains(sourceString, filterText) {
     return booleanContains;
 }
 
+function setFilter(searchText, propertyNameForSearch){
+    if(searchText === ''){
+         store.clearFilter();
+     } else {
+        store.filter([{
+                filterFn: function(item) {
+                    return isNameContains(item.get(propertyNameForSearch), searchText); 
+                }
+        }]);
+     }
+}
+
 var table = Ext.create('Ext.grid.Panel', {
         title: 'Gists',
         height: 200,
@@ -135,33 +147,38 @@ var table = Ext.create('Ext.grid.Panel', {
             }            
         },
         
-        tbar: ['Поиск по названию:',{
+        tbar: ['Введите слово или слова через пробел и нажмите ""Enter >>', 'Поиск по названию:',{
                  xtype: 'textfield',
                  name: 'searchField',
                  hideLabel: true,
                  width: 200,
                  listeners: {
-                     change: {
-                         fn: function( textField, newValue, oldValue, eOpts){
-                             if(newValue === ''){
-                                 store.clearFilter();
-                                 console.log("clear");
-                             } else {
-                                //store.filter("name", newValue);
-                                store.filter([{
-                                        filterFn: function(item) {
-                                            //console.log("in filter");
-                                            //console.log(item.get("name"));
-                                            return isNameContains(item.get("name"), newValue); 
-                                        }
-                                }]);
-                                //console.log("set");
-                             }
-                             //console.log(newValue);
-                         },
-                         scope: this,
-                         buffer: 100
+                     keydown: function(object, e, eOpts ){
+                         if (e.keyCode == 13){
+                            var value = object.getValue();
+                            setFilter(value, "name");
+                         }
                      }
+                 }
+            },'Поиск по описанию:',{
+                 xtype: 'textfield',
+                 name: 'searchField',
+                enableKeyEvents: true,
+                 hideLabel: true,
+                 width: 200,
+                 listeners: {
+                     keydown: function(object, e, eOpts ){
+                         if (e.keyCode == 13){
+                            var value = object.getValue();
+                            setFilter(value, "description");
+                         }
+                     }
+                 }
+            }, {
+                 xtype: 'button',
+                 text: 'reload',
+                 handler: function(){
+                     store.reload();
                  }
             }],        
 });
