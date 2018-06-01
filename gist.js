@@ -50,6 +50,35 @@ var store = Ext.create('Ext.data.Store', {
         }
 });
 
+function isNameContains(sourceString, filterText) {
+    var booleanContains = false;
+    if (filterText != '') {
+        if (filterText.indexOf(' ') !== -1) {
+            //получаем массив слов
+            var arrayFindWords = filterText.trim().split(' ');
+
+            booleanContains = true;
+            for (findWord of arrayFindWords) {
+                if (findWord != '') {
+                    if (sourceString.indexOf(findWord) == -1) {
+                        booleanContains = false;
+                        break;
+                    }
+                }
+            }
+        } else {
+            booleanContains =
+                sourceString
+                    .toLowerCase()
+                    .indexOf(filterText.toLowerCase()) !== -1;
+        }
+    } else {
+        booleanContains = true;
+    }
+
+    return booleanContains;
+}
+
 var table = Ext.create('Ext.grid.Panel', {
         title: 'Gists',
         height: 200,
@@ -104,8 +133,38 @@ var table = Ext.create('Ext.grid.Panel', {
                 });
                 
             }            
-        }
-    });
+        },
+        
+        tbar: ['Поиск по названию:',{
+                 xtype: 'textfield',
+                 name: 'searchField',
+                 hideLabel: true,
+                 width: 200,
+                 listeners: {
+                     change: {
+                         fn: function( textField, newValue, oldValue, eOpts){
+                             if(newValue === ''){
+                                 store.clearFilter();
+                                 console.log("clear");
+                             } else {
+                                //store.filter("name", newValue);
+                                store.filter([{
+                                        filterFn: function(item) {
+                                            //console.log("in filter");
+                                            //console.log(item.get("name"));
+                                            return isNameContains(item.get("name"), newValue); 
+                                        }
+                                }]);
+                                //console.log("set");
+                             }
+                             //console.log(newValue);
+                         },
+                         scope: this,
+                         buffer: 100
+                     }
+                 }
+            }],        
+});
 
 Ext.Ajax.useDefaultXhrHeader = false;
 
