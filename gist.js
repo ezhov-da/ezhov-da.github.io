@@ -147,7 +147,7 @@ var table = Ext.create('Ext.grid.Panel', {
             }            
         },
         
-        tbar: ['Введите слово или слова через пробел и нажмите ""Enter >>', 'Поиск по названию:',{
+        tbar: ['Введите слово или слова через пробел и нажмите "Enter" >>', 'Поиск по названию:',{
                  xtype: 'textfield',
                  name: 'searchField',
                  enableKeyEvents: true,
