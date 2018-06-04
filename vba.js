@@ -149,6 +149,7 @@ var panelFromVbaToSql = Ext.create('Ext.form.Panel', {
         text: 'Изьять',
         handler: function () {
             panelFromVbaToSql.getForm().submit({
+                waitMsg: 'Обработка данных...',
                 url: 'https://prog-tools.ru:8445/vbasql-service/vbasql/toVba',
                 method: 'POST',
                 success: function (form, action) {
