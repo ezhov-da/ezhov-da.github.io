@@ -1,23 +1,23 @@
-function createResultTab(nameTab, text){
+function createResultTab(nameTab, text) {
     var textArea = Ext.create('Ext.form.field.TextArea', {
-                value: text,
-                anchor: '100%',
-                grow: true,
-                region: 'center',
-                
+        value: text,
+        anchor: '100%',
+        grow: true,
+        region: 'center',
+
     });
 
     var buttonSelectAll = Ext.create('Ext.panel.Panel', {
         region: 'south',
         layout: {
-                type: 'vbox',
-                align: 'center'
+            type: 'vbox',
+            align: 'center'
         },
         items: [
             {
                 text: 'Выбрать весь текст',
-                xtype: 'button',  
-                handler: function(){
+                xtype: 'button',
+                handler: function () {
                     textArea.selectText();
                 }
             }
@@ -29,14 +29,20 @@ function createResultTab(nameTab, text){
         xtype: 'panel',
         layout: 'border',
         closable: true,
-        items:[textArea, buttonSelectAll]
+        items: [textArea, buttonSelectAll]
 
     };
 }
 
-function addNew(objectTab){
+function addNew(objectTab) {
     var objectTabActive = tabPanel.add(objectTab);
     tabPanel.setActiveTab(objectTabActive);
+}
+
+function processResponse(tabText, form, action) {
+    //console.log(form);
+    //console.log(action);
+    addNew(createResultTab(tabText, action.result.text));
 }
 
 var tabPanel = Ext.create('Ext.tab.Panel', {
@@ -90,6 +96,7 @@ var panelFromSqlToVba = Ext.create('Ext.form.Panel', {
             xtype: 'textfield',
             fieldLabel: 'Переменная запроса',
             name: 'variable',
+            value: 'query',
             labelAlign: 'left',
         },
         {
@@ -107,20 +114,15 @@ var panelFromSqlToVba = Ext.create('Ext.form.Panel', {
         text: 'Преобразовать',
         handler: function () {
             panelFromSqlToVba.getForm().submit({
-                url: 'http://localhost:8080/vbasql-service/vbasql/toSql',
+                waitMsg: 'Обработка данных...',
+                url: 'https://prog-tools.ru:8445/vbasql-service/vbasql/toSql',
                 method: 'POST',
                 success: function (form, action) {
-                    //Ext.MessageBox.alert('Авторизация пройдена. ', "GOOD");
-                    addNew(createResultTab('SQL -> VBA: ' + new Date(), 'Типа результат'));
-                    console.log(form);
-                    console.log(action);
+                    processResponse('SQL -> VBA: ' + new Date(), form, action);
                 },
                 failure: function (form, action) {
-                    //Ext.MessageBox.alert('Ошибка авторизации. ', action.failureType);
-                    addNew(createResultTab('SQL -> VBA: ' + new Date(), 'Типа результат'));
-                    console.log(form);
-                    console.log(action);
-                }
+                    processResponse('VBA -> SQL: ' + new Date(), form, action);
+                },
             });
         }
     }]
@@ -147,19 +149,13 @@ var panelFromVbaToSql = Ext.create('Ext.form.Panel', {
         text: 'Изьять',
         handler: function () {
             panelFromVbaToSql.getForm().submit({
-                url: 'http://localhost:8080/vbasql-service/vbasql/toVba',
+                url: 'https://prog-tools.ru:8445/vbasql-service/vbasql/toVba',
                 method: 'POST',
                 success: function (form, action) {
-                    //Ext.MessageBox.alert('Авторизация пройдена. ', "GOOD");
-                    addNew(createResultTab('VBA -> SQL: ' + new Date(), 'Типа результат'));
-                    console.log(form);
-                    console.log(action);
+                    processResponse('SQL -> VBA: ' + new Date(), form, action);
                 },
                 failure: function (form, action) {
-                    //Ext.MessageBox.alert('Ошибка авторизации. ', action.failureType);
-                    addNew(createResultTab('VBA -> SQL: ' + new Date(), 'Типа результат'));
-                    console.log(form);
-                    console.log(action);
+                    processResponse('VBA -> SQL: ' + new Date(), form, action);
                 }
             });
         }
