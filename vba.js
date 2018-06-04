@@ -1,42 +1,56 @@
-var panelSingleResult = {
-    title: 'Здесь должно быть динамическое название',
-    xtype: 'textareafield',
-    closable: true,
-    grow: true,
-    anchor: '100%'
-};
+function createResultTab(nameTab, text){
+    return {
+        title: nameTab,
+        xtype: 'textareafield',
+        closable: true,
+        grow: true,
+        anchor: '100%',
+        value: text
+    };
+}
 
+function addNew(objectTab){
+    tabPanel.add(objectTab);
+}
 
 var tabPanel = Ext.create('Ext.tab.Panel', {
     title: 'Результаты',
-    items: [panelSingleResult, panelSingleResult]
+    region: 'south',
+    split: true,
+    height: '40%',
+    items: []
 });
 
 var panelFromSqlToVba = Ext.create('Ext.form.Panel', {
     id: "panelToVba",
     title: 'Сгенерировать вставку кода SQL в VBA',
+    region: 'center',
+    layout: {
+        type: 'vbox',       // Arrange child items vertically
+        align: 'stretch',    // Each takes up full width
+        padding: 5
+    },
     items: [
         {
             xtype: 'fieldcontainer',
             fieldLabel: 'Настройки',
             defaultType: 'checkboxfield',
-
             items: [
                 {
                     boxLabel: 'Добавить шапку подключения ADODB',
                     name: 'addADODB',
                     inputValue: 'true',
-                    id: 'addADODB'
+                    id: 'addADODB',
                 }, {
                     boxLabel: 'Использовать строку подключения',
                     name: 'useConnectionString',
                     inputValue: 'true',
-                    id: 'useConnectionString'
+                    id: 'useConnectionString',
                 }, {
                     boxLabel: 'Добавить строку выполнение запроса ADODB',
                     name: 'addExecuteADODB',
                     inputValue: 'true',
-                    id: 'addExecuteADODB'
+                    id: 'addExecuteADODB',
                 }
             ]
         },
@@ -44,20 +58,22 @@ var panelFromSqlToVba = Ext.create('Ext.form.Panel', {
             xtype: 'textfield',
             fieldLabel: 'Строка подключения',
             name: 'connectionString',
-            labelAlign: 'left'
+            labelAlign: 'left',
         },
         {
             xtype: 'textfield',
             fieldLabel: 'Переменная запроса',
             name: 'variable',
-            labelAlign: 'left'
+            labelAlign: 'left',
         },
         {
             xtype: 'textareafield',
             grow: true,
             name: 'query',
             fieldLabel: 'Внесите текст, который необходимо преобразовать:',
-            anchor: '100%'
+            align: 'stretch',
+            flex: 10,
+            labelAlign: 'top'
         }
     ],
     // кнопки формы
@@ -68,10 +84,16 @@ var panelFromSqlToVba = Ext.create('Ext.form.Panel', {
                 url: 'http://localhost:8080/vbasql-service/vbasql/toSql',
                 method: 'POST',
                 success: function (form, action) {
-                    Ext.MessageBox.alert('Авторизация пройдена. ', "GOOD");
+                    //Ext.MessageBox.alert('Авторизация пройдена. ', "GOOD");
+                    addNew(createResultTab('SQL -> VBA: ' + new Date(), 'Типа результат'));
+                    console.log(form);
+                    console.log(action);
                 },
                 failure: function (form, action) {
-                    Ext.MessageBox.alert('Ошибка авторизации. ', action.failureType);
+                    //Ext.MessageBox.alert('Ошибка авторизации. ', action.failureType);
+                    addNew(createResultTab('SQL -> VBA: ' + new Date(), 'Типа результат'));
+                    console.log(form);
+                    console.log(action);
                 }
             });
         }
@@ -80,15 +102,18 @@ var panelFromSqlToVba = Ext.create('Ext.form.Panel', {
 
 var panelFromVbaToSql = Ext.create('Ext.form.Panel', {
     id: "panelToSql",
-    title: 'Извлечь SQL из VB',
+    title: 'Извлечь SQL из VBA',
+    region: 'east',
     split: true,
+    layout: 'fit',
+    width: '50%',
     items: [
         {
             xtype: 'textareafield',
             grow: true,
             name: 'query',
             fieldLabel: 'Внесите текст, который необходимо изъять:',
-            anchor: '100%'
+            labelAlign: 'top'
         }
     ],
     // кнопки формы
@@ -99,10 +124,16 @@ var panelFromVbaToSql = Ext.create('Ext.form.Panel', {
                 url: 'http://localhost:8080/vbasql-service/vbasql/toVba',
                 method: 'POST',
                 success: function (form, action) {
-                    Ext.MessageBox.alert('Авторизация пройдена. ', "GOOD");
+                    //Ext.MessageBox.alert('Авторизация пройдена. ', "GOOD");
+                    addNew(createResultTab('VBA -> SQL: ' + new Date(), 'Типа результат'));
+                    console.log(form);
+                    console.log(action);
                 },
                 failure: function (form, action) {
-                    Ext.MessageBox.alert('Ошибка авторизации. ', action.failureType);
+                    //Ext.MessageBox.alert('Ошибка авторизации. ', action.failureType);
+                    addNew(createResultTab('VBA -> SQL: ' + new Date(), 'Типа результат'));
+                    console.log(form);
+                    console.log(action);
                 }
             });
         }
@@ -110,7 +141,8 @@ var panelFromVbaToSql = Ext.create('Ext.form.Panel', {
 });
 
 var panelWithToAndFrom = Ext.create('Ext.panel.Panel', {
-    layout: 'hbox',
+    region: 'center',
+    layout: 'border',
     items: [
         panelFromSqlToVba,
         panelFromVbaToSql
@@ -118,6 +150,7 @@ var panelWithToAndFrom = Ext.create('Ext.panel.Panel', {
 });
 
 var basicPanel = Ext.create('Ext.panel.Panel', {
+    layout: 'border',
     items: [
         panelWithToAndFrom,
         tabPanel
