@@ -1,16 +1,42 @@
 function createResultTab(nameTab, text){
+    var textArea = Ext.create('Ext.form.field.TextArea', {
+                value: text,
+                anchor: '100%',
+                grow: true,
+                region: 'center',
+                
+    });
+
+    var buttonSelectAll = Ext.create('Ext.panel.Panel', {
+        region: 'south',
+        layout: {
+                type: 'vbox',
+                align: 'center'
+        },
+        items: [
+            {
+                text: 'Выбрать весь текст',
+                xtype: 'button',  
+                handler: function(){
+                    textArea.selectText();
+                }
+            }
+        ]
+    });
+
     return {
         title: nameTab,
-        xtype: 'textareafield',
+        xtype: 'panel',
+        layout: 'border',
         closable: true,
-        grow: true,
-        anchor: '100%',
-        value: text
+        items:[textArea, buttonSelectAll]
+
     };
 }
 
 function addNew(objectTab){
-    tabPanel.add(objectTab);
+    var objectTabActive = tabPanel.add(objectTab);
+    tabPanel.setActiveTab(objectTabActive);
 }
 
 var tabPanel = Ext.create('Ext.tab.Panel', {
