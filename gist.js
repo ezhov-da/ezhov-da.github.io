@@ -83,6 +83,7 @@ function setFilter(searchText, propertyNameForSearch) {
     if (searchText === '') {
         store.clearFilter();
     } else {
+        store.clearFilter();
         store.filter([{
             filterFn: function (item) {
                 return isNameContains(item.get(propertyNameForSearch), searchText);
@@ -184,21 +185,11 @@ var table = Ext.create('Ext.grid.Panel', {
     }],
 });
 
-Ext.Ajax.useDefaultXhrHeader = false;
-
-Ext.application({
-    name: 'Gists',
-    launch: function () {
-        Ext.create('Ext.container.Viewport', {
-            layout: 'fit',
-            items: [{
-                xtype: 'panel',
-                layout: 'border',
-                items: [
-                    table,
-                    panelTextRaw
-                ]
-            }]
-        });
-    }
+var basicPanelGist = Ext.create('Ext.panel.Panel', {
+    title: 'Мои GIST',
+    layout: 'border',
+    items: [
+        table,
+        panelTextRaw
+    ]
 });

@@ -55,7 +55,7 @@ var tabPanel = Ext.create('Ext.tab.Panel', {
 
 var panelFromSqlToVba = Ext.create('Ext.form.Panel', {
     id: "panelToVba",
-    title: 'Сгенерировать вставку кода SQL в VBA',
+    title: 'Сгенерировать вставку кода SQL -> VBA -> SQL',
     region: 'center',
     layout: {
         type: 'vbox',       // Arrange child items vertically
@@ -172,22 +172,11 @@ var panelWithToAndFrom = Ext.create('Ext.panel.Panel', {
     ]
 });
 
-var basicPanel = Ext.create('Ext.panel.Panel', {
+var basicPanelVba = Ext.create('Ext.panel.Panel', {
+    title: 'Сгенерировать вставку кода SQL -> VBA -> SQL',
     layout: 'border',
     items: [
         panelWithToAndFrom,
         tabPanel
     ]
-});
-
-Ext.Ajax.useDefaultXhrHeader = false;
-
-Ext.application({
-    name: 'Gists',
-    launch: function () {
-        Ext.create('Ext.container.Viewport', {
-            layout: 'fit',
-            items: [basicPanel]
-        });
-    }
 });
