@@ -42,7 +42,7 @@ var store = Ext.create('Ext.data.Store', {
     proxy: {
         type: 'ajax',
         //url: 'j.json',
-        url: 'https://prog-tools.ru:64646/git',
+        url: 'https://prog-tools.ru:64646/knowledges',
         reader: {
             type: 'json',
             root: 'knowledges'
