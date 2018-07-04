@@ -2,7 +2,7 @@ var panelTextRaw = Ext.create('Ext.panel.Panel', {
     title: 'Подробный просмотр',
     layout: 'fit',
     region: 'east',
-    width: '40%',
+    width: '30%',
     collapsible: true,
     split: true,
     items: [{
