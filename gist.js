@@ -15,8 +15,6 @@ var panelTextRaw = Ext.create('Ext.panel.Panel', {
             'font-family': 'monospace',
             'font-style': 'normal',
             'font-variant': 'normal',
-            'font-weight': '500',
-            'line-height': '26.4px'
         }
     }]
 });
