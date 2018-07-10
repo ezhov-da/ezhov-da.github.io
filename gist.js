@@ -10,7 +10,14 @@ var panelTextRaw = Ext.create('Ext.panel.Panel', {
         grow: true,
         id: 'idRawTextArea',
         name: 'message',
-        anchor: '100%'
+        anchor: '100%',
+        fieldStyle : {
+            'font-family': 'monospace',
+            'font-style': 'normal',
+            'font-variant': 'normal',
+            'font-weight': '500',
+            'line-height': '26.4px'
+        }
     }]
 });
 
