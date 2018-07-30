@@ -1,27 +1,35 @@
+//экранирование сырых данных
+var entityMap = {
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#39;',
+    '/': '&#x2F;',
+    '`': '&#x60;',
+    '=': '&#x3D;'
+};
+
+function escapeHtml(string) {
+    return String(string).replace(/[&<>"'`=\/]/g, function (s) {
+        return entityMap[s];
+    });
+}
+
 var panelTextRaw = Ext.create('Ext.panel.Panel', {
     title: 'Подробный просмотр',
     layout: 'fit',
     region: 'east',
-    width: '30%',
+    width: '40%',
     collapsible: true,
     split: true,
-    items: [{
-        xtype: 'textareafield',
-        grow: true,
-        id: 'idRawTextArea',
-        name: 'message',
-        anchor: '100%',
-        fieldStyle : {
-            'font-family': 'monospace',
-            'font-style': 'normal',
-            'font-variant': 'normal',
-        }
-    }]
+    id: 'detailViewer',
+    autoScroll: true,
+    items: []
 });
 
 Ext.define('Gists', {
     extend: 'Ext.data.Model',
-
     fields: [{
         name: 'name',
         type: 'string'
@@ -61,7 +69,6 @@ function isNameContains(sourceString, filterText) {
         if (filterText.indexOf(' ') !== -1) {
             //получаем массив слов
             var arrayFindWords = filterText.trim().split(' ');
-
             booleanContains = true;
             for (findWord of arrayFindWords) {
                 if (findWord != '') {
@@ -134,15 +141,27 @@ var table = Ext.create('Ext.grid.Panel', {
         select: function (grid, record, index, eOpts) {
             //console.log(index);
             //console.log(record);
-
-            var rawUrl = record.getData().rawUrl;
-
+            console.log(record.getData());
+            var data = record.getData();
+            var rawUrl = data.rawUrl;
+            var name = data.name;
             Ext.Ajax.request({
                 url: rawUrl,
                 timeout: 60000,
                 success: function (response) {
-                    Ext.getCmp('idRawTextArea').setValue(response.responseText);
-                    //console.log(response.responseText);
+                    var cmp = Ext.getCmp('detailViewer');
+                    var responseText = response.responseText;
+                    var codeClass = 'nohighlight';
+                    var index = name.lastIndexOf(".");
+                    if (index > -1) {
+                        codeClass = name.substring(index);
+                    }
+                    cmp.update('<pre><code class="' + codeClass + '">' + escapeHtml(responseText) + '</code></pre>');
+                    $(document).ready(function () {
+                        $('pre code').each(function (i, block) {
+                            hljs.highlightBlock(block);
+                        });
+                    });
                 },
                 failure: function (response) {
                     alert("Упс, что то пошло не так :)");

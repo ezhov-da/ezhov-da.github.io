@@ -1,7 +1,7 @@
 Ext.Ajax.useDefaultXhrHeader = false;
 
 Ext.application({
-    name: 'Gists',
+    name: 'Tools',
     launch: function () {
         Ext.create('Ext.container.Viewport', {
             layout: 'fit',
