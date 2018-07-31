@@ -151,7 +151,7 @@ var table = Ext.create('Ext.grid.Panel', {
                 success: function (response) {
                     var cmp = Ext.getCmp('detailViewer');
                     var responseText = response.responseText;
-                    var codeClass = 'nohighlight';
+                    var codeClass = 'txt';
                     var index = name.lastIndexOf(".");
                     if (index > -1) {
                         codeClass = name.substring(index);
