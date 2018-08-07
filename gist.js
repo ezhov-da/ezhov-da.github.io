@@ -171,42 +171,6 @@ var table = Ext.create('Ext.grid.Panel', {
 
         }
     },
-
-    tbar: ['Введите слово или слова через пробел и нажмите "Enter" >>', 'Поиск по названию:', {
-        xtype: 'textfield',
-        name: 'searchField',
-        enableKeyEvents: true,
-        hideLabel: true,
-        width: 200,
-        listeners: {
-            keydown: function (object, e, eOpts) {
-                if (e.keyCode == 13) {
-                    var value = object.getValue();
-                    setFilter(value, "name");
-                }
-            }
-        }
-    }, 'Поиск по описанию:', {
-        xtype: 'textfield',
-        name: 'searchField',
-        enableKeyEvents: true,
-        hideLabel: true,
-        width: 200,
-        listeners: {
-            keydown: function (object, e, eOpts) {
-                if (e.keyCode == 13) {
-                    var value = object.getValue();
-                    setFilter(value, "description");
-                }
-            }
-        }
-    }, {
-        xtype: 'button',
-        text: 'reload',
-        handler: function () {
-            store.reload();
-        }
-    }],
 });
 
 var basicPanelGist = Ext.create('Ext.panel.Panel', {
@@ -215,5 +179,44 @@ var basicPanelGist = Ext.create('Ext.panel.Panel', {
     items: [
         table,
         panelTextRaw
-    ]
+    ],
+    tbar: [
+        'Введите слово или слова через пробел и нажмите "Enter" >>', 
+        'Поиск по названию:', 
+        {
+            xtype: 'textfield',
+            name: 'searchField',
+            enableKeyEvents: true,
+            hideLabel: true,
+            width: 200,
+            listeners: {
+                keydown: function (object, e, eOpts) {
+                    if (e.keyCode == 13) {
+                        var value = object.getValue();
+                        setFilter(value, "name");
+                    }
+                }
+            }
+        }, 'Поиск по описанию:', {
+            xtype: 'textfield',
+            name: 'searchField',
+            enableKeyEvents: true,
+            hideLabel: true,
+            width: 200,
+            listeners: {
+                keydown: function (object, e, eOpts) {
+                    if (e.keyCode == 13) {
+                        var value = object.getValue();
+                        setFilter(value, "description");
+                    }
+                }
+            }
+        }, {
+            xtype: 'button',
+            text: 'reload',
+            handler: function () {
+                store.reload();
+            }
+        }
+    ],
 });
