@@ -10,7 +10,8 @@ Ext.application({
                     renderTo: document.body,
                     items: [
                         basicPanelGist,
-                        basicPanelVba
+                        basicPanelVba,
+                        basicPanelUrl
                     ]
                 })
             ]
