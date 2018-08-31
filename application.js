@@ -11,7 +11,8 @@ Ext.application({
                     items: [
                         basicPanelGist,
                         basicPanelVba,
-                        basicPanelUrl
+                        basicPanelUrl,
+                        basicLibraryPanel
                     ]
                 })
             ]
