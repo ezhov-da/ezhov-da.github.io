@@ -1,11 +1,11 @@
-var urlListBooks = 'https://prog-tools.ru:8445/library/rest/books';
-// var urlListBooks = 'http://localhost:8080/library/rest/books';
-var urlDownloadLinkBook = 'https://prog-tools.ru:8445/library/rest/books/book/link';
-// var urlDownloadLinkBook = 'http://localhost:8080/library/rest/books/book/link';
+// var urlListBooks = 'https://prog-tools.ru:8445/library/rest/books';
+var urlListBooks = 'http://localhost:8080/library/rest/books';
+// var urlDownloadLinkBook = 'https://prog-tools.ru:8445/library/rest/books/book/link';
+var urlDownloadLinkBook = 'http://localhost:8080/library/rest/books/book/link';
 
 Ext.create('Ext.data.Store', {
     storeId: 'bookStore',
-    fields: ['name', 'id'],
+    fields: ['name', 'id', 'size'],
     autoLoad: true,
     proxy: {
         type: 'ajax',
@@ -23,6 +23,7 @@ var bookGrid = Ext.create('Ext.grid.Panel', {
     region: 'center',
     columns: [
         {text: 'Название', dataIndex: 'name', flex: 1},
+        {text: 'Размер', dataIndex: 'size'},
         {
             xtype: 'actioncolumn',
             width: 30,
@@ -30,14 +31,11 @@ var bookGrid = Ext.create('Ext.grid.Panel', {
             menuDisabled: true,
             items: [{
                 icon: 'download-16.png',
-                tooltip: 'Скачать книгу',
+                tooltip: 'Получить ссылку',
                 scope: this,
                 handler: function (grid, rowIndex) {
-                    console.log("click");
                     var record = bookGrid.getStore().getAt(rowIndex);
                     var data = record.data;
-                    console.log(record);
-                    console.log(data);
                     var window = Ext.create('Ext.window.Window', {
                         title: 'Получить ссылку на скачивание книги: ' + data.name,
                         height: 200,
@@ -118,8 +116,45 @@ var bookGrid = Ext.create('Ext.grid.Panel', {
             }
             ]
         }
-    ]
+    ],
+    tbar: [
+        {
+            xtype: 'textfield',
+            width: 500,
+            enableKeyEvents: true,
+            emptyText: 'Введите слово для поиска и нажмите "Enter"',
+            listeners: {
+                keydown: function (object, e, eOpts) {
+                    if (e.keyCode === 13) {
+                        var value = object.getValue();
+                        setFilterCommon(bookGrid.getStore(), value, "name");
+                    }
+                }
+            }
+        },
+        {
+            xtype: 'button',
+            text: 'Обновить',
+            handler: function () {
+                bookGrid.getStore().reload();
+            }
+        }
+    ],
 });
+
+function setFilterCommon(store, searchText, propertyNameForSearch) {
+    if (searchText === '') {
+        store.clearFilter();
+    } else {
+        store.clearFilter();
+        store.filter([{
+            filterFn: function (item) {
+                return isNameContains(item.get(propertyNameForSearch), searchText);
+            }
+        }]);
+    }
+}
+
 
 var basicLibraryPanel = Ext.create('Ext.panel.Panel', {
     title: 'Библиотека',
