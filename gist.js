@@ -141,7 +141,6 @@ var table = Ext.create('Ext.grid.Panel', {
         select: function (grid, record, index, eOpts) {
             //console.log(index);
             //console.log(record);
-            console.log(record.getData());
             var data = record.getData();
             var rawUrl = data.rawUrl;
             var name = data.name;

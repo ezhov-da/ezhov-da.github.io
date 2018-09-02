@@ -58,19 +58,12 @@ var basicPanelUrl = Ext.create('Ext.panel.Panel', {
 								var params = Ext.getCmp('params').getValue();
 								var values = Ext.getCmp('values').getValue();
 								var resultCmp = Ext.getCmp('result');
-								console.log(url + " - " + url);
-								console.log(params + ":\n" + params);
-								console.log(params + ":\n" + values);
 								var splitParams = params.split('\n');
 								var splitValues = values.split('\n');
 								var paramsObject = {};
 								for(var i = 0; i < splitParams.length; i++){
-									console.log("iterate: " + splitParams[i]);
-									console.log("iterate: " + splitValues[i]);
 									paramsObject[splitParams[i]] = splitValues[i];
 								}
-								console.log("Параметры:");
-								console.log(paramsObject);
 								var paramsAfterEncoding = Ext.Object.toQueryString(paramsObject);
 								resultCmp.setValue(url + paramsAfterEncoding);
 							}
