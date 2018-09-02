@@ -70,7 +70,7 @@ function isNameContains(sourceString, filterText) {
             //получаем массив слов
             var arrayFindWords = filterText.trim().split(' ');
             booleanContains = true;
-            for (findWord of arrayFindWords) {
+            for (findWord in arrayFindWords) {
                 if (findWord != '') {
                     if (sourceString.indexOf(findWord) == -1) {
                         booleanContains = false;

@@ -1,4 +1,6 @@
 Ext.Ajax.useDefaultXhrHeader = false;
+Ext.Ajax.cors = false;
+Ext.Ajax.withCredentials = false;
 
 Ext.application({
     name: 'Tools',
