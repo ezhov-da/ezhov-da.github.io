@@ -1,7 +1,7 @@
-// var urlListBooks = 'https://prog-tools.ru:8445/library/rest/books';
-var urlListBooks = 'http://localhost:8080/library/rest/books';
-// var urlDownloadLinkBook = 'https://prog-tools.ru:8445/library/rest/books/book/link';
-var urlDownloadLinkBook = 'http://localhost:8080/library/rest/books/book/link';
+var urlListBooks = 'https://prog-tools.ru:8445/library/rest/books';
+// var urlListBooks = 'http://localhost:8080/library/rest/books';
+var urlDownloadLinkBook = 'https://prog-tools.ru:8445/library/rest/books/book/link';
+// var urlDownloadLinkBook = 'http://localhost:8080/library/rest/books/book/link';
 
 Ext.create('Ext.data.Store', {
     storeId: 'bookStore',
