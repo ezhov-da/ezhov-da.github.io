@@ -54,8 +54,7 @@ var store = Ext.create('Ext.data.Store', {
     autoLoad: true,
     proxy: {
         type: 'ajax',
-        //url: 'j.json',
-        url: 'https://prog-tools.ru:64646/knowledges',
+        url: getUrl('https://prog-tools.ru:64646/knowledges', 'https://prog-tools.ru:64646/knowledges'),
         reader: {
             type: 'json',
             root: 'knowledges'
@@ -180,8 +179,8 @@ var basicPanelGist = Ext.create('Ext.panel.Panel', {
         panelTextRaw
     ],
     tbar: [
-        'Введите слово или слова через пробел и нажмите "Enter" >>', 
-        'Поиск по названию:', 
+        'Введите слово или слова через пробел и нажмите "Enter" >>',
+        'Поиск по названию:',
         {
             xtype: 'textfield',
             name: 'searchField',
@@ -190,7 +189,7 @@ var basicPanelGist = Ext.create('Ext.panel.Panel', {
             width: 200,
             listeners: {
                 keydown: function (object, e, eOpts) {
-                    if (e.keyCode == 13) {
+                    if (e.keyCode === 13) {
                         var value = object.getValue();
                         setFilter(value, "name");
                     }
@@ -204,7 +203,7 @@ var basicPanelGist = Ext.create('Ext.panel.Panel', {
             width: 200,
             listeners: {
                 keydown: function (object, e, eOpts) {
-                    if (e.keyCode == 13) {
+                    if (e.keyCode === 13) {
                         var value = object.getValue();
                         setFilter(value, "description");
                     }
