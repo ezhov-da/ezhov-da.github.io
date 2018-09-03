@@ -78,6 +78,33 @@ var bookGrid = Ext.create('Ext.grid.Panel', {
 
                                 },
                                 {
+                                    xtype: 'button',
+                                    text: 'Получить ссылку',
+                                    handler: function () {
+                                        var form = this.up('form').getForm();
+                                        if (form.isValid()) {
+                                            var cmpLabel = Ext.getCmp('linkDownload');
+                                            var cmpQr = Ext.getCmp('qrDownload');
+                                            form.submit({
+                                                success: function (form, action) {
+                                                    var link = action.result.url;
+                                                    var qr = action.result.qr;
+                                                    cmpLabel.setText('<a target="_blank" href=\"' + link + '\">Скачать</a>', false);
+                                                    cmpQr.setText('<a target="_blank" href=\"' + qr + '\">QR Code</a>', false);
+                                                    cmpLabel.setVisible(true);
+                                                    cmpQr.setVisible(true);
+                                                },
+                                                failure: function (form, action) {
+                                                    cmpLabel.setText(action.result.msg);
+                                                    cmpLabel.setVisible(true);
+                                                    cmpQr.setVisible(false);
+                                                }
+                                            });
+                                        }
+                                    }
+
+                                },
+                                {
                                     xtype: 'label',
                                     text: '',
                                     padding: 5,
@@ -85,27 +112,11 @@ var bookGrid = Ext.create('Ext.grid.Panel', {
                                     hidden: true,
                                 },
                                 {
-                                    xtype: 'button',
-                                    text: 'Получить ссылку',
-                                    handler: function () {
-                                        var form = this.up('form').getForm();
-                                        if (form.isValid()) {
-                                            var cmplabel = Ext.getCmp('linkDownload');
-                                            form.submit({
-                                                success: function (form, action) {
-                                                    var link = action.result.url;
-                                                    cmplabel.setVisible(true);
-                                                    cmplabel.setText('<a target="_blank" href=\"' + link + '\">Скачать</a>', false);
-                                                },
-                                                failure: function (form, action) {
-                                                    cmplabel.setVisible(true);
-                                                    cmplabel.setText(action.result.msg);
-                                                }
-                                            });
-                                        }
-                                    }
-
-                                }
+                                    xtype: 'label',
+                                    padding: 5,
+                                    id: 'qrDownload',
+                                    hidden: true,
+                                },
                             ]
 
                         }
