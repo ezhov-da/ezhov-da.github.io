@@ -138,8 +138,6 @@ var table = Ext.create('Ext.grid.Panel', {
 
     listeners: {
         select: function (grid, record, index, eOpts) {
-            //console.log(index);
-            //console.log(record);
             var data = record.getData();
             var rawUrl = data.rawUrl;
             var name = data.name;
@@ -166,7 +164,6 @@ var table = Ext.create('Ext.grid.Panel', {
                     //console.log(response);
                 }
             });
-
         }
     },
 });
