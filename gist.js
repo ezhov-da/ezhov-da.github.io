@@ -22,6 +22,7 @@ var panelTextRaw = Ext.create('Ext.panel.Panel', {
     region: 'east',
     width: '40%',
     collapsible: true,
+    collapsed: true,
     split: true,
     id: 'detailViewer',
     autoScroll: true,
@@ -158,6 +159,9 @@ var table = Ext.create('Ext.grid.Panel', {
                             hljs.highlightBlock(block);
                         });
                     });
+                    if (panelTextRaw.collapsed) {
+                        panelTextRaw.expand();
+                    }
                 },
                 failure: function (response) {
                     alert("Упс, что то пошло не так :)");
@@ -177,12 +181,12 @@ var basicPanelGist = Ext.create('Ext.panel.Panel', {
     ],
     tbar: [
         'Введите слово или слова через пробел и нажмите "Enter" >>',
-        'Поиск по названию:',
         {
             xtype: 'textfield',
             name: 'searchField',
             enableKeyEvents: true,
             hideLabel: true,
+            emptyText: 'Поиск по названию',
             width: 200,
             listeners: {
                 keydown: function (object, e, eOpts) {
@@ -192,10 +196,12 @@ var basicPanelGist = Ext.create('Ext.panel.Panel', {
                     }
                 }
             }
-        }, 'Поиск по описанию:', {
+        },
+        {
             xtype: 'textfield',
             name: 'searchField',
             enableKeyEvents: true,
+            emptyText: 'Поиск по описанию',
             hideLabel: true,
             width: 200,
             listeners: {
