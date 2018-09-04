@@ -3,11 +3,11 @@ var urlDownloadLinkBook = getUrl('http://localhost:8080/', 'https://prog-tools.r
 
 Ext.create('Ext.data.Store', {
     storeId: 'bookStore',
-    fields: ['name', 'id', 'size'],
+    fields: ['name', 'id', 'size', 'group'],
     autoLoad: true,
+    groupField: 'group',
     proxy: {
         type: 'ajax',
-        //url: 'j.json',
         url: urlListBooks,
         reader: {
             type: 'json',
@@ -16,9 +16,15 @@ Ext.create('Ext.data.Store', {
     }
 });
 
+var groupingFeature = Ext.create('Ext.grid.feature.Grouping', {
+    groupHeaderTpl: 'Раздел  {name} ({rows.length})', //print the number of items in the group
+    startCollapsed: true // start all groups collapsed
+});
+
 var bookGrid = Ext.create('Ext.grid.Panel', {
     store: Ext.data.StoreManager.lookup('bookStore'),
     region: 'center',
+    features: [groupingFeature],
     columns: [
         {text: 'Название', dataIndex: 'name', flex: 1},
         {text: 'Размер', dataIndex: 'size'},
@@ -129,9 +135,9 @@ var bookGrid = Ext.create('Ext.grid.Panel', {
     tbar: [
         {
             xtype: 'textfield',
+            emptyText: 'Введите слово для поиска и нажмите "Enter"',
             width: 500,
             enableKeyEvents: true,
-            emptyText: 'Введите слово для поиска и нажмите "Enter"',
             listeners: {
                 keydown: function (object, e, eOpts) {
                     if (e.keyCode === 13) {
