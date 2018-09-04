@@ -64,14 +64,14 @@ var store = Ext.create('Ext.data.Store', {
 
 function isNameContains(sourceString, filterText) {
     var booleanContains = false;
-    if (filterText != '') {
+    if (filterText !== '') {
         if (filterText.indexOf(' ') !== -1) {
             //получаем массив слов
             var arrayFindWords = filterText.trim().split(' ');
             booleanContains = true;
             for (findWord in arrayFindWords) {
-                if (findWord != '') {
-                    if (sourceString.indexOf(findWord) == -1) {
+                if (findWord !== '') {
+                    if (sourceString.indexOf(arrayFindWords[findWord]) === -1) {
                         booleanContains = false;
                         break;
                     }
