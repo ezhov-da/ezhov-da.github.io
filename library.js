@@ -17,7 +17,7 @@ Ext.create('Ext.data.Store', {
 });
 
 var groupingFeature = Ext.create('Ext.grid.feature.Grouping', {
-    groupHeaderTpl: 'Раздел  {name} ({rows.length})', //print the number of items in the group
+    groupHeaderTpl: '{name} ({rows.length})', //print the number of items in the group
     startCollapsed: true // start all groups collapsed
 });
 
