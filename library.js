@@ -5,7 +5,7 @@ Ext.create('Ext.data.Store', {
     storeId: 'bookStore',
     fields: ['name', 'id', 'size', 'group'],
     autoLoad: true,
-    groupField: 'group',
+    // groupField: 'group',
     proxy: {
         type: 'ajax',
         url: urlListBooks,
@@ -16,17 +16,17 @@ Ext.create('Ext.data.Store', {
     }
 });
 
-var groupingFeature = Ext.create('Ext.grid.feature.Grouping', {
-    groupHeaderTpl: '{name} ({rows.length})', //print the number of items in the group
-    startCollapsed: true // start all groups collapsed
-});
+// var groupingFeature = Ext.create('Ext.grid.feature.Grouping', {
+//     groupHeaderTpl: '{name} ({rows.length})', //print the number of items in the group
+//     startCollapsed: true // start all groups collapsed
+// });
 
 var bookGrid = Ext.create('Ext.grid.Panel', {
     store: Ext.data.StoreManager.lookup('bookStore'),
     region: 'center',
-    features: [groupingFeature],
+    // features: [groupingFeature],
     columns: [
-        {text: 'Название', dataIndex: 'name', flex: 1},
+        {text: 'Название', dataIndex: 'name', flex: 1, tpl: '{group} - {name}', xtype: 'templatecolumn',},
         {text: 'Размер', dataIndex: 'size'},
         {
             xtype: 'actioncolumn',
@@ -38,11 +38,13 @@ var bookGrid = Ext.create('Ext.grid.Panel', {
                 tooltip: 'Получить ссылку',
                 scope: this,
                 handler: function (grid, rowIndex) {
-                    var record = bookGrid.getStore().getAt(rowIndex);
+                    console.log(grid);
+                    console.log(rowIndex);
+                    var record = grid.getStore().getAt(rowIndex);
                     var data = record.data;
                     var window = Ext.create('Ext.window.Window', {
                         title: 'Получить ссылку на скачивание книги: ' + data.name,
-                        height: 200,
+                        // height: 200,
                         width: 600,
                         layout: 'fit',
                         items: {
@@ -58,7 +60,7 @@ var bookGrid = Ext.create('Ext.grid.Panel', {
                             items: [
                                 {
                                     xtype: 'label',
-                                    text: 'Получить ссылку на скачивание книги: ' + data.name,
+                                    html: '<p style="text-align:center">Получить ссылку на скачивание книги:<br><b>' + data.name + '</b><br/>Размер: <b>' + data.size + '</b></p>',
                                     padding: 5,
                                 },
                                 {
