@@ -214,7 +214,7 @@ var basicPanelGist = Ext.create('Ext.panel.Panel', {
             }
         }, {
             xtype: 'button',
-            text: 'reload',
+            text: 'Обновить',
             handler: function () {
                 store.reload();
             }
