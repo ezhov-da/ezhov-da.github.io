@@ -11,10 +11,11 @@ Ext.application({
                 Ext.create('Ext.tab.Panel', {
                     renderTo: document.body,
                     items: [
-                        basicPanelGist,
-                        basicPanelVba,
-                        basicPanelUrl,
-                        basicLibraryPanel
+                        // basicPanelGist,
+                        // basicPanelVba,
+                        // basicPanelUrl,
+                        // basicLibraryPanel,
+                        basicPanelHome
                     ]
                 })
             ]
