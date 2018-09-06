@@ -34,7 +34,7 @@ var bookGrid = Ext.create('Ext.grid.Panel', {
             sortable: false,
             menuDisabled: true,
             items: [{
-                icon: 'download-16.png',
+                icon: 'img/download-16.png',
                 tooltip: 'Получить ссылку',
                 scope: this,
                 handler: function (grid, rowIndex) {
