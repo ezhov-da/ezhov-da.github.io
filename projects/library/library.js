@@ -38,8 +38,6 @@ var bookGrid = Ext.create('Ext.grid.Panel', {
                 tooltip: 'Получить ссылку',
                 scope: this,
                 handler: function (grid, rowIndex) {
-                    console.log(grid);
-                    console.log(rowIndex);
                     var record = grid.getStore().getAt(rowIndex);
                     var data = record.data;
                     var window = Ext.create('Ext.window.Window', {

@@ -10,8 +10,9 @@ var panelLogin = Ext.create("Ext.form.Panel", {
     layout: {
         type: 'vbox',
         align: 'center',
-        pack:'center'
+        pack: 'center'
     },
+    url: urlAuthorizationAndPanel,
     items: [
         {
             xtype: 'label',
@@ -31,31 +32,37 @@ var panelLogin = Ext.create("Ext.form.Panel", {
             inputType: 'password',
             name: 'password',
             allowBlank: false
-
+        },
+        {
+            xtype: 'label',
+            id: 'info',
+            hidden: true
         },
         {
             xtype: 'button',
             text: 'Войти',
             handler: function () {
-                Ext.Ajax.request({
-                    url: urlAuthorizationAndPanel,
-                    timeout: 60000,
-                    method: 'GET',
-                    success: function (response) {
-                        console.log(response);
-                        var object = Ext.decode(response.responseText);
-                        console.log(object);
-                        var data = Ext.decode(object.data);
-                        var panel = Ext.create("Ext.panel.Panel", data);
-                        console.log(panel);
-                        basicPanelHome.removeAll();
-                        basicPanelHome.add(panel);
-                    },
+                var info = Ext.getCmp('info');
+                var form = this.up('form').getForm();
+                if (form.isValid()) {
+                    form.submit({
+                        success: function (form, action) {
+                            info.setVisible(false);
+                            var object = Ext.decode(action.response.responseText);
+                            var data = Ext.decode(object.data);
+                            var panel = Ext.create("Ext.panel.Panel", data);
+                            basicPanelHome.removeAll();
+                            basicPanelHome.add(panel);
+                        },
 
-                    failure: function (response) {
-                        console.log(response);
-                    }
-                });
+                        failure: function (form, action) {
+                            var object = Ext.decode(action.response.responseText);
+                            var panel = Ext.create("Ext.panel.Panel", object.data);
+                            info.setText(object.data);
+                            info.setVisible(true);
+                        }
+                    });
+                }
             }
         }
     ]
