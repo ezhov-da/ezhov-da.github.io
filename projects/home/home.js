@@ -1,5 +1,5 @@
 var basicUrl = getUrl('http://localhost:8080/', 'https://prog-tools.ru:8445/');
-var urlAuthorizationAndPanel = basicUrl + 'home/rest/admin/panel';
+var urlAuthorizationAndPanel = basicUrl + 'home/rest/admin/panel/show';
 
 var panelLogin = Ext.create("Ext.form.Panel", {
     id: 'panelLogin',
