@@ -26,7 +26,8 @@ var bookGrid = Ext.create('Ext.grid.Panel', {
     region: 'center',
     // features: [groupingFeature],
     columns: [
-        {text: 'Название', dataIndex: 'name', flex: 1, tpl: '{group} - {name}', xtype: 'templatecolumn',},
+        {text: 'Раздел', dataIndex: 'group'},
+        {text: 'Название', dataIndex: 'name', flex: 1},
         {text: 'Размер', dataIndex: 'size'},
         {
             xtype: 'actioncolumn',
@@ -135,7 +136,21 @@ var bookGrid = Ext.create('Ext.grid.Panel', {
     tbar: [
         {
             xtype: 'textfield',
-            emptyText: 'Введите слово для поиска и нажмите "Enter"',
+            emptyText: 'Поиск по разделу',
+            width: 500,
+            enableKeyEvents: true,
+            listeners: {
+                keydown: function (object, e, eOpts) {
+                    if (e.keyCode === 13) {
+                        var value = object.getValue();
+                        setFilterCommon(bookGrid.getStore(), value, "group");
+                    }
+                }
+            }
+        },
+        {
+            xtype: 'textfield',
+            emptyText: 'Поиск по названию',
             width: 500,
             enableKeyEvents: true,
             listeners: {
