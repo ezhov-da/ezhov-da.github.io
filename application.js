@@ -1,6 +1,7 @@
 Ext.Ajax.useDefaultXhrHeader = false;
 Ext.Ajax.cors = false;
 Ext.Ajax.withCredentials = false;
+Ext.Ajax.timeout = 600000;
 
 Ext.application({
     name: 'Tools',
