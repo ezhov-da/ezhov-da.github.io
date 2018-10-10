@@ -3,7 +3,7 @@ var urlDownloadLinkBook = getUrl('http://localhost:8080/', 'https://prog-tools.r
 
 Ext.create('Ext.data.Store', {
     storeId: 'bookStore',
-    fields: ['name', 'id', 'size', 'group'],
+    fields: ['name', 'id', 'size', 'group', 'previewLink'],
     autoLoad: true,
     // groupField: 'group',
     proxy: {
@@ -27,6 +27,12 @@ var bookGrid = Ext.create('Ext.grid.Panel', {
     // features: [groupingFeature],
     columns: [
         {text: 'Раздел', dataIndex: 'group'},
+        {
+            text: 'Превью',
+            dataIndex: 'previewLink',
+            xtype: 'templatecolumn',
+            tpl: '<img src="{previewLink}" width="53" height="75" />',
+        },
         {text: 'Название', dataIndex: 'name', flex: 1},
         {text: 'Размер', dataIndex: 'size'},
         {
