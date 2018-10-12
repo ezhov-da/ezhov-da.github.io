@@ -163,7 +163,7 @@ var panelFromVbaToSql = Ext.create('Ext.form.Panel', {
     }]
 });
 
-var panelWithToAndFrom = Ext.create('Ext.panel.Panel', {
+var panelWithToAndFrom = Ext.create('Ext.tab.Panel', {
     region: 'center',
     layout: 'border',
     items: [
