@@ -1,7 +1,10 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
+    <title>Горячие клавиши</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+    <link rel="shortcut icon" href="key.ico">
+    <meta name="description" content="Горячие клавиши">
     <link rel="stylesheet" href="css/bootstrap.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="css/bootstrap-theme.min.css" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -23,6 +26,14 @@
             font-family:verdana;
             font-size:11px;
         }
+        
+        #img_fork_me{
+            position: absolute;
+            top: 50px;
+            right: 0;
+            border: 0;
+        }
+
     </style>
     <script>
         /*кнопка наверх: http://webmastermix.ru/raznoe/300-knopka-vverkh-dlya-saita.html*/
@@ -96,10 +107,16 @@
             xhr.send();
         });
 
+
     </script>
 </head>
 
 <body>
+    <a href="https://github.com/ezhov-da/hot-keys">
+        <img 
+             id="img_fork_me" 
+             src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" 
+             alt="Fork me on GitHub"></a>
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
@@ -123,8 +140,8 @@
             </div>
         </div>
     </div><!-- /.container -->
-    <div ID="toTop"> 
-     <button type="button" class="btn btn-default">Наверх</button>
+    <div ID="toTop">
+        <button type="button" class="btn btn-default">Наверх</button>
     </div>
 </body>
 
