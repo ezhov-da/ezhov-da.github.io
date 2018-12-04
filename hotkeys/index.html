@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="css/bootstrap-theme.min.css" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-
     <style>
+        /*кнопка наверх: http://webmastermix.ru/raznoe/300-knopka-vverkh-dlya-saita.html*/
         #toTop {
             width:100px;
             /*border:1px solid #ccc;*/
@@ -25,6 +25,7 @@
         }
     </style>
     <script>
+        /*кнопка наверх: http://webmastermix.ru/raznoe/300-knopka-vverkh-dlya-saita.html*/
         $(function() {
             $(window).scroll(function() {
                 if($(this).scrollTop() != 0) {
@@ -43,7 +44,7 @@
             var contentsCommonHtml = ''; 
             var contentsStartHtml = 
                 '<div>' + 
-                '    <ul class="nav nav-pills nav-stacked">'; 
+                '    <ul class="list-group">'; 
             var contentsEndtHtml = 
                     '</ul>' + 
                 '</div>';
@@ -51,7 +52,9 @@
             var counterContent = 0;
             var commonPanels = '';
             for (title in hotKeys) {
-                contentsCommonHtml = contentsCommonHtml + '<li> <a href="#' + counterContent + '">'+ title + '</a></li>';
+                contentsCommonHtml =
+                    contentsCommonHtml + 
+                    '<li class="list-group-item"> <a href="#' + counterContent + '">'+ title + '</a> <span class="badge">' + Object.keys(hotKeys[title]).length + '</span></li>';
                 counterContent++;
                 var panelStart =   
                     '<div class="panel panel-default">' + 
@@ -64,8 +67,8 @@
                     var hotKeyHtml = 
                         '<table class="table">' +
                         '  <tr>' +
-                        '    <td width="100">'+ keyName +'</td>' +
-                        '    <td>' + keyDescription + '</td>' +
+                        '    <td width="20%">'+ keyName +'</td>' +
+                        '    <td width="80%">' + keyDescription + '</td>' +
                         '  </tr>' +
                         '</table>'                 
                     panelStart = panelStart + hotKeyHtml;
@@ -108,15 +111,14 @@
             <!--/.nav-collapse -->
         </div>
     </div>
-
     <div class="container">
         <br />
         <br />
         <br />
 
         <div class="row">
-            <div class="col-xs-2 col-xs-2 col-md-2" id="contents"></div>
-            <div class="col-xs-10 col-sm-10 col-md-10">
+            <div class="col-xs-3 col-xs-3 col-md-3" id="contents"></div>
+            <div class="col-xs-9 col-sm-9 col-md-9">
                 <div id="hotKeys"></div>
             </div>
         </div>
