@@ -55,7 +55,7 @@ var store = Ext.create('Ext.data.Store', {
     autoLoad: true,
     proxy: {
         type: 'ajax',
-        url: getUrl('https://prog-tools.ru:64646/knowledges', 'https://prog-tools.ru:64646/knowledges'),
+        url: getUrl('http://localhost:64646/knowledges', 'https://prog-tools.ru:64646/knowledges'),
         reader: {
             type: 'json',
             root: 'knowledges'
@@ -220,4 +220,27 @@ var basicPanelGist = Ext.create('Ext.panel.Panel', {
             }
         }
     ],
+});
+
+Ext.Ajax.request({
+    listeners: {
+        beforerequest: function () {
+            basicPanelGist.mask("Получение данных...");
+        },
+        requestcomplete: function () {
+            basicPanelGist.unmask();
+        },
+        requestexception: function () {
+            basicPanelGist.unmask();
+        }
+    },
+
+    url: getUrl('http://localhost:64646/knowledges', 'https://prog-tools.ru:64646/knowledges'),
+    method: 'GET',
+    success: function (response) {
+        console.log(response);
+    },
+    failure: function (response) {
+        console.log("f");
+    }
 });
