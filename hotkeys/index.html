@@ -1,0 +1,89 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/bootstrap.min.css" crossorigin="anonymous">
+    <script>
+        function createDocument(hotKeys) {
+            var contentsCommonHtml = ''; 
+            var contentsStartHtml = 
+                '<div>' + 
+                '    <ul class="nav nav-pills nav-stacked">'; 
+            var contentsEndtHtml = 
+                    '</ul>' + 
+                '</div>';
+            contentsCommonHtml = contentsStartHtml;
+            var counterContent = 0;
+            var commonPanels = '';
+            for (title in hotKeys) {
+                contentsCommonHtml = contentsCommonHtml + '<li> <a href="#' + counterContent + '">'+ title + '</a></li>';
+                counterContent++;
+                var panelStart =   
+                    '<div class="panel panel-default">' + 
+                    '    <div class="panel-heading">' + 
+                    '        <h3 class="panel-title"><a name="' + counterContent + '">' + title + '</a></h3>' + 
+                    '    </div>';
+                for (key in hotKeys[title]) {
+                    var keyName = key;
+                    var keyDescription = hotKeys[title][key];
+                    var hotKeyHtml = 
+                        '<table class="table">' +
+                        '  <tr>' +
+                        '    <td width="100">'+ keyName +'</td>' +
+                        '    <td>' + keyDescription + '</td>' +
+                        '  </tr>' +
+                        '</table>'                 
+                    panelStart = panelStart + hotKeyHtml;
+                }
+                var panelEnd = '</div>';
+                commonPanels = commonPanels + panelStart + panelEnd;
+            }
+            var hotKeysElement = document.getElementById('hotKeys');
+            hotKeysElement.innerHTML = commonPanels;
+            contentsCommonHtml = contentsCommonHtml + contentsEndtHtml;
+            var contentsElement = document.getElementById('contents');
+            contentsElement.innerHTML = contentsCommonHtml;
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var url = 'https://raw.githubusercontent.com/ezhov-da/hot-keys/master/hot-keys.json';
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', url);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === XMLHttpRequest.DONE & xhr.status == 200) {
+                    var respnseText = xhr.responseText;
+                    createDocument(JSON.parse(respnseText));
+                }
+            }
+            xhr.send();
+        });
+
+    </script>
+</head>
+
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                </button>
+                <a class="navbar-brand" href="#">H0t Key$</a>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </div>
+
+    <div class="container">
+        <br />
+        <br />
+        <br />
+
+        <div class="row">
+            <div class="col-xs-2 col-xs-2 col-md-2" id="contents"></div>
+            <div class="col-xs-10 col-sm-10 col-md-10"><div id="hotKeys"></div></div>
+        </div>
+    </div><!-- /.container -->
+</body>
+
+</html>
