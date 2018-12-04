@@ -3,7 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <style>
+        #toTop {
+            width:100px;
+            /*border:1px solid #ccc;*/
+            /*background:#f7f7f7;*/
+            text-align:center;
+            padding:5px;
+            position:fixed;
+            bottom:10px; /* отступ кнопки от нижнего края страницы*/
+            right:10px;
+            cursor:pointer;
+            display:none;
+            color:#333;
+            font-family:verdana;
+            font-size:11px;
+        }
+    </style>
     <script>
+        $(function() {
+            $(window).scroll(function() {
+                if($(this).scrollTop() != 0) {
+                    $('#toTop').fadeIn();
+                } else {
+                    $('#toTop').fadeOut();
+                }
+            });
+            $('#toTop').click(function() {
+                $('body,html').animate({scrollTop:0},800);
+            });
+        });
+        
+        
         function createDocument(hotKeys) {
             var contentsCommonHtml = ''; 
             var contentsStartHtml = 
@@ -81,9 +116,14 @@
 
         <div class="row">
             <div class="col-xs-2 col-xs-2 col-md-2" id="contents"></div>
-            <div class="col-xs-10 col-sm-10 col-md-10"><div id="hotKeys"></div></div>
+            <div class="col-xs-10 col-sm-10 col-md-10">
+                <div id="hotKeys"></div>
+            </div>
         </div>
     </div><!-- /.container -->
+    <div ID="toTop"> 
+     <button type="button" class="btn btn-default">Наверх</button>
+    </div>
 </body>
 
 </html>
