@@ -66,7 +66,6 @@
                 contentsCommonHtml =
                     contentsCommonHtml + 
                     '<li class="list-group-item"> <a href="#' + counterContent + '">'+ title + '</a> <span class="badge">' + Object.keys(hotKeys[title]).length + '</span></li>';
-                counterContent++;
                 var panelStart =   
                     '<div class="panel panel-default">' + 
                     '    <div class="panel-heading">' + 
@@ -83,6 +82,7 @@
                         '  </tr>' +
                         '</table>'                 
                     panelStart = panelStart + hotKeyHtml;
+                    counterContent++;
                 }
                 var panelEnd = '</div>';
                 commonPanels = commonPanels + panelStart + panelEnd;
