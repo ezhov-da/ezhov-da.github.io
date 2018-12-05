@@ -74,16 +74,22 @@
                 for (key in hotKeys[title]) {
                     var keyName = key;
                     var keyDescription = hotKeys[title][key];
+                    var keyColor = keyName.replace('ctrl','<font color="blue">ctrl</font>');
+                    var keyColor = keyColor.replace('shift','<font color="orange">shift</font>');
+                    var keyColor = keyColor.replace('alt ','<font color="green">alt</font>');
+                    var keyColor = keyColor.replace('space','<font color="red">space</font>');
+                    var keyColor = keyColor.replace('insert','<font color="gray">insert</font>');
+                    var keyColor = keyColor.replace('enter','<font color="brown">enter</font>');
                     var hotKeyHtml = 
                         '<table class="table">' +
                         '  <tr>' +
-                        '    <td width="20%">'+ keyName +'</td>' +
-                        '    <td width="80%">' + keyDescription + '</td>' +
+                        '    <td width="30%">'+ keyColor +'</td>' +
+                        '    <td width="70%">' + keyDescription + '</td>' +
                         '  </tr>' +
                         '</table>'                 
                     panelStart = panelStart + hotKeyHtml;
-                    counterContent++;
                 }
+                counterContent++;
                 var panelEnd = '</div>';
                 commonPanels = commonPanels + panelStart + panelEnd;
             }
