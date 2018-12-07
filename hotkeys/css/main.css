@@ -1,0 +1,12 @@
+body {
+    min-height: 2000px;
+    padding-top: 70px;
+    margin-top: auto;
+}
+
+:target {
+  display: block;
+  position: relative;
+  top: -75px; 
+  visibility: hidden;
+}
