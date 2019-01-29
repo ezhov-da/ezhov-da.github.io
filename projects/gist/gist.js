@@ -52,10 +52,10 @@ Ext.define('Gists', {
 
 var store = Ext.create('Ext.data.Store', {
     model: 'Gists',
-    autoLoad: true,
+//    autoLoad: true,
     proxy: {
-        type: 'ajax',
-        url: getUrl('http://localhost:64646/knowledges', 'https://prog-tools.ru:64646/knowledges'),
+        type: 'memory',
+//        url: getUrl('http://localhost:64646/knowledges', 'https://prog-tools.ru:64646/knowledges'),
         reader: {
             type: 'json',
             root: 'knowledges'
@@ -176,6 +176,11 @@ var basicPanelGist = Ext.create('Ext.panel.Panel', {
     title: 'Мои GIST',
     layout: 'border',
     items: [
+        {
+            xtype: 'panel',
+            id: 'tag-panel',
+            region: 'north',
+        },
         table,
         panelTextRaw
     ],
@@ -215,32 +220,49 @@ var basicPanelGist = Ext.create('Ext.panel.Panel', {
         }, {
             xtype: 'button',
             text: 'Обновить',
-            handler: function () {
-                store.reload();
-            }
+            handler: load()
+//            function () {
+//                store.reload();
+//            }
         }
     ],
 });
 
-Ext.Ajax.request({
-    listeners: {
-        beforerequest: function () {
-            basicPanelGist.mask("Получение данных...");
-        },
-        requestcomplete: function () {
-            basicPanelGist.unmask();
-        },
-        requestexception: function () {
-            basicPanelGist.unmask();
-        }
-    },
 
-    url: getUrl('http://localhost:64646/knowledges', 'https://prog-tools.ru:64646/knowledges'),
-    method: 'GET',
-    success: function (response) {
-        console.log(response);
-    },
-    failure: function (response) {
-        console.log("f");
-    }
-});
+function createTagPanel(contextData){
+    var tagPanel = Ext.getCmp('tag-panel');
+    var html = '';
+    Ext.Array.each(contextData,function(data, index, itself) {
+        // Object { name: "server", count: 1 }
+        console.log(data);
+        html = html + '<a href="#" class="badge badge-dark">' + data.name + '(' + data.count + ')</a>';
+    });
+    console.log(html);
+    tagPanel.update(html);
+    tagPanel.setHeight(15).setHeight('auto');
+}
+
+function load(){
+    Ext.Ajax.on("beforerequest", function(){
+//            basicPanelGist.mask("Получение данных...");
+        });
+    Ext.Ajax.on("requestcomplete", function(){
+//            basicPanelGist.unmask();
+        });
+    Ext.Ajax.on("requestexception", function(){
+//            basicPanelGist.unmask();
+        });
+    Ext.Ajax.request({
+        url: getUrl('http://localhost:64646/knowledges', 'https://prog-tools.ru:64646/knowledges'),
+        method: 'GET',
+        success: function (response) {
+            console.log(response);
+            store.loadData(Ext.decode(response.responseText).knowledges);
+            createTagPanel(Ext.decode(response.responseText).context);
+        },
+        failure: function (response) {
+            console.log("f");
+        }
+    });
+}
+
