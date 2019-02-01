@@ -50,6 +50,20 @@ Ext.define('Gists', {
     }]
 });
 
+Ext.define('CategoryStore', {
+    extend: 'Ext.data.Model',
+    fields: [
+    {
+        name: 'name',
+        type: 'string'
+    },
+    {
+        name: 'count',
+        type: 'int'
+    }
+    ]
+});
+
 var store = Ext.create('Ext.data.Store', {
     model: 'Gists',
 //    autoLoad: true,
@@ -59,6 +73,23 @@ var store = Ext.create('Ext.data.Store', {
         reader: {
             type: 'json',
             root: 'knowledges'
+        }
+    }
+});
+
+var categoryStore = Ext.create('Ext.data.Store', {
+    model: 'CategoryStore',
+    sorters: {
+        property: 'count',
+        direction: 'desc'
+    },
+//    autoLoad: true,
+    proxy: {
+        type: 'memory',
+//        url: getUrl('http://localhost:64646/knowledges', 'https://prog-tools.ru:64646/knowledges'),
+        reader: {
+            type: 'json',
+            root: 'context'
         }
     }
 });
@@ -103,6 +134,34 @@ function setFilter(searchText, propertyNameForSearch) {
         }]);
     }
 }
+
+var categoryTable = Ext.create('Ext.grid.Panel', {
+    title: 'Category',
+    store: categoryStore,
+    region: 'west',
+    width: '20%',
+    collapsible: true,
+    collapsed: false,
+    split: true,
+    columns: [
+    {
+        header: 'Название',
+        flex: 1 /*резиновый столбец*/,
+        dataIndex: 'name'
+    }, {
+        header: 'кол-во',
+        dataIndex: 'count',
+    }
+    ],
+
+    listeners: {
+        select: function (grid, record, index, eOpts) {
+            var name = record.data.name;
+            Ext.getCmp('textFieldName').setValue(name);
+            setFilter(name, "name");
+        }
+    },
+});
 
 var table = Ext.create('Ext.grid.Panel', {
     title: 'Gists',
@@ -176,6 +235,7 @@ var basicPanelGist = Ext.create('Ext.panel.Panel', {
     title: 'Мои GIST',
     layout: 'border',
     items: [
+        categoryTable,
         {
             xtype: 'panel',
             id: 'tag-panel',
@@ -189,6 +249,7 @@ var basicPanelGist = Ext.create('Ext.panel.Panel', {
         {
             xtype: 'textfield',
             name: 'searchField',
+            id: 'textFieldName',
             enableKeyEvents: true,
             hideLabel: true,
             emptyText: 'Поиск по названию',
@@ -220,49 +281,39 @@ var basicPanelGist = Ext.create('Ext.panel.Panel', {
         }, {
             xtype: 'button',
             text: 'Обновить',
-            handler: load()
-//            function () {
-//                store.reload();
-//            }
+            handler: function(){loadGistData();}
         }
     ],
 });
 
+function loadGistData(){
+    var ajax = new Ext.data.Connection({
+        listeners: {
+            beforerequest: function(){
+                Ext.getBody().mask("Получение данных...");
+            },
+            requestcomplete: function(){
+                Ext.getBody().unmask();
+            },
+            requestexception: function(){
+                Ext.getBody().unmask();
+            }
 
-function createTagPanel(contextData){
-    var tagPanel = Ext.getCmp('tag-panel');
-    var html = '';
-    Ext.Array.each(contextData,function(data, index, itself) {
-        // Object { name: "server", count: 1 }
-        console.log(data);
-        html = html + '<a href="#" class="badge badge-dark">' + data.name + '(' + data.count + ')</a>';
+        }
     });
-    console.log(html);
-    tagPanel.update(html);
-    tagPanel.setHeight(15).setHeight('auto');
-}
-
-function load(){
-    Ext.Ajax.on("beforerequest", function(){
-//            basicPanelGist.mask("Получение данных...");
-        });
-    Ext.Ajax.on("requestcomplete", function(){
-//            basicPanelGist.unmask();
-        });
-    Ext.Ajax.on("requestexception", function(){
-//            basicPanelGist.unmask();
-        });
-    Ext.Ajax.request({
+    ajax.request({
         url: getUrl('http://localhost:64646/knowledges', 'https://prog-tools.ru:64646/knowledges'),
         method: 'GET',
         success: function (response) {
-            console.log(response);
             store.loadData(Ext.decode(response.responseText).knowledges);
-            createTagPanel(Ext.decode(response.responseText).context);
+            categoryStore.loadData(Ext.decode(response.responseText).context);
         },
         failure: function (response) {
-            console.log("f");
+            console.log(response);
         }
     });
 }
+
+
+
 
