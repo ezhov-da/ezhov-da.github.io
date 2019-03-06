@@ -1,5 +1,5 @@
-var urlListBooks = getUrl('http://localhost:8080/', 'https://prog-tools.ru:8445/') + 'library/rest/books';
-var urlDownloadLinkBook = getUrl('http://localhost:8080/', 'https://prog-tools.ru:8445/') + 'library/rest/books/book/link';
+var urlListBooks = getUrl('https://prog-tools.ru:8445/', 'https://prog-tools.ru:8445/') + 'library/rest/books';
+var urlDownloadLinkBook = getUrl('https://prog-tools.ru:8445/', 'https://prog-tools.ru:8445/') + 'library/rest/books/book/link';
 
 Ext.create('Ext.data.Store', {
     storeId: 'bookStore',
@@ -143,7 +143,7 @@ var bookGrid = Ext.create('Ext.grid.Panel', {
         {
             xtype: 'textfield',
             emptyText: 'Поиск по разделу',
-            width: 500,
+            width: 150,
             enableKeyEvents: true,
             listeners: {
                 keydown: function (object, e, eOpts) {
@@ -157,7 +157,7 @@ var bookGrid = Ext.create('Ext.grid.Panel', {
         {
             xtype: 'textfield',
             emptyText: 'Поиск по названию',
-            width: 500,
+            width: 150,
             enableKeyEvents: true,
             listeners: {
                 keydown: function (object, e, eOpts) {
