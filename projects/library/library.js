@@ -1,5 +1,5 @@
-var urlListBooks = getUrl('https://localhost:8443/', 'https://prog-tools.ru:8445/') + 'library/rest/books';
-var urlDownloadLinkBook = getUrl('https://localhost:8443/', 'https://prog-tools.ru:8445/') + 'library/rest/books/book/link';
+var urlListBooks = getUrl('https://prog-tools.ru:8445/', 'https://prog-tools.ru:8445/') + 'library/rest/books';
+var urlDownloadLinkBook = getUrl('https://prog-tools.ru:8445/', 'https://prog-tools.ru:8445/') + 'library/rest/books/book/link';
 
 Ext.create('Ext.data.Store', {
     storeId: 'bookStore',
