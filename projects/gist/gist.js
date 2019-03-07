@@ -50,6 +50,20 @@ Ext.define('Gists', {
     }]
 });
 
+var storeTree = Ext.create('Ext.data.TreeStore', {
+    root: {
+        expanded: true,
+        children: [
+            { text: 'detention', leaf: true },
+            { text: 'homework', expanded: true, children: [
+                { text: 'book report', leaf: true },
+                { text: 'algebra', leaf: true}
+            ] },
+            { text: 'buy lottery tickets', leaf: true }
+        ]
+    }
+});
+
 Ext.define('CategoryStore', {
     extend: 'Ext.data.Model',
     fields: [
@@ -136,9 +150,8 @@ function setFilter(searchText, propertyNameForSearch) {
 }
 
 var categoryTable = Ext.create('Ext.grid.Panel', {
-    title: 'Category',
+    title: 'Category List',
     store: categoryStore,
-    region: 'west',
     width: '20%',
     collapsible: true,
     collapsed: false,
@@ -161,6 +174,13 @@ var categoryTable = Ext.create('Ext.grid.Panel', {
             setFilter(name, "name");
         }
     },
+});
+
+var categoryTree = Ext.create('Ext.tree.Panel', {
+    title: 'Category Tree',
+    width: '20%',
+    store: storeTree,
+    rootVisible: false,
 });
 
 var table = Ext.create('Ext.grid.Panel', {
@@ -235,11 +255,14 @@ var basicPanelGist = Ext.create('Ext.panel.Panel', {
     title: 'Мои GIST',
     layout: 'border',
     items: [
-        categoryTable,
         {
-            xtype: 'panel',
-            id: 'tag-panel',
-            region: 'north',
+            xtype: 'tabpanel',
+            region: 'west',
+            width: '20%',
+            items: [
+                categoryTable,
+                categoryTree
+            ]
         },
         table,
         panelTextRaw
