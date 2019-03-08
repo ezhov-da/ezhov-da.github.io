@@ -50,20 +50,6 @@ Ext.define('Gists', {
     }]
 });
 
-var storeTree = Ext.create('Ext.data.TreeStore', {
-    root: {
-        expanded: true,
-        children: [
-            { text: 'detention', leaf: true },
-            { text: 'homework', expanded: true, children: [
-                { text: 'book report', leaf: true },
-                { text: 'algebra', leaf: true}
-            ] },
-            { text: 'buy lottery tickets', leaf: true }
-        ]
-    }
-});
-
 Ext.define('CategoryStore', {
     extend: 'Ext.data.Model',
     fields: [
@@ -179,7 +165,7 @@ var categoryTable = Ext.create('Ext.grid.Panel', {
 var categoryTree = Ext.create('Ext.tree.Panel', {
     title: 'Category Tree',
     width: '20%',
-    store: storeTree,
+//    store: storeTree,
     rootVisible: false,
 });
 
@@ -324,18 +310,26 @@ function loadGistData(){
 
         }
     });
-    ajax.request({
+            store.loadData(staticData.knowledges);
+            categoryStore.loadData(staticData.tableContext);
+
+            var storeTree = Ext.create('Ext.data.TreeStore', {
+                root: staticData.treeContext
+            });
+
+            categoryTree.setStore(storeTree);
+//    ajax.request({
 //        url: getUrl('http://localhost:64646/knowledges', 'https://prog-tools.ru:64646/knowledges'),
-        url: getUrl('https://prog-tools.ru:64646/knowledges', 'https://prog-tools.ru:64646/knowledges'),
-        method: 'GET',
-        success: function (response) {
-            store.loadData(Ext.decode(response.responseText).knowledges);
-            categoryStore.loadData(Ext.decode(response.responseText).context);
-        },
-        failure: function (response) {
-            console.log(response);
-        }
-    });
+//        url: getUrl('https://prog-tools.ru:64646/knowledges', 'https://prog-tools.ru:64646/knowledges'),
+//        method: 'GET',
+//        success: function (response) {
+//            store.loadData(Ext.decode(response.responseText).knowledges);
+//            categoryStore.loadData(Ext.decode(response.responseText).tableContext);
+//        },
+//        failure: function (response) {
+//            console.log(response);
+//        }
+//    });
 }
 
 
