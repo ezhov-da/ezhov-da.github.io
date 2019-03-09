@@ -163,17 +163,7 @@ var staticData = {
     }
   ],
   "treeContext":
-  {
-      expanded: true,
-      children: [
-          { text: '123', leaf: true },
-          { text: 'sdvsv', expanded: true, children: [
-              { text: 'sdvsdv report', leaf: true },
-              { text: 'sdvsv', leaf: true}
-          ] },
-          { text: 'sdvsdvsdv lottery tickets', leaf: true }
-      ]
-  },
+  {"expanded":true,"text":"root","children":[{"expanded":true,"text":"java","children":[{"expanded":true,"text":"maven","children":[{"expanded":true,"text":"gradle","children":[],"leaf":false}],"leaf":false}],"leaf":false},{"expanded":true,"text":"bat","children":[],"leaf":false}],"leaf":false},
   "knowledges": [
     {
       "type": "arduino",
@@ -4697,3 +4687,4 @@ var staticData = {
     }
   ]
 };
+

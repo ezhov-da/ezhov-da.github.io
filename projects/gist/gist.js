@@ -136,7 +136,7 @@ function setFilter(searchText, propertyNameForSearch) {
 }
 
 var categoryTable = Ext.create('Ext.grid.Panel', {
-    title: 'Category List',
+    title: 'Список категорий',
     store: categoryStore,
     width: '20%',
     collapsible: true,
@@ -163,10 +163,18 @@ var categoryTable = Ext.create('Ext.grid.Panel', {
 });
 
 var categoryTree = Ext.create('Ext.tree.Panel', {
-    title: 'Category Tree',
+    title: 'Дерево категорий',
     width: '20%',
 //    store: storeTree,
     rootVisible: false,
+
+    listeners: {
+        select: function (tree, record) {
+            var name = record.data.name;
+            Ext.getCmp('textFieldName').setValue(name);
+            setFilter(name, "name");
+        }
+    },
 });
 
 var table = Ext.create('Ext.grid.Panel', {
@@ -310,26 +318,23 @@ function loadGistData(){
 
         }
     });
-            store.loadData(staticData.knowledges);
-            categoryStore.loadData(staticData.tableContext);
-
-            var storeTree = Ext.create('Ext.data.TreeStore', {
-                root: staticData.treeContext
-            });
-
-            categoryTree.setStore(storeTree);
-//    ajax.request({
-//        url: getUrl('http://localhost:64646/knowledges', 'https://prog-tools.ru:64646/knowledges'),
+    ajax.request({
+        url: getUrl('http://localhost:64646/knowledges', 'https://prog-tools.ru:64646/knowledges'),
 //        url: getUrl('https://prog-tools.ru:64646/knowledges', 'https://prog-tools.ru:64646/knowledges'),
-//        method: 'GET',
-//        success: function (response) {
-//            store.loadData(Ext.decode(response.responseText).knowledges);
-//            categoryStore.loadData(Ext.decode(response.responseText).tableContext);
-//        },
-//        failure: function (response) {
-//            console.log(response);
-//        }
-//    });
+        method: 'GET',
+        success: function (response) {
+            var dataJson = Ext.decode(response.responseText);
+            store.loadData(dataJson.knowledges);
+            categoryStore.loadData(dataJson.tableContext);
+                        var storeTree = Ext.create('Ext.data.TreeStore', {
+                            root: dataJson.treeContext
+                        });
+                        categoryTree.setStore(storeTree);
+        },
+        failure: function (response) {
+            console.log(response);
+        }
+    });
 }
 
 
