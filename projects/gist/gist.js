@@ -19,8 +19,8 @@ function escapeHtml(string) {
 var panelTextRaw = Ext.create('Ext.panel.Panel', {
     title: 'Подробный просмотр',
     layout: 'fit',
-    region: 'east',
-    width: '40%',
+    region: 'south',
+    height: '50%',
     collapsible: true,
     collapsed: true,
     split: true,
@@ -66,10 +66,8 @@ Ext.define('CategoryStore', {
 
 var store = Ext.create('Ext.data.Store', {
     model: 'Gists',
-//    autoLoad: true,
     proxy: {
         type: 'memory',
-//        url: getUrl('http://localhost:64646/knowledges', 'https://prog-tools.ru:64646/knowledges'),
         reader: {
             type: 'json',
             root: 'knowledges'
@@ -83,10 +81,8 @@ var categoryStore = Ext.create('Ext.data.Store', {
         property: 'count',
         direction: 'desc'
     },
-//    autoLoad: true,
     proxy: {
         type: 'memory',
-//        url: getUrl('http://localhost:64646/knowledges', 'https://prog-tools.ru:64646/knowledges'),
         reader: {
             type: 'json',
             root: 'context'
@@ -136,10 +132,10 @@ function setFilter(searchText, propertyNameForSearch) {
 }
 
 var categoryTable = Ext.create('Ext.grid.Panel', {
-    title: 'Category',
+    title: 'Список категорий',
     store: categoryStore,
-    region: 'west',
     width: '20%',
+    region: 'west',
     collapsible: true,
     collapsed: false,
     split: true,
@@ -156,6 +152,23 @@ var categoryTable = Ext.create('Ext.grid.Panel', {
 
     listeners: {
         select: function (grid, record, index, eOpts) {
+            var name = record.data.name;
+            Ext.getCmp('textFieldName').setValue(name);
+            setFilter(name, "name");
+        }
+    },
+});
+
+var categoryTree = Ext.create('Ext.tree.Panel', {
+    title: 'Дерево категорий',
+    width: '20%',
+    region: 'east',
+    collapsible: true,
+    collapsed: false,
+    rootVisible: false,
+    split: true,
+    listeners: {
+        select: function (tree, record) {
             var name = record.data.name;
             Ext.getCmp('textFieldName').setValue(name);
             setFilter(name, "name");
@@ -238,11 +251,14 @@ var basicPanelGist = Ext.create('Ext.panel.Panel', {
         categoryTable,
         {
             xtype: 'panel',
-            id: 'tag-panel',
-            region: 'north',
+            layout: 'border',
+            region: 'center',
+            items: [
+                table,
+                panelTextRaw
+            ]
         },
-        table,
-        panelTextRaw
+        categoryTree
     ],
     tbar: [
         'Введите слово или слова через пробел и нажмите "Enter" >>',
@@ -306,8 +322,13 @@ function loadGistData(){
         url: getUrl('https://prog-tools.ru:64646/knowledges', 'https://prog-tools.ru:64646/knowledges'),
         method: 'GET',
         success: function (response) {
-            store.loadData(Ext.decode(response.responseText).knowledges);
-            categoryStore.loadData(Ext.decode(response.responseText).context);
+            var dataJson = Ext.decode(response.responseText);
+            store.loadData(dataJson.knowledges);
+            categoryStore.loadData(dataJson.tableContext);
+                        var storeTree = Ext.create('Ext.data.TreeStore', {
+                            root: dataJson.treeContext
+                        });
+                        categoryTree.setStore(storeTree);
         },
         failure: function (response) {
             console.log(response);
