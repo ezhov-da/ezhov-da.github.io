@@ -318,8 +318,8 @@ function loadGistData(){
         }
     });
     ajax.request({
-        url: getUrl('http://localhost:64646/knowledges', 'https://prog-tools.ru:64646/knowledges'),
-//        url: getUrl('https://prog-tools.ru:64646/knowledges', 'https://prog-tools.ru:64646/knowledges'),
+//        url: getUrl('http://localhost:64646/knowledges', 'https://prog-tools.ru:64646/knowledges'),
+        url: getUrl('https://prog-tools.ru:64646/knowledges', 'https://prog-tools.ru:64646/knowledges'),
         method: 'GET',
         success: function (response) {
             var dataJson = Ext.decode(response.responseText);
