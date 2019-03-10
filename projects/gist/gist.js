@@ -186,28 +186,87 @@ var table = Ext.create('Ext.grid.Panel', {
         xtype: 'rownumberer' /*нумерация строк*/
     }, {
         header: 'Название',
-        flex: 1 /*резиновый столбец*/,
+        flex: 2 /*резиновый столбец*/,
         dataIndex: 'name'
     }, {
         header: 'Описание',
-        flex: 1,
+        flex: 2,
         dataIndex: 'description',
     }, {
         header: 'URL',
+        flex: 1,
         dataIndex: 'url',
         renderer: function (v) {
             return '<a target="_blank" href="' + v.toString() + '">Редактировать</a>';
         },
     }, {
         header: 'Сырое URL',
+        flex: 1,
         renderer: function (v) {
             return '<a target="_blank" href="' + v.toString() + '">Сырые данные</a>';
         },
         dataIndex: 'rawUrl'
-    }, {
-        header: 'Публичный',
-        dataIndex: 'public'
-    }],
+    },
+//    {
+//        header: 'Публичный',
+//        dataIndex: 'public'
+//    },
+    {
+          header: '...',
+          width: 30,
+          xtype: 'actioncolumn',
+          items: [{
+                icon: 'img/adept_preview_16x16.png',
+                tooltip: 'Просмотр в отдельном окне',
+                handler: function(grid, rowIndex, colIndex) {
+                    var record = grid.getStore().getAt(rowIndex);
+                    var data = record.getData();
+                    var rawUrl = data.rawUrl;
+                    var name = data.name;
+                    Ext.Ajax.request({
+                        url: rawUrl,
+                        timeout: 60000,
+                        success: function (response) {
+                            var responseText = response.responseText;
+                            var codeClass = 'txt';
+                            var index = name.lastIndexOf(".");
+                            if (index > -1) {
+                                codeClass = name.substring(index);
+                            }
+                            var htmlText = '<div><pre><code class="' + codeClass + '">' + escapeHtml(responseText) + '</code></pre></div>';
+                            var he = $(window).height();
+                            var wi = $(window).width();
+
+                            var heWindow = he - (he * 0.2);
+                            var wiWindow = wi - (wi * 0.2);
+
+                            Ext.create('Ext.window.Window', {
+                                title: data.name,
+                                height: heWindow,
+                                width: wiWindow,
+                                modal: true,
+                                layout: 'fit',
+                                items: {
+                                    xtype: 'panel',
+                                    autoScroll: true,
+                                    html: htmlText,
+                                }
+                            }).show();
+                            $(document).ready(function () {
+                                $('pre code').each(function (i, block) {
+                                    hljs.highlightBlock(block);
+                                });
+                            });
+                        },
+                        failure: function (response) {
+                            alert("Упс, что то пошло не так :)");
+                            //console.log(response);
+                        }
+                    });
+                }
+          }]
+      }
+    ],
 
     listeners: {
         select: function (grid, record, index, eOpts) {
@@ -225,7 +284,7 @@ var table = Ext.create('Ext.grid.Panel', {
                     if (index > -1) {
                         codeClass = name.substring(index);
                     }
-                    cmp.update('<pre><code class="' + codeClass + '">' + escapeHtml(responseText) + '</code></pre>');
+                    cmp.update('<div><pre><code class="' + codeClass + '">' + escapeHtml(responseText) + '</code></pre></div>');
                     $(document).ready(function () {
                         $('pre code').each(function (i, block) {
                             hljs.highlightBlock(block);
