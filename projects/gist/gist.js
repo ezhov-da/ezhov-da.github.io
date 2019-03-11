@@ -233,7 +233,7 @@ var table = Ext.create('Ext.grid.Panel', {
                             if (index > -1) {
                                 codeClass = name.substring(index);
                             }
-                            var htmlText = '<div><pre><code class="' + codeClass + '">' + escapeHtml(responseText) + '</code></pre></div>';
+                            var htmlText = '<pre><code class="' + codeClass + '">' + escapeHtml(responseText) + '</code></pre>';
                             var he = $(window).height();
                             var wi = $(window).width();
 
@@ -244,12 +244,20 @@ var table = Ext.create('Ext.grid.Panel', {
                                 title: data.name,
                                 height: heWindow,
                                 width: wiWindow,
+                                layout: 'border',
                                 modal: true,
-                                layout: 'fit',
                                 items: {
                                     xtype: 'panel',
+                                    region: 'center',
                                     autoScroll: true,
                                     html: htmlText,
+                                },
+                                listeners:
+                                {
+                                    show: function()
+                                    {
+                                        this.removeCls("x-unselectable");
+                                    }
                                 }
                             }).show();
                             $(document).ready(function () {
