@@ -226,7 +226,21 @@ var table = Ext.create('Ext.grid.Panel', {
                     var data = record.getData();
                     var rawUrl = data.rawUrl;
                     var name = data.name;
-                    Ext.Ajax.request({
+                    var ajax = new Ext.data.Connection({
+                        listeners: {
+                            beforerequest: function(){
+                                basicPanelGist.mask("Получение данных...");
+                            },
+                            requestcomplete: function(){
+                                basicPanelGist.unmask();
+                            },
+                            requestexception: function(){
+                                basicPanelGist.unmask();
+                            }
+
+                        }
+                    });
+                    ajax.request({
                         url: rawUrl,
                         timeout: 60000,
                         success: function (response) {
@@ -284,7 +298,21 @@ var table = Ext.create('Ext.grid.Panel', {
             var data = record.getData();
             var rawUrl = data.rawUrl;
             var name = data.name;
-            Ext.Ajax.request({
+            var ajax = new Ext.data.Connection({
+                listeners: {
+                    beforerequest: function(){
+                        basicPanelGist.mask("Получение данных...");
+                    },
+                    requestcomplete: function(){
+                        basicPanelGist.unmask();
+                    },
+                    requestexception: function(){
+                        basicPanelGist.unmask();
+                    }
+
+                }
+            });
+            ajax.request({
                 url: rawUrl,
                 timeout: 60000,
                 success: function (response) {
