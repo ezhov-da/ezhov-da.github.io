@@ -187,7 +187,10 @@ var table = Ext.create('Ext.grid.Panel', {
     }, {
         header: 'Название',
         flex: 2 /*резиновый столбец*/,
-        dataIndex: 'name'
+        dataIndex: 'name',
+        renderer: function (v) {
+            return v.replace(/-/g, ' • ');
+        }
     }, {
         header: 'Описание',
         flex: 2,
