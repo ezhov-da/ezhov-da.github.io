@@ -1,0 +1,2146 @@
+{
+  "books": [
+    {
+      "id": "2ed59297-71ea-4516-ba64-f306acdd88af",
+      "group": "algorithm",
+      "name": "algorithms_printable.pdf",
+      "size": "1.8 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/2ed59297-71ea-4516-ba64-f306acdd88af/preview"
+    },
+    {
+      "id": "0ce4269a-6cc8-40fc-803c-386792aedf63",
+      "group": "algorithm",
+      "name": "shen-log.pdf",
+      "size": "0.26 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/0ce4269a-6cc8-40fc-803c-386792aedf63/preview"
+    },
+    {
+      "id": "c70914eb-9c57-4213-9147-8b1205a72176",
+      "group": "algorithm",
+      "name": "shen-progbook.pdf",
+      "size": "2.22 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/c70914eb-9c57-4213-9147-8b1205a72176/preview"
+    },
+    {
+      "id": "d803c63b-4b2d-4852-8ad9-bca3f66828ed",
+      "group": "algorithm",
+      "name": "stephens_r_essential_algorithms_a_practical_approach_to_comp.pdf",
+      "size": "5.35 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/d803c63b-4b2d-4852-8ad9-bca3f66828ed/preview"
+    },
+    {
+      "id": "07c06b50-886e-40e7-afcc-51feca8aa155",
+      "group": "android",
+      "name": "android.pdf",
+      "size": "1.55 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/07c06b50-886e-40e7-afcc-51feca8aa155/preview"
+    },
+    {
+      "id": "0fc83fcb-455c-4328-82ff-6178c9c8b86b",
+      "group": "android",
+      "name": "android_4_dlya_professionalov.pdf",
+      "size": "13.55 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/0fc83fcb-455c-4328-82ff-6178c9c8b86b/preview"
+    },
+    {
+      "id": "012633c9-0e20-4995-b8a3-0ba2808d4b3d",
+      "group": "arduino",
+      "name": "25 крутых проектов на Arduino.pdf",
+      "size": "16.47 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/012633c9-0e20-4995-b8a3-0ba2808d4b3d/preview"
+    },
+    {
+      "id": "d9b8aab2-cca0-4d17-9303-12d9399893b0",
+      "group": "arduino",
+      "name": "ASKManualRev3.pdf",
+      "size": "10.18 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/d9b8aab2-cca0-4d17-9303-12d9399893b0/preview"
+    },
+    {
+      "id": "d3d0adf0-f87b-4f0f-90e5-bf318304f789",
+      "group": "arduino",
+      "name": "Arduino For Beginner Wizards.pdf",
+      "size": "21.59 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/d3d0adf0-f87b-4f0f-90e5-bf318304f789/preview"
+    },
+    {
+      "id": "7855a9c6-640b-4bf2-aa38-e8ea7c9b7141",
+      "group": "arduino",
+      "name": "Bantsi_Massimo_Arduino_dlya_nachinayuschikh_volshebnikov.pdf",
+      "size": "29.72 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/7855a9c6-640b-4bf2-aa38-e8ea7c9b7141/preview"
+    },
+    {
+      "id": "f252ad5a-b9a2-46f4-891f-edddec89c9aa",
+      "group": "arduino",
+      "name": "arduino_cookbook.pdf",
+      "size": "12.92 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/f252ad5a-b9a2-46f4-891f-edddec89c9aa/preview"
+    },
+    {
+      "id": "cca4c7b2-b5a0-4362-b84b-18a58bf86348",
+      "group": "arduino",
+      "name": "notebook_rus_v1-1.pdf",
+      "size": "1.33 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/cca4c7b2-b5a0-4362-b84b-18a58bf86348/preview"
+    },
+    {
+      "id": "e64ddf58-a423-46f1-b084-836e22ffaec2",
+      "group": "arduino",
+      "name": "practical arduino cool projects for open source.pdf",
+      "size": "9.74 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/e64ddf58-a423-46f1-b084-836e22ffaec2/preview"
+    },
+    {
+      "id": "dc52b8ae-1979-472c-bc39-ac697fa3e7c2",
+      "group": "arduino",
+      "name": "С чего начинаются роботы.pdf",
+      "size": "23.96 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/dc52b8ae-1979-472c-bc39-ac697fa3e7c2/preview"
+    },
+    {
+      "id": "ca1d671b-6082-4b43-a92c-f00a0ed77358",
+      "group": "arduino",
+      "name": "Электроника для начинающих.pdf",
+      "size": "12.39 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/ca1d671b-6082-4b43-a92c-f00a0ed77358/preview"
+    },
+    {
+      "id": "493b9979-0df2-48f0-8a84-cf1b74b79346",
+      "group": "assambler",
+      "name": "Ассемблер - это просто. Учимся программировать (Калашников О.А.).pdf",
+      "size": "14.32 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/493b9979-0df2-48f0-8a84-cf1b74b79346/preview"
+    },
+    {
+      "id": "e0540049-5a94-48df-824b-8cdea720b731",
+      "group": "assambler",
+      "name": "Построение компиляторов (Вирт Н.).pdf",
+      "size": "28.44 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/e0540049-5a94-48df-824b-8cdea720b731/preview"
+    },
+    {
+      "id": "e25e49b9-330d-4d86-b526-f793d7bebf8c",
+      "group": "bash",
+      "name": "Bash Notes For Professionals.pdf",
+      "size": "1.75 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/e25e49b9-330d-4d86-b526-f793d7bebf8c/preview"
+    },
+    {
+      "id": "a2536331-3d56-49b9-9d9c-7769ef2308cc",
+      "group": "c#",
+      "name": "Cpp_Visual_Cr_Sozdanie_Prilozhenii_for_Windows.pdf",
+      "size": "8.92 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/a2536331-3d56-49b9-9d9c-7769ef2308cc/preview"
+    },
+    {
+      "id": "360a393b-0bd4-4fd5-8655-6ae6dbae20e8",
+      "group": "c#",
+      "name": "Ватсон К. С#.pdf",
+      "size": "41.49 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/360a393b-0bd4-4fd5-8655-6ae6dbae20e8/preview"
+    },
+    {
+      "id": "ff231868-754a-4a11-8409-a036e5b14707",
+      "group": "c#",
+      "name": "Постолит А. В. Visual Studio .NET разработка приложений баз данных.pdf",
+      "size": "41.84 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/ff231868-754a-4a11-8409-a036e5b14707/preview"
+    },
+    {
+      "id": "7f6d01db-c219-4a70-9d93-1a4cf61495cc",
+      "group": "c#",
+      "name": "Рихтер Дж. Программирование на платформе Microsoft .NET Framework.pdf",
+      "size": "52.21 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/7f6d01db-c219-4a70-9d93-1a4cf61495cc/preview"
+    },
+    {
+      "id": "4f17e34b-4f49-4895-b562-3e412498af6a",
+      "group": "c#",
+      "name": "Русская редакция Альманах программиста Том 1 MS SQL Server Ado.Net.pdf",
+      "size": "43.58 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/4f17e34b-4f49-4895-b562-3e412498af6a/preview"
+    },
+    {
+      "id": "a38b962c-f63b-4dad-ab90-606cdf4419a5",
+      "group": "c#",
+      "name": "Русская редакция Альманах программиста Том 4 Безопасность в NET Шифрование Защита кода и данных.pdf",
+      "size": "31.76 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/a38b962c-f63b-4dad-ab90-606cdf4419a5/preview"
+    },
+    {
+      "id": "7774d955-2bd2-4c93-9968-44d681271a94",
+      "group": "c#",
+      "name": "Троелсен. Э.  С# и платформа .NET. Библиотека программиста.pdf",
+      "size": "98.67 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/7774d955-2bd2-4c93-9968-44d681271a94/preview"
+    },
+    {
+      "id": "fd8f0f05-97e2-48f2-8e2d-950a74c93d92",
+      "group": "c#",
+      "name": "Шилдг Г.Полный справочник по С#.pdf",
+      "size": "25.32 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/fd8f0f05-97e2-48f2-8e2d-950a74c93d92/preview"
+    },
+    {
+      "id": "87763a8f-7d52-401c-b893-b41b208480fb",
+      "group": "c#",
+      "name": "шилдт_герберт_-_полный_справочник_по_c#.pdf",
+      "size": "5.29 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/87763a8f-7d52-401c-b893-b41b208480fb/preview"
+    },
+    {
+      "id": "bc19b32f-14fc-43ef-b076-056144779e4b",
+      "group": "c++",
+      "name": "cpp-za-21-den.pdf",
+      "size": "38.13 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/bc19b32f-14fc-43ef-b076-056144779e4b/preview"
+    },
+    {
+      "id": "ae936619-6473-4b8c-891c-affa27029d8c",
+      "group": "c++",
+      "name": "Освой самостоятельно C++ за 21 день.pdf",
+      "size": "38.49 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/ae936619-6473-4b8c-891c-affa27029d8c/preview"
+    },
+    {
+      "id": "e1aa3e10-45cd-4517-acf0-3d4b1a6d6a64",
+      "group": "c++",
+      "name": "Павловская, Щупак С и С++ Структурное программирование ПРАКТИКУМ.pdf",
+      "size": "58.89 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/e1aa3e10-45cd-4517-acf0-3d4b1a6d6a64/preview"
+    },
+    {
+      "id": "7cd8baea-54d7-40db-a431-a2b0241176f7",
+      "group": "c++",
+      "name": "Павловская_C_Cpp_Программирование на языке высокого уровня.pdf",
+      "size": "10.08 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/7cd8baea-54d7-40db-a431-a2b0241176f7/preview"
+    },
+    {
+      "id": "21d80921-3935-4749-ba97-cb44408bb154",
+      "group": "common",
+      "name": "1stellman_a_greene_j_learning_agile_understanding_scrum_xp_le.pdf",
+      "size": "47.1 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/21d80921-3935-4749-ba97-cb44408bb154/preview"
+    },
+    {
+      "id": "2deb9812-9ab2-406a-824f-d85c2a56cc21",
+      "group": "common",
+      "name": "Avinash_Nejlbaff_Barri_Dzh_Teoriya_igr_Iskusstvo_strategicheskogo_myshleniya_v_biznese_i_zhizni.pdf",
+      "size": "5.5 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/2deb9812-9ab2-406a-824f-d85c2a56cc21/preview"
+    },
+    {
+      "id": "bcfc0b23-173b-419a-bffb-0787ee379c51",
+      "group": "common",
+      "name": "Barbara_Oakli_-_Dumay_kak_matematik.pdf",
+      "size": "3.69 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/bcfc0b23-173b-419a-bffb-0787ee379c51/preview"
+    },
+    {
+      "id": "aecc8a8a-d098-4973-a02e-1c9c575c6daa",
+      "group": "common",
+      "name": "Big Data Principles and Best Practices of Scalable Realtime Data Systems.pdf",
+      "size": "7.76 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/aecc8a8a-d098-4973-a02e-1c9c575c6daa/preview"
+    },
+    {
+      "id": "4ebd0163-d79a-4978-91aa-a642edf50cd4",
+      "group": "common",
+      "name": "CQRS documents.pdf",
+      "size": "1.55 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/4ebd0163-d79a-4978-91aa-a642edf50cd4/preview"
+    },
+    {
+      "id": "69bfdebf-3c47-4a3b-87e3-a5f380275511",
+      "group": "common",
+      "name": "Cracking_the_Coding_Interview_5th_Edition_proglib.pdf",
+      "size": "145.99 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/69bfdebf-3c47-4a3b-87e3-a5f380275511/preview"
+    },
+    {
+      "id": "31f49f4d-4e9e-42be-87e4-036dc562e31a",
+      "group": "common",
+      "name": "D_Knut_-_Iskusstvo_Programmirovania_tom_2.pdf",
+      "size": "66.68 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/31f49f4d-4e9e-42be-87e4-036dc562e31a/preview"
+    },
+    {
+      "id": "b41af9cb-ca8a-4ca2-b58a-3f9c5e33f93f",
+      "group": "common",
+      "name": "D_Knut_-_Iskusstvo_Programmirovania_tom_3.pdf",
+      "size": "65.1 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/b41af9cb-ca8a-4ca2-b58a-3f9c5e33f93f/preview"
+    },
+    {
+      "id": "b8817729-3e04-448f-8d6e-9ebb4a7d9086",
+      "group": "common",
+      "name": "Dzheyson_Mak-Kolm_Smit_Elementarnyie_shablonyi_proektirovaniya_RuLit_Net_282836.pdf",
+      "size": "95.33 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/b8817729-3e04-448f-8d6e-9ebb4a7d9086/preview"
+    },
+    {
+      "id": "036dcd27-84fd-4620-be97-612677524713",
+      "group": "common",
+      "name": "Erik_Evans-Predmetno-orientirovannoe_proektirov.pdf",
+      "size": "22.72 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/036dcd27-84fd-4620-be97-612677524713/preview"
+    },
+    {
+      "id": "2bb93b67-43e3-4b3a-b161-98831ecc127c",
+      "group": "common",
+      "name": "Genri_S_Uorren_ml_Algoritmicheskie_tryuki_dlya_programmistov_2-e_izdanie_2014.pdf",
+      "size": "14.68 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/2bb93b67-43e3-4b3a-b161-98831ecc127c/preview"
+    },
+    {
+      "id": "4e70a587-320c-40e4-b165-a345ac6b0d62",
+      "group": "common",
+      "name": "Hoffman_J_-_Mastering_Swift_4_4th_Edition_-_2017.pdf",
+      "size": "5.27 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/4e70a587-320c-40e4-b165-a345ac6b0d62/preview"
+    },
+    {
+      "id": "090d920c-3ece-4c5f-a548-9444e418b064",
+      "group": "common",
+      "name": "Knut_D_E_-_Iskusstvo_programmirovania_Tom_1.pdf",
+      "size": "26.95 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/090d920c-3ece-4c5f-a548-9444e418b064/preview"
+    },
+    {
+      "id": "330430ef-35fa-4a4f-98cc-a5ce72c7a003",
+      "group": "common",
+      "name": "Martin_Fauler_-_Refaktoring_Uluchshenie_suschestvuyuschego_koda.pdf",
+      "size": "20.62 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/330430ef-35fa-4a4f-98cc-a5ce72c7a003/preview"
+    },
+    {
+      "id": "a6c208f9-0be0-4133-9058-c5aa64271bcd",
+      "group": "common",
+      "name": "Osherove_2014_Art_of_Unit_Testing_2nd_ed.pdf",
+      "size": "14.05 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/a6c208f9-0be0-4133-9058-c5aa64271bcd/preview"
+    },
+    {
+      "id": "372017a2-8df0-4e97-b17b-8eff0c6cfee4",
+      "group": "common",
+      "name": "Percival_H_-_Test-Driven_Development_with_Python_2nd_Edition_-_2017.pdf",
+      "size": "11.97 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/372017a2-8df0-4e97-b17b-8eff0c6cfee4/preview"
+    },
+    {
+      "id": "1ae0e42f-b503-4566-9ea2-30706046d8e0",
+      "group": "common",
+      "name": "Practical Domain Driven Design enterprise java.pdf",
+      "size": "12.15 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/1ae0e42f-b503-4566-9ea2-30706046d8e0/preview"
+    },
+    {
+      "id": "5b4e9def-2811-4d1a-842b-ff693f62893c",
+      "group": "common",
+      "name": "Pro RESTful API.pdf",
+      "size": "2.76 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/5b4e9def-2811-4d1a-842b-ff693f62893c/preview"
+    },
+    {
+      "id": "3d5961bf-c924-427d-ba7a-9b8c6716ceab",
+      "group": "common",
+      "name": "T_Kormen_Ch_Leyzerson_R_Rivest_K_Shtayn_-_Algoritmy_Postroenie_i_analiz_-_2013.pdf",
+      "size": "103.99 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/3d5961bf-c924-427d-ba7a-9b8c6716ceab/preview"
+    },
+    {
+      "id": "6e689682-6489-4531-9394-450304033f77",
+      "group": "common",
+      "name": "Tanenbaum_E__Van_Steen_M_Raspredelennye_sistemy_Printsipy_i_paradigmy_2003.pdf",
+      "size": "23.57 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/6e689682-6489-4531-9394-450304033f77/preview"
+    },
+    {
+      "id": "8506e2d2-bb1e-4430-83b5-f8cead0fd321",
+      "group": "common",
+      "name": "Transaction.pdf",
+      "size": "0.42 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/8506e2d2-bb1e-4430-83b5-f8cead0fd321/preview"
+    },
+    {
+      "id": "79d8fb48-7472-47de-9f89-8abe238410a3",
+      "group": "common",
+      "name": "UML.pdf",
+      "size": "0.56 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/79d8fb48-7472-47de-9f89-8abe238410a3/preview"
+    },
+    {
+      "id": "3840502c-491d-4d08-a783-779f34e0d138",
+      "group": "common",
+      "name": "Vaysfeld_Obektno-orientirovannoe_myishlenie.pdf",
+      "size": "8.87 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/3840502c-491d-4d08-a783-779f34e0d138/preview"
+    },
+    {
+      "id": "abb780ee-0cfa-4e24-bae9-d8220540d16f",
+      "group": "common",
+      "name": "designing-event-driven-systems.pdf",
+      "size": "5.29 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/abb780ee-0cfa-4e24-bae9-d8220540d16f/preview"
+    },
+    {
+      "id": "86122e71-a91e-4704-9f3c-8945e349bfaa",
+      "group": "common",
+      "name": "ebook-how-to-build-and-scale-with-microservices.pdf",
+      "size": "0.17 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/86122e71-a91e-4704-9f3c-8945e349bfaa/preview"
+    },
+    {
+      "id": "12d9a025-0232-428a-b640-13e6d78e69c6",
+      "group": "common",
+      "name": "gameprogrammingpatterns.pdf",
+      "size": "9.25 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/12d9a025-0232-428a-b640-13e6d78e69c6/preview"
+    },
+    {
+      "id": "6e741946-9ff2-4fda-b721-a8b81b19fd5e",
+      "group": "common",
+      "name": "groff-dzh_-r_-vajnberg-p_n_-oppel-e_-dzh_-sql_-polnoe-rukovodstvo-2015.pdf",
+      "size": "28.89 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/6e741946-9ff2-4fda-b721-a8b81b19fd5e/preview"
+    },
+    {
+      "id": "bef3ec06-4cf4-485a-ae54-cf4fef092f7a",
+      "group": "common",
+      "name": "iOS_11_amp_amp_Swift_4_For_Beginners.pdf",
+      "size": "43.76 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/bef3ec06-4cf4-485a-ae54-cf4fef092f7a/preview"
+    },
+    {
+      "id": "3202c7c2-0111-4f4c-afdb-3919c97c29aa",
+      "group": "common",
+      "name": "patterns.pdf",
+      "size": "6.62 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/3202c7c2-0111-4f4c-afdb-3919c97c29aa/preview"
+    },
+    {
+      "id": "bede63a8-c038-4630-a47f-f976be12bc2a",
+      "group": "common",
+      "name": "problems-basic-01.pdf",
+      "size": "0.15 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/bede63a8-c038-4630-a47f-f976be12bc2a/preview"
+    },
+    {
+      "id": "261f04ef-b098-4f42-8baf-fe01ba6d8697",
+      "group": "common",
+      "name": "release-it-proektirovanie-i-dizayn-po.pdf",
+      "size": "22.8 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/261f04ef-b098-4f42-8baf-fe01ba6d8697/preview"
+    },
+    {
+      "id": "ade33365-6af0-473b-af7b-8cc83dabae6c",
+      "group": "common",
+      "name": "Архитектура корпоративных программных приложений (Фаулер).pdf",
+      "size": "6.59 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/ade33365-6af0-473b-af7b-8cc83dabae6c/preview"
+    },
+    {
+      "id": "dbe7c424-eeb2-4e92-9cad-17abf050be87",
+      "group": "common",
+      "name": "Базы данных  2015.pdf",
+      "size": "154.54 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/dbe7c424-eeb2-4e92-9cad-17abf050be87/preview"
+    },
+    {
+      "id": "4a964e28-04e6-44d2-83a0-0fcff67a8c59",
+      "group": "common",
+      "name": "Мартин Фаулер Рефакторинг улучшение существующего кода.pdf",
+      "size": "20.62 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/4a964e28-04e6-44d2-83a0-0fcff67a8c59/preview"
+    },
+    {
+      "id": "aaf3bc5a-a09a-49da-bd70-d07705cde6b8",
+      "group": "common",
+      "name": "Микросервисы. Паттерны разработки и рефакторинга. (2019) Крис Ричардсон-free.pdf",
+      "size": "44.65 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/aaf3bc5a-a09a-49da-bd70-d07705cde6b8/preview"
+    },
+    {
+      "id": "d1b2f4e9-af8a-4e1d-a851-00437ae11f1b",
+      "group": "common",
+      "name": "Микросервисы. Паттерны разработки и рефакторинга.pdf",
+      "size": "26.52 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/d1b2f4e9-af8a-4e1d-a851-00437ae11f1b/preview"
+    },
+    {
+      "id": "7228bfef-73fa-4549-8195-5156d9f2e094",
+      "group": "common",
+      "name": "Непрерывная интеграция улучшение качества программного обеспечения.pdf",
+      "size": "11.44 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/7228bfef-73fa-4549-8195-5156d9f2e094/preview"
+    },
+    {
+      "id": "8344d3fb-db3b-45a9-b513-429b80ec8a54",
+      "group": "common",
+      "name": "Непрерывное развертывание ПО.pdf",
+      "size": "11.12 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/8344d3fb-db3b-45a9-b513-429b80ec8a54/preview"
+    },
+    {
+      "id": "a336c1b7-dc4d-41cd-ac1c-e2ba4f68e0a7",
+      "group": "common",
+      "name": "Реализация методов предметно-ориентированного проектирования - DDD-Вон Вернон.pdf",
+      "size": "34.0 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/a336c1b7-dc4d-41cd-ac1c-e2ba4f68e0a7/preview"
+    },
+    {
+      "id": "6be285d8-fe36-4af7-808f-7ea93785366f",
+      "group": "common",
+      "name": "Структура  и  интерпретация компьютерных программ.pdf",
+      "size": "4.21 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/6be285d8-fe36-4af7-808f-7ea93785366f/preview"
+    },
+    {
+      "id": "40cd6d4d-6a7f-4f90-8811-5b94f09ab048",
+      "group": "common",
+      "name": "Технология программирования.pdf",
+      "size": "0.37 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/40cd6d4d-6a7f-4f90-8811-5b94f09ab048/preview"
+    },
+    {
+      "id": "52bb661d-cc91-4a3e-993b-6929f942003b",
+      "group": "common",
+      "name": "Шаблоны интеграции корпоративных приложений.pdf",
+      "size": "32.77 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/52bb661d-cc91-4a3e-993b-6929f942003b/preview"
+    },
+    {
+      "id": "bfe65a9e-11b9-4481-8862-a52c6b58101e",
+      "group": "common",
+      "name": "Шаблоны корпоративных приложений (Фаулер).pdf",
+      "size": "57.03 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/bfe65a9e-11b9-4481-8862-a52c6b58101e/preview"
+    },
+    {
+      "id": "a98fbb55-f5d7-42ba-8a03-388f7cc684b8",
+      "group": "common",
+      "name": "Шаблоны реализации корпоративных приложений.pdf",
+      "size": "5.1 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/a98fbb55-f5d7-42ba-8a03-388f7cc684b8/preview"
+    },
+    {
+      "id": "7bdd7e25-1289-4975-8058-7fdc0aba2e7b",
+      "group": "common",
+      "name": "Эволюционная архитектура.pdf",
+      "size": "0.25 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/7bdd7e25-1289-4975-8058-7fdc0aba2e7b/preview"
+    },
+    {
+      "id": "349913c4-e887-451e-9979-84408f735399",
+      "group": "common",
+      "name": "гмарь.pdf",
+      "size": "0.41 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/349913c4-e887-451e-9979-84408f735399/preview"
+    },
+    {
+      "id": "94ebb492-1c91-433b-a598-0a818de2df1c",
+      "group": "common",
+      "name": "чистый код.pdf",
+      "size": "34.28 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/94ebb492-1c91-433b-a598-0a818de2df1c/preview"
+    },
+    {
+      "id": "d9fbf0a5-12ba-4611-9e19-7cc91bf1f62b",
+      "group": "css",
+      "name": "CSS Notes For Professionals.pdf",
+      "size": "3.4 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/d9fbf0a5-12ba-4611-9e19-7cc91bf1f62b/preview"
+    },
+    {
+      "id": "72d8a306-b7f3-4d68-903a-f94362b17356",
+      "group": "css",
+      "name": "Holzschlag Molly 250 HTML AND WEB DESIGN SECRETS (2004).pdf",
+      "size": "74.87 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/72d8a306-b7f3-4d68-903a-f94362b17356/preview"
+    },
+    {
+      "id": "c5ea114b-99c5-4089-950e-6d77bd135d61",
+      "group": "css",
+      "name": "Otzyvchivy_veb-dizayn__Itan_Markott_2012.pdf",
+      "size": "7.43 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/c5ea114b-99c5-4089-950e-6d77bd135d61/preview"
+    },
+    {
+      "id": "d767535a-f45c-465d-bf91-c65c0c8e0bc1",
+      "group": "css",
+      "name": "Инлайновый контекст форматирования.pdf",
+      "size": "2.34 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/d767535a-f45c-465d-bf91-c65c0c8e0bc1/preview"
+    },
+    {
+      "id": "beb82ea0-fcbd-4692-9559-afb9ed051f34",
+      "group": "css",
+      "name": "Круг С. Веб-Дизайн- книга Стива Круга или не заставляйте меня думать! (2-е издание, 2008).pdf",
+      "size": "11.98 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/beb82ea0-fcbd-4692-9559-afb9ed051f34/preview"
+    },
+    {
+      "id": "cc5427b8-89b1-4a93-9647-337f12cf4b7c",
+      "group": "css",
+      "name": "Макнейл П. Веб-дизайн. Идеи, секреты, советы (2012).pdf",
+      "size": "72.36 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/cc5427b8-89b1-4a93-9647-337f12cf4b7c/preview"
+    },
+    {
+      "id": "ef7f07d5-fb99-4b9c-bbda-fff79358a737",
+      "group": "css",
+      "name": "Макфарланд Дэвид Большая книга CSS (2012).pdf",
+      "size": "51.78 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/ef7f07d5-fb99-4b9c-bbda-fff79358a737/preview"
+    },
+    {
+      "id": "067c2ed7-aaa2-4106-b598-aa3e77e4d30b",
+      "group": "css",
+      "name": "С. Уэйншенк - 100 главных принципов дизайна (Библиотека специалиста) - 2012.pdf",
+      "size": "6.8 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/067c2ed7-aaa2-4106-b598-aa3e77e4d30b/preview"
+    },
+    {
+      "id": "4c0c574c-d123-42a7-982d-dc311a8e4ba9",
+      "group": "css",
+      "name": "Ташков П.А. Веб-мастеринг. HTML, CSS, JavaScript, PHP, CMS, AJAX, раскрутка (2010).pdf",
+      "size": "11.4 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/4c0c574c-d123-42a7-982d-dc311a8e4ba9/preview"
+    },
+    {
+      "id": "4f0ca602-793c-4949-a1b3-c4a11bcb1025",
+      "group": "css",
+      "name": "Хоган Б. HTML5 и CSS3. Веб-разработка по стандартам нового поколения (2014).pdf",
+      "size": "10.24 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/4f0ca602-793c-4949-a1b3-c4a11bcb1025/preview"
+    },
+    {
+      "id": "76e346f1-a7f2-4c43-8e41-6909a081cf85",
+      "group": "db",
+      "name": "Database Systems.pdf",
+      "size": "44.0 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/76e346f1-a7f2-4c43-8e41-6909a081cf85/preview"
+    },
+    {
+      "id": "9238cba5-04fc-4038-92e2-541bb53ed3df",
+      "group": "delphi",
+      "name": "Delphi глазами Хакера.pdf",
+      "size": "7.77 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/9238cba5-04fc-4038-92e2-541bb53ed3df/preview"
+    },
+    {
+      "id": "ab5ddb34-f103-49d4-a619-9800a9d291ae",
+      "group": "delphi",
+      "name": "Осипов Д. Delphi. Программирование для Windows, OS X, iOS и Android (2014).pdf",
+      "size": "29.51 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/ab5ddb34-f103-49d4-a619-9800a9d291ae/preview"
+    },
+    {
+      "id": "ceb86af6-95f3-4c54-b34a-589ad075db10",
+      "group": "delphi",
+      "name": "Флёнов М.Е. - Библия Delphi (3-е издание) - 2011.pdf",
+      "size": "45.53 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/ceb86af6-95f3-4c54-b34a-589ad075db10/preview"
+    },
+    {
+      "id": "d7df3d9d-0261-474c-8fe7-2f5ce574a0d2",
+      "group": "docker",
+      "name": "Containerization-Cookbook.pdf",
+      "size": "2.59 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/d7df3d9d-0261-474c-8fe7-2f5ce574a0d2/preview"
+    },
+    {
+      "id": "9064b5ad-0fdc-4583-926b-91a7490ed157",
+      "group": "docker",
+      "name": "Docker cookbook.pdf",
+      "size": "6.61 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/9064b5ad-0fdc-4583-926b-91a7490ed157/preview"
+    },
+    {
+      "id": "8364f900-2d38-44b9-99c4-19e97efcfc5a",
+      "group": "docker",
+      "name": "Docker for Java Delopers.pdf",
+      "size": "4.65 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/8364f900-2d38-44b9-99c4-19e97efcfc5a/preview"
+    },
+    {
+      "id": "01fc7ced-5f8d-4b26-afc5-fd942d033bc8",
+      "group": "docker",
+      "name": "Использование Docker.pdf",
+      "size": "5.71 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/01fc7ced-5f8d-4b26-afc5-fd942d033bc8/preview"
+    },
+    {
+      "id": "d0c9de93-f306-4a0a-abfe-2bc3f6bc15c5",
+      "group": "git",
+      "name": "Git in practice.pdf",
+      "size": "6.54 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/d0c9de93-f306-4a0a-abfe-2bc3f6bc15c5/preview"
+    },
+    {
+      "id": "d8cb4eb5-3de0-474d-8ffd-a8e1cd75ad64",
+      "group": "go",
+      "name": "Донован А. Керниган Б. - Язык программирования Go (Программирование для профессионалов) - 2016.pdf",
+      "size": "19.22 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/d8cb4eb5-3de0-474d-8ffd-a8e1cd75ad64/preview"
+    },
+    {
+      "id": "abedea3f-4f7c-46e3-9718-66e8f4d3e49e",
+      "group": "groovy",
+      "name": "Groovy 2 Cookbook.pdf",
+      "size": "26.28 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/abedea3f-4f7c-46e3-9718-66e8f4d3e49e/preview"
+    },
+    {
+      "id": "463989fe-cb02-4e2f-a0c1-dd2830154871",
+      "group": "groovy",
+      "name": "Смит Г., Ледбрук П. Grails. Гибкость Groovy и надежность Java (2010).pdf",
+      "size": "7.73 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/463989fe-cb02-4e2f-a0c1-dd2830154871/preview"
+    },
+    {
+      "id": "319ace37-ea70-4a2f-94a4-fa980aeb9250",
+      "group": "hadoop",
+      "name": "Hadoop-The_Definitive_proglib.pdf",
+      "size": "10.06 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/319ace37-ea70-4a2f-94a4-fa980aeb9250/preview"
+    },
+    {
+      "id": "2c6943ce-c343-42b4-a979-9e431b8c00a7",
+      "group": "haskell",
+      "name": "ohaskell.pdf",
+      "size": "0.77 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/2c6943ce-c343-42b4-a979-9e431b8c00a7/preview"
+    },
+    {
+      "id": "c1fa90e2-a7a7-4e4d-a60b-2d5b7e4c562b",
+      "group": "html",
+      "name": "HTML5 Notes For Professionals.pdf",
+      "size": "1.36 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/c1fa90e2-a7a7-4e4d-a60b-2d5b7e4c562b/preview"
+    },
+    {
+      "id": "d5c6e5ad-488d-4e9c-9d80-7bf739c185d5",
+      "group": "java",
+      "name": "Beginning_EJB_in_Java_EE_8_3rd_Edition.pdf",
+      "size": "17.71 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/d5c6e5ad-488d-4e9c-9d80-7bf739c185d5/preview"
+    },
+    {
+      "id": "4466ad91-0e06-4e9f-b2eb-d04a67bdfd72",
+      "group": "java",
+      "name": "Data_Science_with_Java_Practical.pdf",
+      "size": "7.35 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/4466ad91-0e06-4e9f-b2eb-d04a67bdfd72/preview"
+    },
+    {
+      "id": "c0824195-a626-4999-b05f-e0fdf518f865",
+      "group": "java",
+      "name": "Evans_B__Verburg_M_-_Java_Novoe_pokolenie_ra.pdf",
+      "size": "26.08 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/c0824195-a626-4999-b05f-e0fdf518f865/preview"
+    },
+    {
+      "id": "668d9aab-48eb-4016-b148-a6baa3fd1dea",
+      "group": "java",
+      "name": "JMeter-Tutorial.pdf",
+      "size": "3.86 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/668d9aab-48eb-4016-b148-a6baa3fd1dea/preview"
+    },
+    {
+      "id": "f2123f4d-7c5a-4bb8-a3b4-c0efe5a0a844",
+      "group": "java",
+      "name": "JNDI-JDBC.pdf",
+      "size": "1.58 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/f2123f4d-7c5a-4bb8-a3b4-c0efe5a0a844/preview"
+    },
+    {
+      "id": "468b2437-5f13-4d62-b1e4-cfb173083bb0",
+      "group": "java",
+      "name": "JVM-Troubleshooting-Guide.pdf",
+      "size": "3.02 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/468b2437-5f13-4d62-b1e4-cfb173083bb0/preview"
+    },
+    {
+      "id": "f8e0a25e-71a5-4058-8f43-49e55109d934",
+      "group": "java",
+      "name": "Java 8 Lambdas.pdf",
+      "size": "7.24 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/f8e0a25e-71a5-4058-8f43-49e55109d934/preview"
+    },
+    {
+      "id": "32d2983f-bf38-4497-828d-e8ea7e10fcb6",
+      "group": "java",
+      "name": "Java EE Web Application Primer.pdf",
+      "size": "2.18 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/32d2983f-bf38-4497-828d-e8ea7e10fcb6/preview"
+    },
+    {
+      "id": "368322e5-e19e-44d5-990f-b8b7171594ed",
+      "group": "java",
+      "name": "Java EE web application primer.pdf",
+      "size": "2.18 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/368322e5-e19e-44d5-990f-b8b7171594ed/preview"
+    },
+    {
+      "id": "73c6d486-833a-4458-8ecf-9ffa760ba5a2",
+      "group": "java",
+      "name": "Java EE8 Recipes.pdf",
+      "size": "12.42 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/73c6d486-833a-4458-8ecf-9ffa760ba5a2/preview"
+    },
+    {
+      "id": "e0ed5793-8161-4fd0-8652-bc62dbd1cd41",
+      "group": "java",
+      "name": "Java Notes For Professionals.pdf",
+      "size": "7.38 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/e0ed5793-8161-4fd0-8652-bc62dbd1cd41/preview"
+    },
+    {
+      "id": "4e5cf23d-c0bd-4bf0-b684-6673571d7647",
+      "group": "java",
+      "name": "Java Puzzlers_ Traps, Pitfalls, and Corner Cases [Bloch \u0026 Gafter 2005-07-04].pdf",
+      "size": "5.01 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/4e5cf23d-c0bd-4bf0-b684-6673571d7647/preview"
+    },
+    {
+      "id": "c0642786-92cd-484a-90c9-47ff0758e3c4",
+      "group": "java",
+      "name": "Java-8-Features.pdf",
+      "size": "1.74 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/c0642786-92cd-484a-90c9-47ff0758e3c4/preview"
+    },
+    {
+      "id": "a8b20979-a23b-460d-8892-deb65c9e5471",
+      "group": "java",
+      "name": "Java-Interview-Questions.pdf",
+      "size": "1.97 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/a8b20979-a23b-460d-8892-deb65c9e5471/preview"
+    },
+    {
+      "id": "cc7c49f5-900f-4969-ac74-2410d8b12e57",
+      "group": "java",
+      "name": "Java-NIO-Programming-Cookbook.pdf",
+      "size": "1.38 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/cc7c49f5-900f-4969-ac74-2410d8b12e57/preview"
+    },
+    {
+      "id": "0585de36-5189-4696-b6b4-d66a332be563",
+      "group": "java",
+      "name": "JavaFX-Programming-Cookbook.pdf",
+      "size": "10.49 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/0585de36-5189-4696-b6b4-d66a332be563/preview"
+    },
+    {
+      "id": "4b2e2ac4-4a80-4001-9cdf-908a2eaaa004",
+      "group": "java",
+      "name": "Java_concurrency_in_practice.pdf",
+      "size": "5.21 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/4b2e2ac4-4a80-4001-9cdf-908a2eaaa004/preview"
+    },
+    {
+      "id": "6781ca25-32ad-4f5f-b9f5-c6691295c21d",
+      "group": "java",
+      "name": "Load testing with JMeter.pdf",
+      "size": "3.86 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/6781ca25-32ad-4f5f-b9f5-c6691295c21d/preview"
+    },
+    {
+      "id": "73536014-fcc0-491f-a405-6a23b54e9ab7",
+      "group": "java",
+      "name": "Machine Learning in Java.pdf",
+      "size": "13.9 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/73536014-fcc0-491f-a405-6a23b54e9ab7/preview"
+    },
+    {
+      "id": "a8e9dd8f-8388-4c9f-87f8-a628f434f4ce",
+      "group": "java",
+      "name": "Microservices Patterns with examples in Java.pdf",
+      "size": "7.93 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/a8e9dd8f-8388-4c9f-87f8-a628f434f4ce/preview"
+    },
+    {
+      "id": "85cae56a-109a-4e58-af92-d25491b21d1d",
+      "group": "java",
+      "name": "Microservices for Java Developers.pdf",
+      "size": "2.74 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/85cae56a-109a-4e58-af92-d25491b21d1d/preview"
+    },
+    {
+      "id": "5d6674df-649b-4622-8035-6c9bdf27eb04",
+      "group": "java",
+      "name": "Modern Java Recipes.pdf",
+      "size": "3.27 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/5d6674df-649b-4622-8035-6c9bdf27eb04/preview"
+    },
+    {
+      "id": "27f406ef-d0f2-431a-90ef-4e44961a3ffd",
+      "group": "java",
+      "name": "Multithreading-and-Concurrency-Questions.pdf",
+      "size": "2.25 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/27f406ef-d0f2-431a-90ef-4e44961a3ffd/preview"
+    },
+    {
+      "id": "9be00db7-cac0-4705-8a25-3b80d4c4897a",
+      "group": "java",
+      "name": "Pro Java Clustering and Scalability.pdf",
+      "size": "3.89 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/9be00db7-cac0-4705-8a25-3b80d4c4897a/preview"
+    },
+    {
+      "id": "b5e60724-b90c-48c5-b49f-e02fdfda3146",
+      "group": "java",
+      "name": "Pro Javafx 8.pdf",
+      "size": "9.19 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/b5e60724-b90c-48c5-b49f-e02fdfda3146/preview"
+    },
+    {
+      "id": "299ed99b-d85b-4a35-b6b4-64ea9be36063",
+      "group": "java",
+      "name": "Pro Javafx 9.pdf",
+      "size": "6.34 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/299ed99b-d85b-4a35-b6b4-64ea9be36063/preview"
+    },
+    {
+      "id": "7eb3e556-3855-4709-8fab-21d1a0dd6b83",
+      "group": "java",
+      "name": "Spring 4 для профессионалов (2015).pdf",
+      "size": "109.65 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/7eb3e556-3855-4709-8fab-21d1a0dd6b83/preview"
+    },
+    {
+      "id": "be512a25-1b93-4bf1-9680-a126bc791207",
+      "group": "java",
+      "name": "Spring Microservices In Action.pdf",
+      "size": "20.51 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/be512a25-1b93-4bf1-9680-a126bc791207/preview"
+    },
+    {
+      "id": "474cea4c-81c3-46e9-b9cf-fa64c04ff73f",
+      "group": "java",
+      "name": "Spring Microservices in Action 2017 eng.pdf",
+      "size": "6.67 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/474cea4c-81c3-46e9-b9cf-fa64c04ff73f/preview"
+    },
+    {
+      "id": "65928c30-e6d9-411f-9d1c-6c97236ca708",
+      "group": "java",
+      "name": "Spring in Action, 4th Edition.pdf",
+      "size": "9.99 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/65928c30-e6d9-411f-9d1c-6c97236ca708/preview"
+    },
+    {
+      "id": "6c25f9ea-166a-453d-91af-4608de3bc0f9",
+      "group": "java",
+      "name": "Spring-Framework-Cookbook.pdf",
+      "size": "8.46 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/6c25f9ea-166a-453d-91af-4608de3bc0f9/preview"
+    },
+    {
+      "id": "061c6c33-94d1-49cc-9320-07ed42b16001",
+      "group": "java",
+      "name": "Spring-Interview-Questions.pdf",
+      "size": "1.97 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/061c6c33-94d1-49cc-9320-07ed42b16001/preview"
+    },
+    {
+      "id": "c55fee04-3c0b-440f-8960-48ca0fb53397",
+      "group": "java",
+      "name": "Spring_5_dlya_professionalov.pdf",
+      "size": "97.06 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/c55fee04-3c0b-440f-8960-48ca0fb53397/preview"
+    },
+    {
+      "id": "7f60c129-aa40-468d-ad22-20ff41788b7e",
+      "group": "java",
+      "name": "dependencyinjection.pdf",
+      "size": "1.34 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/7f60c129-aa40-468d-ad22-20ff41788b7e/preview"
+    },
+    {
+      "id": "4764f074-5ec1-43ab-bcbe-4b62bdc3225e",
+      "group": "java",
+      "name": "effectprogram.pdf",
+      "size": "0.43 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/4764f074-5ec1-43ab-bcbe-4b62bdc3225e/preview"
+    },
+    {
+      "id": "11a6dbfa-ec1e-4c0c-b1b8-f7fcb8aa5805",
+      "group": "java",
+      "name": "enterprise-integration-java-patterns.pdf",
+      "size": "0.43 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/11a6dbfa-ec1e-4c0c-b1b8-f7fcb8aa5805/preview"
+    },
+    {
+      "id": "51d3deea-ef39-42d1-ad73-a7a639f7cb7e",
+      "group": "java",
+      "name": "enterprise_javabeans.pdf",
+      "size": "5.64 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/51d3deea-ef39-42d1-ad73-a7a639f7cb7e/preview"
+    },
+    {
+      "id": "71d86592-9b42-4b88-b607-4c63ef346839",
+      "group": "java",
+      "name": "harrer_simon_java_by_comparison.pdf",
+      "size": "1.6 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/71d86592-9b42-4b88-b607-4c63ef346839/preview"
+    },
+    {
+      "id": "e697a628-e4e2-4b9f-97f8-37eaf756b0c0",
+      "group": "java",
+      "name": "intellij_idea_professionalnoe_programmirovanie_na_java.pdf",
+      "size": "27.05 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/e697a628-e4e2-4b9f-97f8-37eaf756b0c0/preview"
+    },
+    {
+      "id": "7d7641ed-3f3d-49c7-a52b-e055c09541b5",
+      "group": "java",
+      "name": "j8api.pdf",
+      "size": "9.65 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/7d7641ed-3f3d-49c7-a52b-e055c09541b5/preview"
+    },
+    {
+      "id": "4090eb81-9364-4c84-8cbe-11c11f0dcf76",
+      "group": "java",
+      "name": "j8fund.pdf",
+      "size": "8.8 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/4090eb81-9364-4c84-8cbe-11c11f0dcf76/preview"
+    },
+    {
+      "id": "c1879aaf-b088-419d-a5e5-7af6576c8bb0",
+      "group": "java",
+      "name": "j8fx.pdf",
+      "size": "19.13 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/c1879aaf-b088-419d-a5e5-7af6576c8bb0/preview"
+    },
+    {
+      "id": "ac8eff53-4078-40ba-b75d-521454dd7ce5",
+      "group": "java",
+      "name": "j8lang.pdf",
+      "size": "6.26 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/ac8eff53-4078-40ba-b75d-521454dd7ce5/preview"
+    },
+    {
+      "id": "ff67f178-5ffc-4261-85ec-66b377c435d3",
+      "group": "java",
+      "name": "java 9 revealed.pdf",
+      "size": "6.53 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/ff67f178-5ffc-4261-85ec-66b377c435d3/preview"
+    },
+    {
+      "id": "be05c4f7-dbcf-40f2-b44c-f46b60663515",
+      "group": "java",
+      "name": "java-18.JNDI_.JDBC_.pdf",
+      "size": "1.58 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/be05c4f7-dbcf-40f2-b44c-f46b60663515/preview"
+    },
+    {
+      "id": "35d1830b-7fad-47be-9de3-fb04d998a334",
+      "group": "java",
+      "name": "java-2011-паттерны_проектирования_.pdf",
+      "size": "68.31 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/35d1830b-7fad-47be-9de3-fb04d998a334/preview"
+    },
+    {
+      "id": "8e9693af-90b8-4d81-8470-760694c03046",
+      "group": "java",
+      "name": "java-binding.pdf",
+      "size": "0.4 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/8e9693af-90b8-4d81-8470-760694c03046/preview"
+    },
+    {
+      "id": "50dc24e6-a225-4709-90e5-0f4e6950fa14",
+      "group": "java",
+      "name": "java-mastering.pdf",
+      "size": "1.78 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/50dc24e6-a225-4709-90e5-0f4e6950fa14/preview"
+    },
+    {
+      "id": "78f7e9fc-257a-4e4b-a8ce-a9d451935ae9",
+      "group": "java",
+      "name": "java._полное_руководство._8-е_издание.pdf",
+      "size": "25.61 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/78f7e9fc-257a-4e4b-a8ce-a9d451935ae9/preview"
+    },
+    {
+      "id": "8cee458d-889a-4bc5-8080-5b4c550b37d8",
+      "group": "java",
+      "name": "java.промышленное_программирование.pdf",
+      "size": "7.24 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/8cee458d-889a-4bc5-8080-5b4c550b37d8/preview"
+    },
+    {
+      "id": "56e31184-0255-4b54-ae8c-8e38856f7b88",
+      "group": "java",
+      "name": "java_2_biblioteka_professionala_tom_1_osnovy_8-e_izd.pdf",
+      "size": "29.16 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/56e31184-0255-4b54-ae8c-8e38856f7b88/preview"
+    },
+    {
+      "id": "59ee400e-df0b-4f91-bbfe-e6cdfc16b803",
+      "group": "java",
+      "name": "java_2_biblioteka_professionala_tom_2_8-e_izd.pdf",
+      "size": "30.7 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/59ee400e-df0b-4f91-bbfe-e6cdfc16b803/preview"
+    },
+    {
+      "id": "1ac0b10d-6a40-453a-9242-f1cde829520d",
+      "group": "java",
+      "name": "java_3-e_izd.pdf",
+      "size": "46.02 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/1ac0b10d-6a40-453a-9242-f1cde829520d/preview"
+    },
+    {
+      "id": "8c8a46fd-6784-45a9-8be0-edbccbbfc9c8",
+      "group": "java",
+      "name": "java_7_4-e_izd.pdf",
+      "size": "17.74 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/8c8a46fd-6784-45a9-8be0-edbccbbfc9c8/preview"
+    },
+    {
+      "id": "7f0de94a-9308-4246-8e88-71d34dd87fb6",
+      "group": "java",
+      "name": "java_implementation-patterns-ru.pdf",
+      "size": "5.1 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/7f0de94a-9308-4246-8e88-71d34dd87fb6/preview"
+    },
+    {
+      "id": "fd5e9c33-2e0c-479b-934d-1f3d00a79639",
+      "group": "java",
+      "name": "java_lab_work.pdf",
+      "size": "0.33 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/fd5e9c33-2e0c-479b-934d-1f3d00a79639/preview"
+    },
+    {
+      "id": "15a22ef9-cbcf-49be-976d-74a6210570e8",
+      "group": "java",
+      "name": "java_methods_programming.pdf",
+      "size": "14.94 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/15a22ef9-cbcf-49be-976d-74a6210570e8/preview"
+    },
+    {
+      "id": "3b70a3a6-4334-4f69-a144-b5dc2526e095",
+      "group": "java",
+      "name": "java_spravochnik_4-e_izd.pdf",
+      "size": "7.64 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/3b70a3a6-4334-4f69-a144-b5dc2526e095/preview"
+    },
+    {
+      "id": "4a5ce10e-461b-4a1b-a113-181939549f7b",
+      "group": "java",
+      "name": "java_v_primerakh_spravochnik.pdf",
+      "size": "4.27 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/4a5ce10e-461b-4a1b-a113-181939549f7b/preview"
+    },
+    {
+      "id": "08d5e98a-a5f9-47cc-8f63-a11b8bef67e4",
+      "group": "java",
+      "name": "jpa_tutorial.pdf",
+      "size": "3.31 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/08d5e98a-a5f9-47cc-8f63-a11b8bef67e4/preview"
+    },
+    {
+      "id": "d5bc90e2-f78a-4d43-b0e6-113742882048",
+      "group": "java",
+      "name": "jsr339-jaxrs-2.0-final-spec.pdf",
+      "size": "0.6 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/d5bc90e2-f78a-4d43-b0e6-113742882048/preview"
+    },
+    {
+      "id": "e938e319-a3de-4747-a772-bc8759dee605",
+      "group": "java",
+      "name": "junit.pdf",
+      "size": "3.9 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/e938e319-a3de-4747-a772-bc8759dee605/preview"
+    },
+    {
+      "id": "1483fde3-e8ad-4280-9531-ceeaceeea450",
+      "group": "java",
+      "name": "lyambda-vyrazhenia_v_Java_8_2014.pdf",
+      "size": "12.44 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/1483fde3-e8ad-4280-9531-ceeaceeea450/preview"
+    },
+    {
+      "id": "39f9c25f-b68b-4a4c-9603-09384a0cf5ec",
+      "group": "java",
+      "name": "polnyi_spravochnik_po_java_7-e_izd.pdf",
+      "size": "8.07 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/39f9c25f-b68b-4a4c-9603-09384a0cf5ec/preview"
+    },
+    {
+      "id": "eafafff7-f898-4933-b2ef-3588b4c925b1",
+      "group": "java",
+      "name": "pragmatic_unit_testing_in_java_8_wit.pdf",
+      "size": "5.78 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/eafafff7-f898-4933-b2ef-3588b4c925b1/preview"
+    },
+    {
+      "id": "77014e7c-cc1d-4f1e-9c78-1b6cc5531575",
+      "group": "java",
+      "name": "primefaces_user_guide_5_3.pdf",
+      "size": "8.34 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/77014e7c-cc1d-4f1e-9c78-1b6cc5531575/preview"
+    },
+    {
+      "id": "7c52ab22-9352-4730-b9a4-d32cb1665899",
+      "group": "java",
+      "name": "servlets_tutorial.pdf",
+      "size": "1.76 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/7c52ab22-9352-4730-b9a4-d32cb1665899/preview"
+    },
+    {
+      "id": "9e69428f-97f6-4936-8eae-9e8f2d1269dc",
+      "group": "java",
+      "name": "sozdanie_i_obrabotka_struktur_dannykh_v_primerakh_na_java.pdf",
+      "size": "4.9 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/9e69428f-97f6-4936-8eae-9e8f2d1269dc/preview"
+    },
+    {
+      "id": "cfc2ee0e-5214-40f8-9673-f27f7ad736a2",
+      "group": "java",
+      "name": "sozdanie_raspredelennykh_prilozhenii_na_java_2.pdf",
+      "size": "5.79 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/cfc2ee0e-5214-40f8-9673-f27f7ad736a2/preview"
+    },
+    {
+      "id": "975e2119-5b43-45d0-a949-44e471e25072",
+      "group": "java",
+      "name": "spark_для_профессионалов.pdf",
+      "size": "5.89 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/975e2119-5b43-45d0-a949-44e471e25072/preview"
+    },
+    {
+      "id": "9ed38fe8-8c21-4f72-96a0-8f028a684795",
+      "group": "java",
+      "name": "spring-Spring Framework Notes For Professionals.pdf",
+      "size": "0.88 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/9ed38fe8-8c21-4f72-96a0-8f028a684795/preview"
+    },
+    {
+      "id": "64027df9-ca92-4c77-8217-d7967b2afec3",
+      "group": "java",
+      "name": "swing.pdf",
+      "size": "3.93 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/64027df9-ca92-4c77-8217-d7967b2afec3/preview"
+    },
+    {
+      "id": "c9aabd26-4df1-43e5-ac41-e4fd7cffb02c",
+      "group": "java",
+      "name": "swingbook.pdf",
+      "size": "4.47 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/c9aabd26-4df1-43e5-ac41-e4fd7cffb02c/preview"
+    },
+    {
+      "id": "0d84da28-8f86-4a0b-a060-13a780f53d49",
+      "group": "java",
+      "name": "tekhnologiya_web-servisov_platformy_java.pdf",
+      "size": "14.45 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/0d84da28-8f86-4a0b-a060-13a780f53d49/preview"
+    },
+    {
+      "id": "a7f8cedb-084e-410e-b890-0d75b28dad9c",
+      "group": "java",
+      "name": "Лафоре Роберт Структуры данных и алгоритмы Java (2013).pdf",
+      "size": "12.65 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/a7f8cedb-084e-410e-b890-0d75b28dad9c/preview"
+    },
+    {
+      "id": "bab97fc0-49a4-47fb-aa36-cfe79f100793",
+      "group": "java",
+      "name": "Перри Б. Java сервлеты и JSP. Сборник рецептов (2-е издание, 2006).pdf",
+      "size": "147.9 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/bab97fc0-49a4-47fb-aa36-cfe79f100793/preview"
+    },
+    {
+      "id": "0ee5230f-39b9-4d8b-9d64-8b537d124910",
+      "group": "java",
+      "name": "УоллсК.-Spring-в-действии-2013.pdf",
+      "size": "5.91 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/0ee5230f-39b9-4d8b-9d64-8b537d124910/preview"
+    },
+    {
+      "id": "3875c3a8-8352-427b-bc10-9dc442776138",
+      "group": "java",
+      "name": "блох_д._java._эффективное_программирование_(2002).pdf",
+      "size": "1.1 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/3875c3a8-8352-427b-bc10-9dc442776138/preview"
+    },
+    {
+      "id": "66f5198c-924d-4f37-b3fd-a7288dccdcd9",
+      "group": "java",
+      "name": "изучаем_java_ee_7.pdf",
+      "size": "13.15 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/66f5198c-924d-4f37-b3fd-a7288dccdcd9/preview"
+    },
+    {
+      "id": "f904d740-ba55-4614-84cf-307f1ede45c2",
+      "group": "java",
+      "name": "ильдар_хабибулин_-_разработка_web-служб_средствами_java.pdf",
+      "size": "9.69 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/f904d740-ba55-4614-84cf-307f1ede45c2/preview"
+    },
+    {
+      "id": "4ee532f2-d6c6-448f-a895-bd1d18a53544",
+      "group": "java",
+      "name": "к.арнольд,_д.гослинг_-_язык_программирования_java.pdf",
+      "size": "1.14 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/4ee532f2-d6c6-448f-a895-bd1d18a53544/preview"
+    },
+    {
+      "id": "871ff30f-e308-4490-98be-4e006445cb3c",
+      "group": "java",
+      "name": "п.ноутон,_г.шилдт_-_java2._наиболее_полное_руководство.pdf",
+      "size": "47.97 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/871ff30f-e308-4490-98be-4e006445cb3c/preview"
+    },
+    {
+      "id": "cfc426e9-e79f-44d5-8632-7de034be1816",
+      "group": "java",
+      "name": "руководство_программиста_enterprise_javabean_v4.0._inprise_corporation._1999.pdf",
+      "size": "1.45 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/cfc426e9-e79f-44d5-8632-7de034be1816/preview"
+    },
+    {
+      "id": "457cf564-6ee1-4cda-8f42-ea56ae674148",
+      "group": "java",
+      "name": "сборник исходников.pdf",
+      "size": "0.67 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/457cf564-6ee1-4cda-8f42-ea56ae674148/preview"
+    },
+    {
+      "id": "c3de6d59-b4c2-4cec-9299-1023b1300370",
+      "group": "java",
+      "name": "секреты_программирования_для_internet_на_java.pdf",
+      "size": "3.33 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/c3de6d59-b4c2-4cec-9299-1023b1300370/preview"
+    },
+    {
+      "id": "314bc66f-41ab-42ff-8bbc-5a7f20c588f3",
+      "group": "java",
+      "name": "флэнаган_д._java_в_примерах._справочник_(2-е_издание,_2003).pdf",
+      "size": "5.2 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/314bc66f-41ab-42ff-8bbc-5a7f20c588f3/preview"
+    },
+    {
+      "id": "32dcd846-688d-46ab-819b-9313d6ca9c3b",
+      "group": "javascript",
+      "name": "Ext_JS_6_By_Example.pdf",
+      "size": "11.19 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/32dcd846-688d-46ab-819b-9313d6ca9c3b/preview"
+    },
+    {
+      "id": "531eaee7-564c-4caf-bd1d-e6d4913ee587",
+      "group": "javascript",
+      "name": "JavaScript Notes For Professionals.pdf",
+      "size": "4.29 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/531eaee7-564c-4caf-bd1d-e6d4913ee587/preview"
+    },
+    {
+      "id": "35f398c2-e2a5-4d3d-a7ea-527e434ee871",
+      "group": "javascript",
+      "name": "JavaScript_Cookbook_2nd_Edition.pdf",
+      "size": "13.03 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/35f398c2-e2a5-4d3d-a7ea-527e434ee871/preview"
+    },
+    {
+      "id": "1e656c99-1b0a-4c7b-9974-bae1d9206636",
+      "group": "javascript",
+      "name": "Learning_ExtJS_Fourth_Edition.pdf",
+      "size": "12.33 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/1e656c99-1b0a-4c7b-9974-bae1d9206636/preview"
+    },
+    {
+      "id": "e353bfe7-848a-431e-8b34-3c2ae113862a",
+      "group": "javascript",
+      "name": "Loiane_Groner_Mastering_Ext_JS_2nd_Edition_2015.pdf",
+      "size": "12.27 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/e353bfe7-848a-431e-8b34-3c2ae113862a/preview"
+    },
+    {
+      "id": "6d1950e7-3093-481a-b7b5-37604eb0d666",
+      "group": "javascript",
+      "name": "ReactJS Notes For Professionals.pdf",
+      "size": "1.05 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/6d1950e7-3093-481a-b7b5-37604eb0d666/preview"
+    },
+    {
+      "id": "5deea6d1-0a0f-4b81-a459-07d6f0282dcc",
+      "group": "javascript",
+      "name": "TypeScript Notes For Professionals.pdf",
+      "size": "1.19 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/5deea6d1-0a0f-4b81-a459-07d6f0282dcc/preview"
+    },
+    {
+      "id": "73627afc-25e0-4865-a34a-905cb1d5d596",
+      "group": "javascript",
+      "name": "ber_bibo_ieguda_kac_-_jquery._podrobnoe_rukovodstvo_po_prodvinutomu_javascript.pdf",
+      "size": "46.59 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/73627afc-25e0-4865-a34a-905cb1d5d596/preview"
+    },
+    {
+      "id": "25aa80ca-b619-4f3e-92fe-7763dce9294c",
+      "group": "javascript",
+      "name": "jQuery-1_5-Visual-Cheat-Sheet.pdf",
+      "size": "0.34 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/25aa80ca-b619-4f3e-92fe-7763dce9294c/preview"
+    },
+    {
+      "id": "ea29cc94-c557-46da-a984-d8bc92153e38",
+      "group": "javascript",
+      "name": "jQuery-tutorial-for-beginners-1.0.5.pdf",
+      "size": "2.02 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/ea29cc94-c557-46da-a984-d8bc92153e38/preview"
+    },
+    {
+      "id": "c357144d-7009-4cac-a157-8cee63250ab7",
+      "group": "javascript",
+      "name": "optimizatsiya_proizvoditelnosti.pdf",
+      "size": "4.7 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/c357144d-7009-4cac-a157-8cee63250ab7/preview"
+    },
+    {
+      "id": "8ec942d3-a20c-4414-bbd4-39efce902473",
+      "group": "javascript",
+      "name": "podrobnoe_rukovodstvo_5-e_izd_decrypted.pdf",
+      "size": "6.07 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/8ec942d3-a20c-4414-bbd4-39efce902473/preview"
+    },
+    {
+      "id": "b05d4436-f2ce-4842-8b21-2ee6e279b62b",
+      "group": "javascript",
+      "name": "Нидерст Роббинс - HTML5 CSS3 и JavaScript исчерпывающее руководство (Мировой компьютерный бестселлер) - 2014.pdf",
+      "size": "24.85 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/b05d4436-f2ce-4842-8b21-2ee6e279b62b/preview"
+    },
+    {
+      "id": "989d5458-0c55-417d-91bf-dc101fdfc23b",
+      "group": "javaserver",
+      "name": "faces.pdf",
+      "size": "25.93 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/989d5458-0c55-417d-91bf-dc101fdfc23b/preview"
+    },
+    {
+      "id": "8649828c-abac-4548-9b3a-1f968397253d",
+      "group": "kafka",
+      "name": "Kafka Streams in action.pdf",
+      "size": "16.4 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/8649828c-abac-4548-9b3a-1f968397253d/preview"
+    },
+    {
+      "id": "98a5c18d-50cc-4a86-a1f1-840619413bff",
+      "group": "linux",
+      "name": "Linux Fundamentals.pdf",
+      "size": "7.02 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/98a5c18d-50cc-4a86-a1f1-840619413bff/preview"
+    },
+    {
+      "id": "df0793e5-54aa-48ce-987e-1c83646dd3f6",
+      "group": "linux",
+      "name": "Linux Notes For Professionals.pdf",
+      "size": "0.87 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/df0793e5-54aa-48ce-987e-1c83646dd3f6/preview"
+    },
+    {
+      "id": "f9f2c3fe-5358-436e-af25-f1eb438713c4",
+      "group": "linux",
+      "name": "Linux-handbook-comands-A-Z-SEDICOMM-University.pdf",
+      "size": "0.77 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/f9f2c3fe-5358-436e-af25-f1eb438713c4/preview"
+    },
+    {
+      "id": "93b9e8ba-b91e-4068-bf39-5d2db7a395f4",
+      "group": "linux",
+      "name": "Ubuntu и Debian Linux для продвинутых.pdf",
+      "size": "19.48 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/93b9e8ba-b91e-4068-bf39-5d2db7a395f4/preview"
+    },
+    {
+      "id": "ace2e527-a30b-497b-8200-f207c05fe8b8",
+      "group": "linux",
+      "name": "linux_dlya_chaynikov.pdf",
+      "size": "8.36 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/ace2e527-a30b-497b-8200-f207c05fe8b8/preview"
+    },
+    {
+      "id": "a6435370-7f26-47d4-9332-461674c6f827",
+      "group": "linux",
+      "name": "rukovodstvo_po_komandam_i_shell-programmirovaniyu_v_linux.pdf",
+      "size": "13.31 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/a6435370-7f26-47d4-9332-461674c6f827/preview"
+    },
+    {
+      "id": "0fd0ec25-c34d-4b7e-9c72-c8a40c181db3",
+      "group": "linux",
+      "name": "servernoe_primenenie_linux_3-e_izd.pdf",
+      "size": "25.75 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/0fd0ec25-c34d-4b7e-9c72-c8a40c181db3/preview"
+    },
+    {
+      "id": "d8a8fc6f-b54a-4016-9a29-d4c86bc12775",
+      "group": "linux",
+      "name": "set_na_linux_proektirovanie_prokladka_ekspluatatsiya.pdf",
+      "size": "7.86 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/d8a8fc6f-b54a-4016-9a29-d4c86bc12775/preview"
+    },
+    {
+      "id": "bae0a3d8-1fa0-4470-af83-b32e236e4f60",
+      "group": "linux",
+      "name": "setevoe_administrirovanie_linux.pdf",
+      "size": "9.79 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/bae0a3d8-1fa0-4470-af83-b32e236e4f60/preview"
+    },
+    {
+      "id": "56141548-aef9-4c40-8493-786ba64356b7",
+      "group": "linux",
+      "name": "Командная строка Linux. Полное руководство.pdf",
+      "size": "46.3 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/56141548-aef9-4c40-8493-786ba64356b7/preview"
+    },
+    {
+      "id": "b7becb1f-faa2-42d8-9b2d-2230b5367ee4",
+      "group": "linux",
+      "name": "команды Linux.pdf",
+      "size": "4.25 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/b7becb1f-faa2-42d8-9b2d-2230b5367ee4/preview"
+    },
+    {
+      "id": "bb1127e4-c0f4-4006-8880-7239819c6f2c",
+      "group": "net",
+      "name": "TCP⁄IP для профессионалов 3-е издание.pdf",
+      "size": "91.17 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/bb1127e4-c0f4-4006-8880-7239819c6f2c/preview"
+    },
+    {
+      "id": "f1f20667-8fa6-4640-8db5-857b96d45e32",
+      "group": "net",
+      "name": "TCP⁄IP иллюстрированный учебник.pdf",
+      "size": "34.1 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/f1f20667-8fa6-4640-8db5-857b96d45e32/preview"
+    },
+    {
+      "id": "6408726b-471a-4aa8-a420-27f9ba08850b",
+      "group": "net",
+      "name": "Сетевое администрирование 3-е издание.pdf",
+      "size": "25.82 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/6408726b-471a-4aa8-a420-27f9ba08850b/preview"
+    },
+    {
+      "id": "94c8628b-e0cc-4b8b-88ee-bad364cb9812",
+      "group": "net",
+      "name": "Сеть для дома и офиса. Создание, настройка, диагностика и защита.pdf",
+      "size": "56.47 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/94c8628b-e0cc-4b8b-88ee-bad364cb9812/preview"
+    },
+    {
+      "id": "189bbe3b-fee9-4a44-9145-3d9726c79b36",
+      "group": "nginx",
+      "name": "Nginx Essentials.pdf",
+      "size": "2.56 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/189bbe3b-fee9-4a44-9145-3d9726c79b36/preview"
+    },
+    {
+      "id": "6db665c2-2231-486f-8cb4-4526333df461",
+      "group": "open office",
+      "name": "0300CG-CalcGuide-Ru.pdf",
+      "size": "4.09 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/6db665c2-2231-486f-8cb4-4526333df461/preview"
+    },
+    {
+      "id": "2aebd832-3960-4fef-a896-d3a27dec181e",
+      "group": "open office",
+      "name": "Learn.OpenOffice.org.Spreadsheet.Macro.Programming.pdf",
+      "size": "4.26 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/2aebd832-3960-4fef-a896-d3a27dec181e/preview"
+    },
+    {
+      "id": "3d3ba397-4da9-46c3-ae41-ac4a98111d15",
+      "group": "open office",
+      "name": "OpenOffice.org Macros Explained.Master.pdf",
+      "size": "4.32 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/3d3ba397-4da9-46c3-ae41-ac4a98111d15/preview"
+    },
+    {
+      "id": "3e3403f5-b891-4843-b033-371e76459add",
+      "group": "open office",
+      "name": "OpenOffice.org_pro._Avtomatizaciya_raboty.pdf",
+      "size": "2.47 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/3e3403f5-b891-4843-b033-371e76459add/preview"
+    },
+    {
+      "id": "595b31ff-1a72-44de-bd8e-bcd2ebcf178c",
+      "group": "oracle",
+      "name": "11g_osnovy_4-e_izd_decrypted.pdf",
+      "size": "4.17 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/595b31ff-1a72-44de-bd8e-bcd2ebcf178c/preview"
+    },
+    {
+      "id": "ed7620f7-24f4-4ad9-bd85-3ad92932c1b3",
+      "group": "oracle",
+      "name": "Oracle_PLS_QL_Dlya_professionalov_Bestsellery_O_39_Reilly_-2015.pdf",
+      "size": "8.86 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/ed7620f7-24f4-4ad9-bd85-3ad92932c1b3/preview"
+    },
+    {
+      "id": "1cb960c2-6804-437e-baad-abd6cc0d74c6",
+      "group": "oracle",
+      "name": "database_11g_rukovodstvo_administratora_bd.pdf",
+      "size": "15.73 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/1cb960c2-6804-437e-baad-abd6cc0d74c6/preview"
+    },
+    {
+      "id": "06a5d8be-4bd0-4485-b9e8-99abcbbce47a",
+      "group": "oracle",
+      "name": "optimizatsiya_proizvoditelnosti.pdf",
+      "size": "3.84 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/06a5d8be-4bd0-4485-b9e8-99abcbbce47a/preview"
+    },
+    {
+      "id": "577032ba-58ad-4a03-941b-2e5db379e71a",
+      "group": "oracle",
+      "name": "oracle_8_Yazik_programmirovaniya_PLSQL_Scott_Urman.pdf",
+      "size": "33.46 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/577032ba-58ad-4a03-941b-2e5db379e71a/preview"
+    },
+    {
+      "id": "784712b4-0091-4ef0-805e-525347c15645",
+      "group": "oracle",
+      "name": "oracle_dlya_professionalov.pdf",
+      "size": "9.6 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/784712b4-0091-4ef0-805e-525347c15645/preview"
+    },
+    {
+      "id": "7819f949-0f25-4831-a43b-3b5378ce0018",
+      "group": "oracle",
+      "name": "plsql_dlya_administratorov_bd.pdf",
+      "size": "3.97 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/7819f949-0f25-4831-a43b-3b5378ce0018/preview"
+    },
+    {
+      "id": "5f00de7f-f2de-4fe6-98ee-2d19e7f1dc38",
+      "group": "oracle",
+      "name": "sekrety_Oracle_SQL.pdf",
+      "size": "26.03 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/5f00de7f-f2de-4fe6-98ee-2d19e7f1dc38/preview"
+    },
+    {
+      "id": "a4be0481-9036-426f-96e5-563ccadb937c",
+      "group": "oracle",
+      "name": "sekrety_oracle_sql.pdf",
+      "size": "1.86 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/a4be0481-9036-426f-96e5-563ccadb937c/preview"
+    },
+    {
+      "id": "b1346e54-ea62-45ee-b0fc-73d75546138c",
+      "group": "oracle",
+      "name": "spravochnik.pdf",
+      "size": "4.71 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/b1346e54-ea62-45ee-b0fc-73d75546138c/preview"
+    },
+    {
+      "id": "9c79a766-0d70-4c2f-a6c3-54c7fd1b1f9e",
+      "group": "oracle",
+      "name": "sql-sbornik_retseptov_O_39_Reilly.pdf",
+      "size": "3.7 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/9c79a766-0d70-4c2f-a6c3-54c7fd1b1f9e/preview"
+    },
+    {
+      "id": "6f1699b0-c6dd-4ddf-b6f4-a06e0ed6259c",
+      "group": "oracle",
+      "name": "Ричард Баркер Моделирование взаимосвязей.pdf",
+      "size": "1.8 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/6f1699b0-c6dd-4ddf-b6f4-a06e0ed6259c/preview"
+    },
+    {
+      "id": "fcfa8b7e-bb91-4ced-8913-7b7668923a2b",
+      "group": "oreilly",
+      "name": "2011-Паттерны проектирования .pdf",
+      "size": "68.31 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/fcfa8b7e-bb91-4ced-8913-7b7668923a2b/preview"
+    },
+    {
+      "id": "c3bfa156-51a3-443c-a14c-36a1da6661db",
+      "group": "oreilly",
+      "name": "2012- Изучаем C# .pdf",
+      "size": "27.69 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/c3bfa156-51a3-443c-a14c-36a1da6661db/preview"
+    },
+    {
+      "id": "97d15988-c3ca-40a1-89d8-cd63c61d62ca",
+      "group": "oreilly",
+      "name": "2012- Изучаем JavaScript.pdf",
+      "size": "21.14 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/97d15988-c3ca-40a1-89d8-cd63c61d62ca/preview"
+    },
+    {
+      "id": "22c55426-b198-43e3-989b-09c5e7ce485a",
+      "group": "oreilly",
+      "name": "2012-Изучаем HTML, XHTML и CSS .pdf",
+      "size": "82.71 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/22c55426-b198-43e3-989b-09c5e7ce485a/preview"
+    },
+    {
+      "id": "11aaa10e-a371-4e0d-91bf-efdaa63bd48e",
+      "group": "oreilly",
+      "name": "2012-Изучаем SQL.pdf",
+      "size": "16.5 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/11aaa10e-a371-4e0d-91bf-efdaa63bd48e/preview"
+    },
+    {
+      "id": "1d931910-2522-41c0-b89e-57013e4a0f2e",
+      "group": "oreilly",
+      "name": "2012-Изучаем работу с jQuery.pdf",
+      "size": "19.52 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/1d931910-2522-41c0-b89e-57013e4a0f2e/preview"
+    },
+    {
+      "id": "848ec06b-1e53-4299-814e-6f11b8667501",
+      "group": "oreilly",
+      "name": "2013-Изучаем программирование на C  .pdf",
+      "size": "195.25 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/848ec06b-1e53-4299-814e-6f11b8667501/preview"
+    },
+    {
+      "id": "00e5b9fe-f9f4-4209-950e-10a1f446670f",
+      "group": "oreilly",
+      "name": "2013-Изучаем программирование на HTML5  .pdf",
+      "size": "17.48 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/00e5b9fe-f9f4-4209-950e-10a1f446670f/preview"
+    },
+    {
+      "id": "a5e0c494-1dc4-417a-84c5-509ac259d3ae",
+      "group": "oreilly",
+      "name": "2013-Объектно-ориентированный анализ и проектирование .pdf",
+      "size": "62.27 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/a5e0c494-1dc4-417a-84c5-509ac259d3ae/preview"
+    },
+    {
+      "id": "0b723389-5ce7-492e-9e95-f780cd46f14e",
+      "group": "oreilly",
+      "name": "2013-Разработка веб-сайтов для мобильных устройств.pdf",
+      "size": "124.31 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/0b723389-5ce7-492e-9e95-f780cd46f14e/preview"
+    },
+    {
+      "id": "dc93bed1-aac3-422d-aa69-241007ad83be",
+      "group": "perl",
+      "name": "cgi-programmirovanie_na_perl_2-e_izd.pdf",
+      "size": "1.64 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/dc93bed1-aac3-422d-aa69-241007ad83be/preview"
+    },
+    {
+      "id": "e618b238-2e5d-4ca0-b5fe-d1e52d7b31b1",
+      "group": "perl",
+      "name": "perl_dlya_sistemnogo_administrirovaniya.pdf",
+      "size": "2.9 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/e618b238-2e5d-4ca0-b5fe-d1e52d7b31b1/preview"
+    },
+    {
+      "id": "b1d70a0c-6de5-433c-8ed7-b85494d26364",
+      "group": "perl",
+      "name": "perl_izuchaem_glubzhe_2-e_izd.pdf",
+      "size": "1.66 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/b1d70a0c-6de5-433c-8ed7-b85494d26364/preview"
+    },
+    {
+      "id": "2b9d3694-ab91-4f7b-9a4a-4afc26d8e056",
+      "group": "perl",
+      "name": "programmirovanie_na_perl_dbi.pdf",
+      "size": "2.01 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/2b9d3694-ab91-4f7b-9a4a-4afc26d8e056/preview"
+    },
+    {
+      "id": "0a0ef21b-0b53-4af6-881a-3e7c18b25a44",
+      "group": "php",
+      "name": "Chip_12.11_RU.pdf",
+      "size": "80.63 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/0a0ef21b-0b53-4af6-881a-3e7c18b25a44/preview"
+    },
+    {
+      "id": "64fb0403-b821-470b-ae14-b67173cfc4e2",
+      "group": "php",
+      "name": "Jelezo_11.11.pdf",
+      "size": "64.61 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/64fb0403-b821-470b-ae14-b67173cfc4e2/preview"
+    },
+    {
+      "id": "76a9733b-5318-4a1c-a3df-9a386151bdb7",
+      "group": "php",
+      "name": "UpSp_12.11.pdf",
+      "size": "87.23 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/76a9733b-5318-4a1c-a3df-9a386151bdb7/preview"
+    },
+    {
+      "id": "18998185-9e05-4852-89bf-ca6f2b5cd526",
+      "group": "php",
+      "name": "Xaker_11.11.pdf",
+      "size": "73.26 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/18998185-9e05-4852-89bf-ca6f2b5cd526/preview"
+    },
+    {
+      "id": "37bafa87-d081-4021-81f7-14a5c0e69c48",
+      "group": "php",
+      "name": "php-Мазуркевич.PHP.Настольная книга програмиста.pdf",
+      "size": "13.88 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/37bafa87-d081-4021-81f7-14a5c0e69c48/preview"
+    },
+    {
+      "id": "a734b9b2-4914-407b-967f-7565293d9cd6",
+      "group": "php",
+      "name": "php.pdf",
+      "size": "1.97 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/a734b9b2-4914-407b-967f-7565293d9cd6/preview"
+    },
+    {
+      "id": "97923ae6-b5c3-4b41-b10d-0bf8ed63bea3",
+      "group": "php",
+      "name": "rukovodstvo_po_php.pdf",
+      "size": "28.8 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/97923ae6-b5c3-4b41-b10d-0bf8ed63bea3/preview"
+    },
+    {
+      "id": "e0fa3cd9-50cf-4608-abd2-3f83b8e1a9be",
+      "group": "php",
+      "name": "Мазуркевич А., Еловой Д. PHP. Настольная книга программиста (2003).pdf",
+      "size": "13.88 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/e0fa3cd9-50cf-4608-abd2-3f83b8e1a9be/preview"
+    },
+    {
+      "id": "7ff4c506-b045-4680-b81b-0d58489f55fb",
+      "group": "php",
+      "name": "Мазуркевич.PHP.Настольная книга програмиста.pdf",
+      "size": "13.88 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/7ff4c506-b045-4680-b81b-0d58489f55fb/preview"
+    },
+    {
+      "id": "99910066-aa75-4794-b884-77c700f994d4",
+      "group": "php",
+      "name": "Михаил_Фленов-PHP_глазами_хакера.pdf",
+      "size": "40.46 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/99910066-aa75-4794-b884-77c700f994d4/preview"
+    },
+    {
+      "id": "3c19b81e-6368-4179-b76c-64d9add023e5",
+      "group": "postgresql",
+      "name": "Postgresql High Availability cookbook.pdf",
+      "size": "6.48 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/3c19b81e-6368-4179-b76c-64d9add023e5/preview"
+    },
+    {
+      "id": "3b14c637-e120-4c20-a5db-e08300722078",
+      "group": "python",
+      "name": "3-samoe-neobhodimoe.pdf",
+      "size": "85.06 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/3b14c637-e120-4c20-a5db-e08300722078/preview"
+    },
+    {
+      "id": "edb01f73-2bde-479f-93ba-9e35c9a8c2ce",
+      "group": "python",
+      "name": "Effective_Python_proglib.pdf",
+      "size": "12.86 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/edb01f73-2bde-479f-93ba-9e35c9a8c2ce/preview"
+    },
+    {
+      "id": "34e72b49-07d1-46d4-9558-6099f1fd440b",
+      "group": "python",
+      "name": "izuchaem_python_3-e_izdanie.pdf",
+      "size": "5.09 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/34e72b49-07d1-46d4-9558-6099f1fd440b/preview"
+    },
+    {
+      "id": "fa628016-9be7-405e-975a-8c3088daa032",
+      "group": "python",
+      "name": "programmirovanie_na_python.pdf",
+      "size": "13.01 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/fa628016-9be7-405e-975a-8c3088daa032/preview"
+    },
+    {
+      "id": "9b537180-1212-4f00-9f69-bf995552b964",
+      "group": "python",
+      "name": "programmirovanie_na_python_3_podrobnoe_rukovodstvo.pdf",
+      "size": "3.92 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/9b537180-1212-4f00-9f69-bf995552b964/preview"
+    },
+    {
+      "id": "8e5640c6-dad7-471f-a226-4c5ca7da29fb",
+      "group": "python",
+      "name": "python_3_i_pyqt_razrabotka_prilozhenii.pdf",
+      "size": "14.59 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/8e5640c6-dad7-471f-a226-4c5ca7da29fb/preview"
+    },
+    {
+      "id": "b6600d02-4148-4082-8083-b6a411e0d228",
+      "group": "python",
+      "name": "python_podrobnyi_spravochnik_4-e_izd.pdf",
+      "size": "7.38 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/b6600d02-4148-4082-8083-b6a411e0d228/preview"
+    },
+    {
+      "id": "c5c32272-af05-4975-8ff2-834f3dd8c5cd",
+      "group": "python",
+      "name": "python_v_sistemnom_administrirovanii_unix_i_linux.pdf",
+      "size": "3.27 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/c5c32272-af05-4975-8ff2-834f3dd8c5cd/preview"
+    },
+    {
+      "id": "68712732-2a4e-4e02-b4c9-7e05e083a39d",
+      "group": "python",
+      "name": "Марк Лутц - Программирование на Python. Том 1.pdf",
+      "size": "55.17 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/68712732-2a4e-4e02-b4c9-7e05e083a39d/preview"
+    },
+    {
+      "id": "7172a159-6d51-47c6-bcba-5074eac1dc9b",
+      "group": "python",
+      "name": "Марк Лутц - Программирование на Python. Том 2.pdf",
+      "size": "16.3 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/7172a159-6d51-47c6-bcba-5074eac1dc9b/preview"
+    },
+    {
+      "id": "4de6df61-2aa1-4d31-ae34-fe84f62ca773",
+      "group": "python",
+      "name": "Прохоренок Н.А. - Python 3 и PyQt. Разработка приложений - 2012.pdf",
+      "size": "29.44 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/4de6df61-2aa1-4d31-ae34-fe84f62ca773/preview"
+    },
+    {
+      "id": "6010af88-8f40-4395-9286-6ec9a4df9732",
+      "group": "regexp",
+      "name": "RegExp.pdf",
+      "size": "4.91 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/6010af88-8f40-4395-9286-6ec9a4df9732/preview"
+    },
+    {
+      "id": "e364ea52-cbbe-45d9-9fdc-701690848fc1",
+      "group": "regexp",
+      "name": "Regex_Quick_Syntax_Reference.pdf",
+      "size": "2.06 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/e364ea52-cbbe-45d9-9fdc-701690848fc1/preview"
+    },
+    {
+      "id": "3bc39e50-7359-457c-9b35-1ba7392b4ac4",
+      "group": "regexp",
+      "name": "regulyarnye_vyrazheniya_3-e_izd.pdf",
+      "size": "3.66 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/3bc39e50-7359-457c-9b35-1ba7392b4ac4/preview"
+    },
+    {
+      "id": "523063ca-a1ae-4340-af55-e205b3da67ad",
+      "group": "regexp",
+      "name": "regulyarnye_vyrazheniya_sbornik_retseptov.pdf",
+      "size": "4.44 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/523063ca-a1ae-4340-af55-e205b3da67ad/preview"
+    },
+    {
+      "id": "9edc9c20-16c0-4499-a0ad-6bdf7f19c8ba",
+      "group": "scala",
+      "name": "Хорстман Кей Scala для нетерпеливых (2013).pdf",
+      "size": "35.22 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/9edc9c20-16c0-4499-a0ad-6bdf7f19c8ba/preview"
+    },
+    {
+      "id": "08bfcbb4-e49b-4dc2-9f0b-7a859f380cfa",
+      "group": "seo",
+      "name": "Кокшаров С. SEO- Поисковая Оптимизация от А до Я. Основы (2011).pdf",
+      "size": "10.45 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/08bfcbb4-e49b-4dc2-9f0b-7a859f380cfa/preview"
+    },
+    {
+      "id": "cbc134a3-c091-482f-a376-94322fdc3875",
+      "group": "seo",
+      "name": "Кокшаров С. SEO- Поисковая Оптимизация от А до Я. Продвинутый уровень (2011).pdf",
+      "size": "14.31 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/cbc134a3-c091-482f-a376-94322fdc3875/preview"
+    },
+    {
+      "id": "1ffc2795-54c8-4140-b28e-93200ace8f3b",
+      "group": "seo",
+      "name": "Кокшаров С. SEO- Поисковая Оптимизация от А до Я. Средний уровень (2011).pdf",
+      "size": "11.27 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/1ffc2795-54c8-4140-b28e-93200ace8f3b/preview"
+    },
+    {
+      "id": "81fffceb-4a03-4d8c-a2c6-7d26292c97c9",
+      "group": "sql",
+      "name": "Hester Matthew, Henley Chris Microsoft Windows Server 2012 Administration (2013).pdf",
+      "size": "29.0 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/81fffceb-4a03-4d8c-a2c6-7d26292c97c9/preview"
+    },
+    {
+      "id": "c2ee472a-bfe4-402c-8600-6f1ae28890c1",
+      "group": "sql",
+      "name": "MS_SQL_Server_2012_Rukov_dlia_nachin_2013.pdf",
+      "size": "16.21 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/c2ee472a-bfe4-402c-8600-6f1ae28890c1/preview"
+    },
+    {
+      "id": "893dd6bf-fa91-415e-9f31-683da8454799",
+      "group": "sql",
+      "name": "Microsoft SQL Server 2008. Руководство для начинающих.pdf",
+      "size": "120.59 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/893dd6bf-fa91-415e-9f31-683da8454799/preview"
+    },
+    {
+      "id": "e03ba55a-77c1-410b-a1d0-67b4f5c965da",
+      "group": "sql",
+      "name": "Microsoft SQL Server 2012. Руководство для начинающих.pdf",
+      "size": "0.99 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/e03ba55a-77c1-410b-a1d0-67b4f5c965da/preview"
+    },
+    {
+      "id": "5acaec21-a7ee-4b47-adcc-009249649efb",
+      "group": "sql",
+      "name": "SQL-sbornik_retseptov_O_39_Reilly.pdf",
+      "size": "3.7 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/5acaec21-a7ee-4b47-adcc-009249649efb/preview"
+    },
+    {
+      "id": "5527f798-686e-4f94-9e24-706f9917cd00",
+      "group": "sql",
+      "name": "SQL-сборник рецептов (O\u0027Reilly).pdf",
+      "size": "3.7 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/5527f798-686e-4f94-9e24-706f9917cd00/preview"
+    },
+    {
+      "id": "50ddcd8e-1c9a-4c67-aff4-cce43db84c55",
+      "group": "sql",
+      "name": "postgresql.pdf",
+      "size": "1.62 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/50ddcd8e-1c9a-4c67-aff4-cce43db84c55/preview"
+    },
+    {
+      "id": "62e47883-acd3-4771-9b45-832cbeced597",
+      "group": "sql",
+      "name": "postgresql_dlya_nachinayuschikh.pdf",
+      "size": "1.44 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/62e47883-acd3-4771-9b45-832cbeced597/preview"
+    },
+    {
+      "id": "bdd2ec65-be19-43b0-a0fc-26e29e32f43f",
+      "group": "sql",
+      "name": "programmirovanie-baz-dannyih-sql-tipichnyie-oshibki-i-ih-ustranenie.pdf",
+      "size": "10.98 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/bdd2ec65-be19-43b0-a0fc-26e29e32f43f/preview"
+    },
+    {
+      "id": "a6fcdc74-4702-41da-a691-5de337331e8b",
+      "group": "sql",
+      "name": "sql-polnoe-rukovodstvo.pdf",
+      "size": "28.89 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/a6fcdc74-4702-41da-a691-5de337331e8b/preview"
+    },
+    {
+      "id": "15d3eeec-b4b6-4709-a5b5-13f496e10605",
+      "group": "sql",
+      "name": "userguide_postgres7.pdf",
+      "size": "0.67 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/15d3eeec-b4b6-4709-a5b5-13f496e10605/preview"
+    },
+    {
+      "id": "9a5936a6-aed6-43b3-9928-8a6d59791d9a",
+      "group": "sql",
+      "name": "Кайт Т. Oracle для профессионалов (2003).pdf",
+      "size": "9.6 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/9a5936a6-aed6-43b3-9928-8a6d59791d9a/preview"
+    },
+    {
+      "id": "5831ea89-2117-4224-8ccb-c233564e99ac",
+      "group": "sql",
+      "name": "Крис Фиайли SQL (2013).pdf",
+      "size": "3.78 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/5831ea89-2117-4224-8ccb-c233564e99ac/preview"
+    },
+    {
+      "id": "e12fbb0a-e0d1-4164-a50d-167abacb6cf0",
+      "group": "sql",
+      "name": "Мартин Грубер - Понимание SQL.pdf",
+      "size": "1.48 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/e12fbb0a-e0d1-4164-a50d-167abacb6cf0/preview"
+    },
+    {
+      "id": "affd8236-9dee-4f78-bad3-b3f6707e07cd",
+      "group": "sql",
+      "name": "Рудикова Л Базы данных. Разработка приложений (2006).pdf",
+      "size": "11.16 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/affd8236-9dee-4f78-bad3-b3f6707e07cd/preview"
+    },
+    {
+      "id": "e49b4852-1dda-41d6-a4ca-c89c4373d9e7",
+      "group": "uml",
+      "name": "UML 2 и Унифицированный процесс.pdf",
+      "size": "6.37 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/e49b4852-1dda-41d6-a4ca-c89c4373d9e7/preview"
+    },
+    {
+      "id": "c25e2f57-3007-4292-be86-a386ebbbd6d0",
+      "group": "uml",
+      "name": "UML. Основы (Мартин Фаулер).pdf",
+      "size": "1.18 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/c25e2f57-3007-4292-be86-a386ebbbd6d0/preview"
+    },
+    {
+      "id": "2dfa41bb-9279-40ff-9572-f657d59b61e3",
+      "group": "vba",
+      "name": "Джон Уокенбах - Профессиональное программирование на VBA в Excel 2003 - 2006.pdf",
+      "size": "11.51 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/2dfa41bb-9279-40ff-9572-f657d59b61e3/preview"
+    },
+    {
+      "id": "8a39ab3b-71f5-4365-b6e0-f5bebaf5cdd3",
+      "group": "vba",
+      "name": "Диалектика - VBA Для чайников.2002.pdf",
+      "size": "9.35 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/8a39ab3b-71f5-4365-b6e0-f5bebaf5cdd3/preview"
+    },
+    {
+      "id": "689c0a42-f538-4f29-a6e6-70880cbec2b3",
+      "group": "vba",
+      "name": "Уокенбах проф_программ_VBA_Excel_2003.pdf",
+      "size": "11.51 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/689c0a42-f538-4f29-a6e6-70880cbec2b3/preview"
+    },
+    {
+      "id": "cb6421f4-8d4b-48be-be68-4c63f9e23895",
+      "group": "vba",
+      "name": "Юниор - Самоучитель программированияна VBAвMicrosoft Office.2001.pdf",
+      "size": "21.66 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/cb6421f4-8d4b-48be-be68-4c63f9e23895/preview"
+    },
+    {
+      "id": "dad0a114-9ab2-4265-8a14-f46cef797c20",
+      "group": "vbs",
+      "name": "vbs.pdf",
+      "size": "1.16 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/dad0a114-9ab2-4265-8a14-f46cef797c20/preview"
+    },
+    {
+      "id": "6dd0fd53-2a4d-4d22-988c-dc6ca6d02dd1",
+      "group": "xml",
+      "name": "XML справочник.pdf",
+      "size": "10.09 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/6dd0fd53-2a4d-4d22-988c-dc6ca6d02dd1/preview"
+    },
+    {
+      "id": "5d1f1ca0-aa05-4aed-995a-1ef2613aa00b",
+      "group": "xml",
+      "name": "XSLT. Сборник рецептов (Сэл Мангано).pdf",
+      "size": "3.94 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/5d1f1ca0-aa05-4aed-995a-1ef2613aa00b/preview"
+    },
+    {
+      "id": "8380ba84-f69d-412a-a73d-c177feecbe9b",
+      "group": "xml",
+      "name": "Изучаем XML (Эрик Рэй).pdf",
+      "size": "4.24 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/8380ba84-f69d-412a-a73d-c177feecbe9b/preview"
+    },
+    {
+      "id": "3f295867-a3b6-4e1b-89cf-abadd1aee7c9",
+      "group": "Без группы",
+      "name": "javamail_api_tutorial.pdf",
+      "size": "1.43 mb",
+      "previewLink": "https://prog-tools.ru:8445/library/rest/books/book/3f295867-a3b6-4e1b-89cf-abadd1aee7c9/preview"
+    }
+  ]
+}
