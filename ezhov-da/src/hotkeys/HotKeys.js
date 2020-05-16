@@ -12,7 +12,7 @@ class HotKey extends React.Component{
 
         hotKeys.items.forEach(element => {
             trArray.push(
-                <tr>
+                <tr key={'_' + Math.random().toString(36).substr(2, 9)}>
                   <td>{element.key}</td>
                   <td>{element.value}</td>
                 </tr>
@@ -20,9 +20,15 @@ class HotKey extends React.Component{
         });
 
         return (
-           <div class="box">
-                <p>{hotKeys.name}</p>
-                <table class="table is-fullwidth">
+           <div className="box">
+                <nav className="level">
+                    <div className="level-item">
+                    <p className="subtitle is-5">
+                            <strong>{hotKeys.name}</strong>
+                          </p>
+                    </div>
+                </nav>
+                <table className="table is-fullwidth">
                   <tbody>
                     {trArray}
                   </tbody>

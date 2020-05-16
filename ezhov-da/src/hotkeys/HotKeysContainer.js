@@ -60,8 +60,6 @@ class HotKeysContainer extends React.Component{
 
         axios.get(url)
             .then(data => {
-                console.log(data.data.groups);
-
                 this.setState({
                     isLoad: false,
                     hotKeys: data.data.groups
