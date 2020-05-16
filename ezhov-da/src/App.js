@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import GistContainer from './gist/GistContainer';
 import BookContainer from './book/BookContainer';
+import HotKeysContainer from './hotkeys/HotKeysContainer';
 
 import {
     Route,
@@ -30,12 +31,14 @@ class App extends React.Component {
               <ul>
                 <li><NavLink exact={true} activeStyle={{borderBottomColor: "#3273dc", color: "#3273dc"}} to="/">Мои Gist</NavLink></li>
                 <li><NavLink activeStyle={{borderBottomColor: "#3273dc", color: "#3273dc"}} to="/books">Книги</NavLink></li>
+                <li><NavLink activeStyle={{borderBottomColor: "#3273dc", color: "#3273dc"}} to="/hotkeys">Команды</NavLink></li>
               </ul>
             </div>
 
             <div>
                 <Route exact={true} path="/" component={GistContainer}/>
                 <Route path="/books" component={BookContainer}/>
+                <Route path="/hotkeys" component={HotKeysContainer}/>
             </div>
         </div>
         </HashRouter>
