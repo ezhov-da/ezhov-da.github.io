@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import qs from 'querystring';
 import Preloader from '../Preloader';
+import DownloadCondition from './DownloadCondition';
 
 
 class DownloadBook extends React.Component{
@@ -12,12 +13,14 @@ class DownloadBook extends React.Component{
             startDownload: false,
             completeDownload: false,
             url: '',
-            qr: ''
+            qr: '',
+            condition: {type: 'count', value: '1'}
         }
 
         var self = this;
 
         this.download = this.download.bind(this);
+        this.onChangeCondition = this.onChangeCondition.bind(this);
     }
 
      render(){
@@ -56,6 +59,9 @@ class DownloadBook extends React.Component{
                         <input className="input" type="password" placeholder="Пароль" ref={(el) => this._password = el}/>
                       </div>
                     </div>
+
+                    <DownloadCondition onChange={this.onChangeCondition}/>
+
                       <div className="control">
                         <button className="button is-link" onClick={() => this.download(this.props.book.id)}>Скачать</button>
                       </div>
@@ -67,20 +73,25 @@ class DownloadBook extends React.Component{
         )
      }
 
+     onChangeCondition(condition){
+        console.log(condition);
+
+        this.setState({
+            condition: condition
+        });
+     }
+
     async download(bookId) {
         this.setState({
             startDownload: true,
         });
 
-        let bodyFormData = new FormData();
-        bodyFormData.set('id', bookId);
-        bodyFormData.set('login', this._login.value);
-        bodyFormData.set('password', this._password.value);
-
         const requestBody = {
           id: bookId,
           login: this._login.value,
-          password: this._password.value
+          password: this._password.value,
+          conditionType: this.state.condition.type,
+          conditionValue:this.state.condition.value
         }
 
          axios({
