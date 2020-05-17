@@ -29,21 +29,21 @@ class DownloadCondition extends React.Component{
         return (
             <div className="section">
 
-            <h2 class="subtitle">Ограничение на скачивание</h2>
+            <h2 className="subtitle">Ограничение на скачивание</h2>
                 <div className="container">
                     <div className="level">
                         <div className="level-item">
-                            <div class="field">
-                              <div class="control">
-                                <label class="radio">
+                            <div className="field">
+                              <div className="control">
+                                <label className="radio">
                                   <input type="radio" name="type" onClick={this.onSelectedRadio} defaultChecked={this.state.selectedRadio === 'countRadio'} value="countRadio"/>
                                   Количество скачиваний
                                 </label>
-                                <label class="radio">
+                                <label className="radio">
                                   <input type="radio" name="type" onClick={this.onSelectedRadio} defaultChecked={this.state.selectedRadio === 'timeRadio'} value="timeRadio"/>
                                   Время
                                 </label>
-                                <label class="radio">
+                                <label className="radio">
                                   <input type="radio" name="type" onClick={this.onSelectedRadio} defaultChecked={this.state.selectedRadio === 'dateRadio'} value="dateRadio"/>
                                   Дата
                                 </label>
@@ -52,9 +52,9 @@ class DownloadCondition extends React.Component{
                         </div>
                     </div>
                     <div>{text}</div>
-                    <div class="field">
-                      <div class="control">
-                        <input class="input" type="text" placeholder={text} onChange={this.onInput}/>
+                    <div className="field">
+                      <div className="control">
+                        <input className="input" type="text" placeholder={text} onChange={this.onInput}/>
                       </div>
                     </div>
                 </div>
