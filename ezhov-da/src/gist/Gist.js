@@ -12,8 +12,8 @@ class Gist extends React.Component{
 
        let names = name.split('-');
 
-       let resultName = names.length > 1? names[1] : name;
-
+       let resultGroup = names.length > 1? names[0] : name;
+       let resultName = names.length > 1? names[1] : names[names.length - 1];
 
         return (
                 <div className="box">
@@ -37,7 +37,7 @@ class Gist extends React.Component{
                     <div className="media-content">
                       <div className="content">
                         <p>
-                           {gist.description}
+                           {resultGroup}
                         </p>
                       </div>
                     </div>

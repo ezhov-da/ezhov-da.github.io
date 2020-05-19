@@ -6,7 +6,8 @@ import HotKeysContainer from './hotkeys/HotKeysContainer';
 import {
     Route,
     NavLink,
-    HashRouter
+    HashRouter,
+    Redirect
 } from 'react-router-dom';
 
 class App extends React.Component {
@@ -29,14 +30,23 @@ class App extends React.Component {
             <div className="tabs is-centered">
 
               <ul>
-                <li><NavLink exact={true} activeStyle={{borderBottomColor: "#3273dc", color: "#3273dc"}} to="/">Мои Gist</NavLink></li>
+                <li><NavLink exact={true} activeStyle={{borderBottomColor: "#3273dc", color: "#3273dc"}} to="/gists">Мои Gist</NavLink></li>
                 <li><NavLink activeStyle={{borderBottomColor: "#3273dc", color: "#3273dc"}} to="/books">Книги</NavLink></li>
                 <li><NavLink activeStyle={{borderBottomColor: "#3273dc", color: "#3273dc"}} to="/hotkeys">Команды</NavLink></li>
               </ul>
             </div>
 
             <div>
-                <Route exact={true} path="/" component={GistContainer}/>
+                <Route exact={true} path="/" render={({location}) => {
+                        return <Redirect
+                                    to={{
+                                      pathname: "/gists",
+                                      state: { from: location }
+                                    }}
+                                  />
+                    }
+                }/>
+                <Route path="/gists" component={GistContainer}/>
                 <Route path="/books" component={BookContainer}/>
                 <Route path="/hotkeys" component={HotKeysContainer}/>
             </div>
