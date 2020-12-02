@@ -1,5 +1,5 @@
 ---
-title: Ezhov books
+title: Books
 layout: default
 ---
 

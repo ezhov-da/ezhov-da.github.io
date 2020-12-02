@@ -1,5 +1,5 @@
 ---
-title: Ezhov blog
+title: Blog
 layout: default
 ---
 

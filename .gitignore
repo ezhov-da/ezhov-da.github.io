@@ -1,6 +1,6 @@
-_site
-.sass-cache
-.jekyll-cache
-.jekyll-metadata
-vendor
+/src/_site/
+/src/.sass-cache/
+/src/.jekyll-cache/
+/src/.jekyll-metadata
+/src/vendor
 .idea
