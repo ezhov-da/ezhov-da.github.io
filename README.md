@@ -1,2 +1,10 @@
 # ezhov-da.github.io
-My own site...
+
+
+Created with [https://jekyllrb.com/](https://jekyllrb.com/)
+
+Build
+
+```
+bundle exec jekyll serve
+```
