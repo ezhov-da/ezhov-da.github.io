@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <link rel="icon" href="/tool.ico"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="theme-color" content="#000000"/>
+    <meta name="description" content="Programmer notes">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
+
+    <title>EzhovDA Культура commit-ов</title>
+
+    <style>
+        .main {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        .section {
+            flex: 1;
+        }
+    </style>
+
+</head>
+<body class="main">
+<div class="section">
+    <div class="container">
+        <div class="level">
+            <div class="level-item">
+                <figure class="image is-128x128">
+                    <img class="is-rounded" src="/avatar.jpg"/>
+                </figure>
+            </div>
+        </div>
+
+        <div class="level">
+            <div class="level-item has-text-centered">
+            <span class="icon has-text-info">
+                <a href="https://github.com/ezhov-da">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
+            </span>
+                <span class="icon has-text-info has-text-centered">
+                <a href="https://www.linkedin.com/in/ezhovda">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                </a>
+            </span>
+                <span class="icon has-text-info has-text-centered">
+              <a href="https://twitter.com/ezhov_da">
+                  <i class="fab fa-twitter" aria-hidden="true"></i>
+              </a>
+          </span>
+            </div>
+        </div>
+
+        <div class="tabs is-centered">
+            <ul>
+                <li><a href="/">Обо мне</a></li>
+                <li><a href="/posts/">Статьи</a></li>
+                <!--                <li><a href="/books/">Книги</a></li>-->
+                <!--                <li><a href="/links/">Ссылки</a></li>-->
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="container">
+        <div class="content">
+    <h1>Культура commit-ов</h1>
+
+    <p>04 Dec 2020</p>
+
+    <br>
+
+    <p>С самого начал работы с <a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0_%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F_%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%8F%D0%BC%D0%B8">системами контроля версий</a>, будь то <a href="https://ru.wikipedia.org/wiki/Subversion#:~:text=Subversion%20(%D1%82%D0%B0%D0%BA%D0%B6%D0%B5%20%D0%B8%D0%B7%D0%B2%D0%B5%D1%81%D1%82%D0%BD%D0%B0%D1%8F%20%D0%BA%D0%B0%D0%BA%20%C2%ABSVN,Subversion%20(%D0%B7%D0%B0%D1%80%D0%B5%D0%B3%D0%B8%D1%81%D1%82%D1%80%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D1%8B%D0%B9%20%D1%82%D0%BE%D0%B2%D0%B0%D1%80%D0%BD%D1%8B%D0%B9%20%D0%B7%D0%BD%D0%B0%D0%BA).">SVN</a>, <a href="https://ru.wikipedia.org/wiki/Mercurial#:~:text=Mercurial%20(%D1%81%20%D0%B0%D0%BD%D0%B3%D0%BB.,%D0%BE%D1%87%D0%B5%D1%80%D0%B5%D0%B4%D1%8C%20%D0%BE%D0%BD%D0%B0%20%D1%8F%D0%B2%D0%BB%D1%8F%D0%B5%D1%82%D1%81%D1%8F%20%D0%BA%D0%BE%D0%BD%D1%81%D0%BE%D0%BB%D1%8C%D0%BD%D0%BE%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%BE%D0%B9.">Mercurial</a> или <a href="https://ru.wikipedia.org/wiki/Git#:~:text=Git%20(%D0%BF%D1%80%D0%BE%D0%B8%D0%B7%D0%BD%D0%BE%D1%81%D0%B8%D1%82%D1%81%D1%8F%20%C2%AB%D0%B3%D0%B8%D1%82%C2%BB)%20%E2%80%94%20%D1%80%D0%B0%D1%81%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D1%91%D0%BD%D0%BD%D0%B0%D1%8F%20%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0%20%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F%20%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%8F%D0%BC%D0%B8.">Git</a>, 
+я задал себе вопрос:</p>
+<blockquote>
+  <p>“Как правильно, а главное <strong>качественно</strong> писать комментарий к своему изменению кода?”</p>
+</blockquote>
+
+<p>И казалось бы, что может быть проще ответа: <strong>“Что сделал, то и Опиши”</strong>.</p>
+
+<p>Но на практике всё оказалось немного сложнее.</p>
+
+<ul>
+  <li><a href="#ошибки">Ошибки</a></li>
+  <li><a href="#выход-есть">Выход есть</a></li>
+  <li><a href="#заключение">Заключение</a></li>
+</ul>
+
+<h2 id="ошибки">Ошибки</h2>
+
+<p>Когда проект молодой, и первый, а возможно и последующие, его этапы разработки идут под лозунгом:</p>
+<blockquote>
+  <p>Сроки горят</p>
+</blockquote>
+
+<p>мало кто задумывается о такой мелочи как текст, который оставляют причастные к коду люди в <a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0_%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F_%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%8F%D0%BC%D0%B8">системе контроля версий</a>.</p>
+
+<p><strong>В конечном итоге история проекта принимает вид “мусорки”, в которую кладут “отходы” без разделения.</strong></p>
+
+<p>“И что в этом плохого?” - сразу возникнет вопрос. Если посмотреть поверхностно - ничего.</p>
+
+<p>Проекту, от того, что фигурирует в истории к коду - всё равно, он и так собирается и выполняет свои бизнес задачи.</p>
+
+<p>Проходит время. Проект растёт. Количество и виды комментариев увеличиваются, мелькают строки со смайликами, 
+номерами задач, невразумительными <code class="language-plaintext highlighter-rouge">fix</code>, <code class="language-plaintext highlighter-rouge">reviw</code>, упражнения в английском и т.д.</p>
+
+<p>Работники всё чаще и чаще начинают сталкиваться с необходимостью смотреть историю, 
+чтоб понять кто изменил тот или иной участок кода и в рамках какой задачи.</p>
+
+<p>И каково же бывает удивление, когда находиться нужный <code class="language-plaintext highlighter-rouge">commit</code> из <strong>15</strong>-и файлов с комментарием <code class="language-plaintext highlighter-rouge">fix2</code> от человека, 
+который уже <strong>не работает</strong> на проекте.</p>
+
+<h2 id="выход-есть">Выход есть</h2>
+
+<p>И он заключается в следовании простым правилам с начала проекта или с момента, 
+когда всем в команде стало понятно, что так дальше нельзя.</p>
+
+<ul>
+  <li>
+    <h4 id="обсудить-и-зафиксировать-язык-комментариев">Обсудить и зафиксировать язык комментариев</h4>
+    <p>Как показывает практика, в историях проектов, часто можно увидеть использование нескольких языков.</p>
+  </li>
+  <li>
+    <h4 id="начать-придерживаться-конвенции">Начать придерживаться <a href="https://www.conventionalcommits.org/en/v1.0.0/">конвенции</a></h4>
+    <p>Это не только стандартизирует ваши сообщения, но и сделает их удобными для автоматической обработки.</p>
+
+    <p>Например, следование конвенции позволит вам создавать <code class="language-plaintext highlighter-rouge">CHANGELOG.md</code> файл, который при правильном ведении комментариев может стать 
+  удобной навигацией по прогрессу проекта.</p>
+
+    <p>В <a href="https://github.com/ezhov-da/changelog-builder/blob/master/CHANGELOG.md">changelog-builder/blob/master/CHANGELOG.md</a> можно увидеть пример того, как выглядит автоматически формируемый файл.</p>
+
+    <p>Кстати, проект <a href="https://github.com/ezhov-da/changelog-builder">changelog-builder</a> предназначен для формирования <code class="language-plaintext highlighter-rouge">CHANGELOG.md</code> файла и Вы можете им воспользоваться.
+  Неважно, придерживаетесь ли Вы конвенции или нет, файл сформируется, но вот насколько он будет удобочитаем и понятен - это Вы и проверите.</p>
+
+    <p>Так же для <strong>IntelliJ IDEA</strong> я немного усовершенствовал <a href="https://github.com/ezhov-da/git-commit-template">плагин</a>, который позволяет легко набирать комментарии согласно <a href="https://www.conventionalcommits.org/en/v1.0.0/">конвенции</a>.</p>
+  </li>
+  <li>
+    <h4 id="использовать-squash">Использовать <a href="https://git-scm.com/docs/git-rebase#_interactive_mode">squash</a></h4>
+    <p>Когда в удалённый репозиторий отправляется две одинаковых строки комментария - это повод задуматься.</p>
+
+    <p>“А одинаковые ли причины несут эти изменения?”, - и в <code class="language-plaintext highlighter-rouge">100%</code> случаях ответ - <strong>НЕТ</strong>.</p>
+  </li>
+  <li>
+    <h4 id="использовать-fast-forwards">Использовать <a href="https://git-scm.com/docs/git-push#_note_about_fast_forwards">fast-forwards</a></h4>
+    <p>Если в <strong>отдельной локальной ветке</strong> вы навели в комментариях порядок, не забудьте отправить изменения <strong>в свою ветку</strong> на удалённый сервер.</p>
+  </li>
+  <li>
+    <h4 id="не-писать-что-сделали-писать-что-сделано">Не писать “что сделали”, писать “что сделано”</h4>
+    <p>Как только в ваших комментариях фразы <code class="language-plaintext highlighter-rouge">сделал</code>, <code class="language-plaintext highlighter-rouge">откорректировал</code>, <code class="language-plaintext highlighter-rouge">реализовал</code>, <code class="language-plaintext highlighter-rouge">пофиксил</code>, и т.д будут заменены на <code class="language-plaintext highlighter-rouge">сделано</code>, <code class="language-plaintext highlighter-rouge">откорректировано</code>, <code class="language-plaintext highlighter-rouge">реализовано</code>, они 
+  сразу приобретут деловой стиль и будут отражать <strong>изменения в проекте</strong>, а не <strong>изменения конкретным человеком</strong>.</p>
+
+    <p>До</p>
+    <blockquote>
+      <p>откорректировал регулярное выражение, так как не обрабатывались некоторые случаи</p>
+    </blockquote>
+
+    <p>После</p>
+    <blockquote>
+      <p>откорректировано регулярное выражение, так как случай <code class="language-plaintext highlighter-rouge">рамма</code> не обрабатывался</p>
+    </blockquote>
+  </li>
+</ul>
+
+<h2 id="заключение">Заключение</h2>
+
+<p>Правильная работа с историей комментариев - это такая же важная часть разработки приложения, как и написание кода.</p>
+
+<p>Успехов!</p>
+
+
+</div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="content has-text-centered">
+        <p>
+            Спасибо <a href="https://bulma.io/">Bulma</a> и <a href="https://jekyllrb.com/">Jekyll</a>.
+        </p>
+
+        <p>
+            © 2020 -  2020
+        </p>
+    </div>
+</footer>
+</body>
+</html>

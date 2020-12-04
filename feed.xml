@@ -1,17 +1,96 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-12-02T23:29:40+03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Ezh</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2020/12/02/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2020-12-02T22:40:48+03:00</published><updated>2020-12-02T22:40:48+03:00</updated><id>http://localhost:4000/jekyll/update/2020/12/02/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2020/12/02/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-12-05T00:28:14+03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">EzhovDA</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Культура commit-ов</title><link href="http://localhost:4000/2020/12/04/commit-culture.html" rel="alternate" type="text/html" title="Культура commit-ов" /><published>2020-12-04T18:00:00+03:00</published><updated>2020-12-04T18:00:00+03:00</updated><id>http://localhost:4000/2020/12/04/commit-culture</id><content type="html" xml:base="http://localhost:4000/2020/12/04/commit-culture.html">&lt;p&gt;С самого начал работы с &lt;a href=&quot;https://ru.wikipedia.org/wiki/%D0%A1%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0_%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F_%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%8F%D0%BC%D0%B8&quot;&gt;системами контроля версий&lt;/a&gt;, будь то &lt;a href=&quot;https://ru.wikipedia.org/wiki/Subversion#:~:text=Subversion%20(%D1%82%D0%B0%D0%BA%D0%B6%D0%B5%20%D0%B8%D0%B7%D0%B2%D0%B5%D1%81%D1%82%D0%BD%D0%B0%D1%8F%20%D0%BA%D0%B0%D0%BA%20%C2%ABSVN,Subversion%20(%D0%B7%D0%B0%D1%80%D0%B5%D0%B3%D0%B8%D1%81%D1%82%D1%80%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D1%8B%D0%B9%20%D1%82%D0%BE%D0%B2%D0%B0%D1%80%D0%BD%D1%8B%D0%B9%20%D0%B7%D0%BD%D0%B0%D0%BA).&quot;&gt;SVN&lt;/a&gt;, &lt;a href=&quot;https://ru.wikipedia.org/wiki/Mercurial#:~:text=Mercurial%20(%D1%81%20%D0%B0%D0%BD%D0%B3%D0%BB.,%D0%BE%D1%87%D0%B5%D1%80%D0%B5%D0%B4%D1%8C%20%D0%BE%D0%BD%D0%B0%20%D1%8F%D0%B2%D0%BB%D1%8F%D0%B5%D1%82%D1%81%D1%8F%20%D0%BA%D0%BE%D0%BD%D1%81%D0%BE%D0%BB%D1%8C%D0%BD%D0%BE%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%BE%D0%B9.&quot;&gt;Mercurial&lt;/a&gt; или &lt;a href=&quot;https://ru.wikipedia.org/wiki/Git#:~:text=Git%20(%D0%BF%D1%80%D0%BE%D0%B8%D0%B7%D0%BD%D0%BE%D1%81%D0%B8%D1%82%D1%81%D1%8F%20%C2%AB%D0%B3%D0%B8%D1%82%C2%BB)%20%E2%80%94%20%D1%80%D0%B0%D1%81%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D1%91%D0%BD%D0%BD%D0%B0%D1%8F%20%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0%20%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F%20%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%8F%D0%BC%D0%B8.&quot;&gt;Git&lt;/a&gt;, 
+я задал себе вопрос:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;“Как правильно, а главное &lt;strong&gt;качественно&lt;/strong&gt; писать комментарий к своему изменению кода?”&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;Jekyll requires blog post files to be named according to the following format:&lt;/p&gt;
+&lt;p&gt;И казалось бы, что может быть проще ответа: &lt;strong&gt;“Что сделал, то и Опиши”&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YEAR-MONTH-DAY-title.MARKUP&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Но на практике всё оказалось немного сложнее.&lt;/p&gt;
 
-&lt;p&gt;Where &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YEAR&lt;/code&gt; is a four-digit number, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MONTH&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DAY&lt;/code&gt; are both two-digit numbers, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MARKUP&lt;/code&gt; is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#ошибки&quot;&gt;Ошибки&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#выход-есть&quot;&gt;Выход есть&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#заключение&quot;&gt;Заключение&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+&lt;h2 id=&quot;ошибки&quot;&gt;Ошибки&lt;/h2&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;Когда проект молодой, и первый, а возможно и последующие, его этапы разработки идут под лозунгом:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Сроки горят&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry></feed>
+&lt;p&gt;мало кто задумывается о такой мелочи как текст, который оставляют причастные к коду люди в &lt;a href=&quot;https://ru.wikipedia.org/wiki/%D0%A1%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0_%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F_%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%8F%D0%BC%D0%B8&quot;&gt;системе контроля версий&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;В конечном итоге история проекта принимает вид “мусорки”, в которую кладут “отходы” без разделения.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;“И что в этом плохого?” - сразу возникнет вопрос. Если посмотреть поверхностно - ничего.&lt;/p&gt;
+
+&lt;p&gt;Проекту, от того, что фигурирует в истории к коду - всё равно, он и так собирается и выполняет свои бизнес задачи.&lt;/p&gt;
+
+&lt;p&gt;Проходит время. Проект растёт. Количество и виды комментариев увеличиваются, мелькают строки со смайликами, 
+номерами задач, невразумительными &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fix&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;reviw&lt;/code&gt;, упражнения в английском и т.д.&lt;/p&gt;
+
+&lt;p&gt;Работники всё чаще и чаще начинают сталкиваться с необходимостью смотреть историю, 
+чтоб понять кто изменил тот или иной участок кода и в рамках какой задачи.&lt;/p&gt;
+
+&lt;p&gt;И каково же бывает удивление, когда находиться нужный &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;commit&lt;/code&gt; из &lt;strong&gt;15&lt;/strong&gt;-и файлов с комментарием &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fix2&lt;/code&gt; от человека, 
+который уже &lt;strong&gt;не работает&lt;/strong&gt; на проекте.&lt;/p&gt;
+
+&lt;h2 id=&quot;выход-есть&quot;&gt;Выход есть&lt;/h2&gt;
+
+&lt;p&gt;И он заключается в следовании простым правилам с начала проекта или с момента, 
+когда всем в команде стало понятно, что так дальше нельзя.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;h4 id=&quot;обсудить-и-зафиксировать-язык-комментариев&quot;&gt;Обсудить и зафиксировать язык комментариев&lt;/h4&gt;
+    &lt;p&gt;Как показывает практика, в историях проектов, часто можно увидеть использование нескольких языков.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h4 id=&quot;начать-придерживаться-конвенции&quot;&gt;Начать придерживаться &lt;a href=&quot;https://www.conventionalcommits.org/en/v1.0.0/&quot;&gt;конвенции&lt;/a&gt;&lt;/h4&gt;
+    &lt;p&gt;Это не только стандартизирует ваши сообщения, но и сделает их удобными для автоматической обработки.&lt;/p&gt;
+
+    &lt;p&gt;Например, следование конвенции позволит вам создавать &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CHANGELOG.md&lt;/code&gt; файл, который при правильном ведении комментариев может стать 
+  удобной навигацией по прогрессу проекта.&lt;/p&gt;
+
+    &lt;p&gt;В &lt;a href=&quot;https://github.com/ezhov-da/changelog-builder/blob/master/CHANGELOG.md&quot;&gt;changelog-builder/blob/master/CHANGELOG.md&lt;/a&gt; можно увидеть пример того, как выглядит автоматически формируемый файл.&lt;/p&gt;
+
+    &lt;p&gt;Кстати, проект &lt;a href=&quot;https://github.com/ezhov-da/changelog-builder&quot;&gt;changelog-builder&lt;/a&gt; предназначен для формирования &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CHANGELOG.md&lt;/code&gt; файла и Вы можете им воспользоваться.
+  Неважно, придерживаетесь ли Вы конвенции или нет, файл сформируется, но вот насколько он будет удобочитаем и понятен - это Вы и проверите.&lt;/p&gt;
+
+    &lt;p&gt;Так же для &lt;strong&gt;IntelliJ IDEA&lt;/strong&gt; я немного усовершенствовал &lt;a href=&quot;https://github.com/ezhov-da/git-commit-template&quot;&gt;плагин&lt;/a&gt;, который позволяет легко набирать комментарии согласно &lt;a href=&quot;https://www.conventionalcommits.org/en/v1.0.0/&quot;&gt;конвенции&lt;/a&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h4 id=&quot;использовать-squash&quot;&gt;Использовать &lt;a href=&quot;https://git-scm.com/docs/git-rebase#_interactive_mode&quot;&gt;squash&lt;/a&gt;&lt;/h4&gt;
+    &lt;p&gt;Когда в удалённый репозиторий отправляется две одинаковых строки комментария - это повод задуматься.&lt;/p&gt;
+
+    &lt;p&gt;“А одинаковые ли причины несут эти изменения?”, - и в &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;100%&lt;/code&gt; случаях ответ - &lt;strong&gt;НЕТ&lt;/strong&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h4 id=&quot;использовать-fast-forwards&quot;&gt;Использовать &lt;a href=&quot;https://git-scm.com/docs/git-push#_note_about_fast_forwards&quot;&gt;fast-forwards&lt;/a&gt;&lt;/h4&gt;
+    &lt;p&gt;Если в &lt;strong&gt;отдельной локальной ветке&lt;/strong&gt; вы навели в комментариях порядок, не забудьте отправить изменения &lt;strong&gt;в свою ветку&lt;/strong&gt; на удалённый сервер.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h4 id=&quot;не-писать-что-сделали-писать-что-сделано&quot;&gt;Не писать “что сделали”, писать “что сделано”&lt;/h4&gt;
+    &lt;p&gt;Как только в ваших комментариях фразы &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;сделал&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;откорректировал&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;реализовал&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;пофиксил&lt;/code&gt;, и т.д будут заменены на &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;сделано&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;откорректировано&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;реализовано&lt;/code&gt;, они 
+  сразу приобретут деловой стиль и будут отражать &lt;strong&gt;изменения в проекте&lt;/strong&gt;, а не &lt;strong&gt;изменения конкретным человеком&lt;/strong&gt;.&lt;/p&gt;
+
+    &lt;p&gt;До&lt;/p&gt;
+    &lt;blockquote&gt;
+      &lt;p&gt;откорректировал регулярное выражение, так как не обрабатывались некоторые случаи&lt;/p&gt;
+    &lt;/blockquote&gt;
+
+    &lt;p&gt;После&lt;/p&gt;
+    &lt;blockquote&gt;
+      &lt;p&gt;откорректировано регулярное выражение, так как случай &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;рамма&lt;/code&gt; не обрабатывался&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;заключение&quot;&gt;Заключение&lt;/h2&gt;
+
+&lt;p&gt;Правильная работа с историей комментариев - это такая же важная часть разработки приложения, как и написание кода.&lt;/p&gt;
+
+&lt;p&gt;Успехов!&lt;/p&gt;</content><author><name></name></author><summary type="html">С самого начал работы с системами контроля версий, будь то SVN, Mercurial или Git, я задал себе вопрос: “Как правильно, а главное качественно писать комментарий к своему изменению кода?”</summary></entry></feed>
