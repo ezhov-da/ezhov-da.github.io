@@ -2,7 +2,7 @@
 layout: post
 title:  "Культура commit-ов"
 date:   2020-12-04 18:00:00 +0300
-update: 2020-12-05 11:40:00 +0300
+update: 2020-12-05 14:09:00 +0300
 comments: true
 ---
 С самого начал работы с [системами контроля версий][VCS], будь то [SVN][SVN], [Mercurial][ML] или [Git][GIT], 
@@ -78,6 +78,9 @@ comments: true
     После
     > откорректировано регулярное выражение, так как случай ```рамма``` не обрабатывался 
 
+    Для своих проектов я написал и начал использовать [git-hook][GIT-HOOK] [commit-msg][COMMIT-MSG], 
+    который проверяет обязательное наличие в комментариях хотя бы одного слова из списка.
+
 ## Заключение
 
 Правильная работа с историей комментариев - это такая же важная часть разработки приложения, как и написание кода.
@@ -85,8 +88,6 @@ comments: true
 А как в вашей команде обстоят дела с историей commit-ов?
 
 Успехов!
-
-
 
 [VCS]: https://ru.wikipedia.org/wiki/%D0%A1%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0_%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F_%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%8F%D0%BC%D0%B8
 [SVN]: https://ru.wikipedia.org/wiki/Subversion#:~:text=Subversion%20(%D1%82%D0%B0%D0%BA%D0%B6%D0%B5%20%D0%B8%D0%B7%D0%B2%D0%B5%D1%81%D1%82%D0%BD%D0%B0%D1%8F%20%D0%BA%D0%B0%D0%BA%20%C2%ABSVN,Subversion%20(%D0%B7%D0%B0%D1%80%D0%B5%D0%B3%D0%B8%D1%81%D1%82%D1%80%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D1%8B%D0%B9%20%D1%82%D0%BE%D0%B2%D0%B0%D1%80%D0%BD%D1%8B%D0%B9%20%D0%B7%D0%BD%D0%B0%D0%BA).
@@ -98,3 +99,5 @@ comments: true
 [GCT-PROJECT]: https://github.com/ezhov-da/git-commit-template
 [SQUASH]: https://git-scm.com/docs/git-rebase#_interactive_mode
 [PUSH-FORCE]: https://git-scm.com/docs/git-push#Documentation/git-push.txt---force
+[GIT-HOOK]: https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks
+[COMMIT-MSG]: https://github.com/ezhov-da/git-hook/blob/main/commit-msg
