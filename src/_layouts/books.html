@@ -1,0 +1,27 @@
+---
+title: Books
+layout: default
+---
+<style>
+    .center {
+        text-align: center;
+    }
+</style>
+
+<div class="section center">
+    <div class="container">
+
+        <h2 class="subtitle">
+            {{  site.data.books.top.title }}
+        </h2>
+
+        {% for book in site.data.books.top.list %}
+
+        <div class="box">
+            <p><a href="{{ book.link }}">{{ book.name }}</a></p>
+            <p>{{ book.author }}</p>
+        </div>
+
+        {% endfor %}
+    </div>
+</div>

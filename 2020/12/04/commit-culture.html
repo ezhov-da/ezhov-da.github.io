@@ -60,7 +60,7 @@
             <ul>
                 <li><a href="/">Обо мне</a></li>
                 <li><a href="/posts">Статьи</a></li>
-                <!--                <li><a href="/books/">Книги</a></li>-->
+                <li><a href="/books">Книги</a></li>
                 <!--                <li><a href="/links/">Ссылки</a></li>-->
             </ul>
         </div>
@@ -69,14 +69,15 @@
 
 <div class="section">
     <div class="container">
+
         <div class="content">
-    <h1>Культура commit-ов</h1>
+            <h1>Культура commit-ов</h1>
 
-    <p>Created: 04 Dec 2020 Updated: 05 Dec 2020</p>
+            <p>Created: 04 Dec 2020 Updated: 05 Dec 2020</p>
 
-    <br>
+            <br>
 
-    <p>С самого начал работы с <a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0_%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F_%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%8F%D0%BC%D0%B8">системами контроля версий</a>, будь то <a href="https://ru.wikipedia.org/wiki/Subversion#:~:text=Subversion%20(%D1%82%D0%B0%D0%BA%D0%B6%D0%B5%20%D0%B8%D0%B7%D0%B2%D0%B5%D1%81%D1%82%D0%BD%D0%B0%D1%8F%20%D0%BA%D0%B0%D0%BA%20%C2%ABSVN,Subversion%20(%D0%B7%D0%B0%D1%80%D0%B5%D0%B3%D0%B8%D1%81%D1%82%D1%80%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D1%8B%D0%B9%20%D1%82%D0%BE%D0%B2%D0%B0%D1%80%D0%BD%D1%8B%D0%B9%20%D0%B7%D0%BD%D0%B0%D0%BA).">SVN</a>, <a href="https://ru.wikipedia.org/wiki/Mercurial#:~:text=Mercurial%20(%D1%81%20%D0%B0%D0%BD%D0%B3%D0%BB.,%D0%BE%D1%87%D0%B5%D1%80%D0%B5%D0%B4%D1%8C%20%D0%BE%D0%BD%D0%B0%20%D1%8F%D0%B2%D0%BB%D1%8F%D0%B5%D1%82%D1%81%D1%8F%20%D0%BA%D0%BE%D0%BD%D1%81%D0%BE%D0%BB%D1%8C%D0%BD%D0%BE%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%BE%D0%B9.">Mercurial</a> или <a href="https://ru.wikipedia.org/wiki/Git#:~:text=Git%20(%D0%BF%D1%80%D0%BE%D0%B8%D0%B7%D0%BD%D0%BE%D1%81%D0%B8%D1%82%D1%81%D1%8F%20%C2%AB%D0%B3%D0%B8%D1%82%C2%BB)%20%E2%80%94%20%D1%80%D0%B0%D1%81%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D1%91%D0%BD%D0%BD%D0%B0%D1%8F%20%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0%20%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F%20%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%8F%D0%BC%D0%B8.">Git</a>, 
+            <p>С самого начал работы с <a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0_%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F_%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%8F%D0%BC%D0%B8">системами контроля версий</a>, будь то <a href="https://ru.wikipedia.org/wiki/Subversion#:~:text=Subversion%20(%D1%82%D0%B0%D0%BA%D0%B6%D0%B5%20%D0%B8%D0%B7%D0%B2%D0%B5%D1%81%D1%82%D0%BD%D0%B0%D1%8F%20%D0%BA%D0%B0%D0%BA%20%C2%ABSVN,Subversion%20(%D0%B7%D0%B0%D1%80%D0%B5%D0%B3%D0%B8%D1%81%D1%82%D1%80%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D1%8B%D0%B9%20%D1%82%D0%BE%D0%B2%D0%B0%D1%80%D0%BD%D1%8B%D0%B9%20%D0%B7%D0%BD%D0%B0%D0%BA).">SVN</a>, <a href="https://ru.wikipedia.org/wiki/Mercurial#:~:text=Mercurial%20(%D1%81%20%D0%B0%D0%BD%D0%B3%D0%BB.,%D0%BE%D1%87%D0%B5%D1%80%D0%B5%D0%B4%D1%8C%20%D0%BE%D0%BD%D0%B0%20%D1%8F%D0%B2%D0%BB%D1%8F%D0%B5%D1%82%D1%81%D1%8F%20%D0%BA%D0%BE%D0%BD%D1%81%D0%BE%D0%BB%D1%8C%D0%BD%D0%BE%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%BE%D0%B9.">Mercurial</a> или <a href="https://ru.wikipedia.org/wiki/Git#:~:text=Git%20(%D0%BF%D1%80%D0%BE%D0%B8%D0%B7%D0%BD%D0%BE%D1%81%D0%B8%D1%82%D1%81%D1%8F%20%C2%AB%D0%B3%D0%B8%D1%82%C2%BB)%20%E2%80%94%20%D1%80%D0%B0%D1%81%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D1%91%D0%BD%D0%BD%D0%B0%D1%8F%20%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0%20%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F%20%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%8F%D0%BC%D0%B8.">Git</a>, 
 я задал себе вопрос:</p>
 <blockquote>
   <p>“Как правильно, а главное <strong>качественно</strong> писать комментарий к своему изменению кода?”</p>
@@ -181,35 +182,35 @@
 
 
 
-</div>
+        </div>
 
+        
 
+        <div id="disqus_thread"></div>
+        <script>
+            /**
+             *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+             *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+            /*
+            var disqus_config = function () {
+            this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+            */
+            (function () { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://ezhov-da.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
 
-<div id="disqus_thread"></div>
-<script>
-    /**
-     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function () { // DON'T EDIT BELOW THIS LINE
-        var d = document, s = d.createElement('script');
-        s.src = 'https://ezhov-da.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
-    Disqus.</a></noscript>
-
-
-
+        
     </div>
 </div>
+
 
 <footer class="footer">
     <div class="content has-text-centered">

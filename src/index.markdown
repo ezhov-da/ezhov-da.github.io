@@ -1,8 +1,7 @@
 ---
-title: Blog
-layout: default
+title: Обо мне
+layout: about
 ---
-
-<center>
-Привет, меня зовут Денис.
-</center>
+### Привет.
+ 
+#### Меня зовут Денис.

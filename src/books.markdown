@@ -1,6 +1,4 @@
 ---
 title: Books
-layout: default
+layout: books
 ---
-
-# Топ 5 книг

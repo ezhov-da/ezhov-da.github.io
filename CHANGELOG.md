@@ -1,5 +1,6 @@
 # Changelog
 ## 2020-12-05
+- refactoring completed *feat*
 - mistake edited. &#96;&#96;&#96;Fast-forward&#96;&#96;&#96; replaced to &#96;&#96;&#96;push --force&#96;&#96;&#96; *fix*
 - fix posts link *fix*
 - created post about commit for master *feat*

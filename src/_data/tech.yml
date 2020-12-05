@@ -1,0 +1,57 @@
+---
+now:
+  title: С чем работаю
+  list:
+    - name: DDD
+    - name: Архитектура
+    - name: Паттерны проектирования
+    - name: Java
+    - name: Kotlin
+    - name: Scala
+    - name: Gatling
+    - name: Spring
+    - name: Gradle
+    - name: Maven
+    - name: Git
+    - name: IntelliJ IDEA
+    - name: K8S
+    - name: Docker
+    - name: CI/CD
+    - name: Linux
+    - name: Bash
+    - name: Groovy
+    - name: GitLab
+    - name: GitHub
+
+interested:
+  title: Чем интересуюсь
+  list:
+    - name: GO
+    - name: JS
+    - name: React
+    - name: Kafka
+    - name: RabbitMQ
+    - name: Spark (WEB Framework)
+    - name: JavaFX
+    - name: Swing
+
+worked:
+  title: С чем работал
+  list:
+    - name: ActiveMQ
+    - name: Hazelcast
+    - name: JMeter
+    - name: Wildfly
+    - name: Tomcat
+    - name: ExtJs
+    - name: Teradata
+    - name: Informatica
+    - name: Oracle DB
+    - name: MS SQL
+    - name: OLAP
+    - name: NetBeans
+    - name: Ant
+    - name: SVN
+    - name: VBA
+    - name: VBS
+...

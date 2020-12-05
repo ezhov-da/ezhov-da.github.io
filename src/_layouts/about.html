@@ -1,0 +1,108 @@
+---
+title: About me
+layout: default
+---
+<style>
+    .center {
+        text-align: center;
+    }
+</style>
+
+<div class="section center">
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="content" >
+                {{ content }}
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="section center">
+    <div class="container">
+
+        <h2 class="subtitle">
+            {{  site.data.tech.now.title }}
+        </h2>
+
+        {% for tech in site.data.tech.now.list %}
+
+        {% assign modul = forloop.index0 | modulo: 4 %}
+
+        {% if forloop.index == 1 %}
+        <div class="columns">
+            <div class="column is-3">{{ tech.name }}</div>
+            {% elsif modul == 0 %}
+        </div>
+        <div class="columns">
+            <div class="column is-3">{{ tech.name }}</div>
+            {% else %}
+            <div class="column is-3">{{ tech.name }}</div>
+            {% endif %}
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+</div>
+
+<div class="section center">
+    <div class="container">
+
+        <h2 class="subtitle">
+            {{  site.data.tech.interested.title }}
+        </h2>
+
+        {% for tech in site.data.tech.interested.list %}
+
+        {% assign modul = forloop.index0 | modulo: 4 %}
+
+        {% if forloop.index == 1 %}
+        <div class="columns">
+            <div class="column is-3">{{ tech.name }}</div>
+            {% elsif modul == 0 %}
+        </div>
+        <div class="columns">
+            <div class="column is-3">{{ tech.name }}</div>
+            {% else %}
+            <div class="column is-3">{{ tech.name }}</div>
+            {% endif %}
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+</div>
+
+<div class="section center">
+    <div class="container">
+
+        <h2 class="subtitle">
+            {{  site.data.tech.worked.title }}
+        </h2>
+
+        {% for tech in site.data.tech.worked.list %}
+
+        {% assign modul = forloop.index0 | modulo: 4 %}
+
+        {% if forloop.index == 1 %}
+        <div class="columns">
+            <div class="column is-3">{{ tech.name }}</div>
+            {% elsif modul == 0 %}
+        </div>
+        <div class="columns">
+            <div class="column is-3">{{ tech.name }}</div>
+            {% else %}
+            <div class="column is-3">{{ tech.name }}</div>
+            {% endif %}
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+</div>
