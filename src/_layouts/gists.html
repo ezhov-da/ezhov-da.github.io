@@ -1,0 +1,41 @@
+---
+title: Gists
+layout: default
+---
+<div class="section">
+    <div class="container">
+        <div class="content">
+            <a name="topPage"></a>
+            <ul>
+                {% for block in site.data.gists.blocks %}
+                <li>
+                    <p>
+                        <a href="#{{ block }}">{{ block }}</a>
+                    </p>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+
+        {% for group in site.data.gists.groups %}
+        <div class="content">
+            <p>
+            <h1><a name="{{ group.name }}">{{ group.name }}</a></h1>
+            <a href="#topPage">В начало</a>
+            </p>
+
+            {% for entity in group.entities %}
+            <p>
+                <a href="{{ entity.htmlUrl }}">{{ entity.name }}</a> [<a class="is-small" href="{{ entity.rawUrl }}">raw</a>]
+                <span class="tag is-light">{{ group.name }}</span>
+                {% for tag in entity.tags %}
+                <span class="tag is-light">{{ tag }}</span>
+                {% endfor %}
+            </p>
+            {% endfor %}
+        </div>
+        {% endfor %}
+
+    </div>
+</div>
