@@ -1,0 +1,41 @@
+@startuml
+
+title Потребители логов
+
+rectangle "Потребители" as p
+
+rectangle "Разработка" as pro
+rectangle "Служба поддержки" as sup
+rectangle "Бизнес" as bus
+rectangle "Служба безопасности" as sec
+
+rectangle "TRACE" as T
+rectangle "DEBUG" as D
+rectangle "INFO" as I
+rectangle "WARN" as W
+rectangle "ERROR" as E
+
+p -- pro
+p -- sup
+p -- bus
+p -- sec
+
+pro -- T
+pro -- D
+pro -- I
+pro -- W
+pro -- E
+
+sup -- W
+sup -- E
+sup -- I
+
+bus -- I
+bus -- E
+
+sec -- D
+sec -- I
+sec -- W
+sec -- E
+
+@enduml
