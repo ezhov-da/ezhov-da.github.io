@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <link rel="icon" href="/tool.ico"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="theme-color" content="#000000"/>
+    <meta name="description" content="Programmer notes">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
+
+    <title>EzhovDA Логи? Логи!</title>
+
+    <style>
+        .main {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        .section {
+            flex: 1;
+        }
+    </style>
+
+</head>
+<body class="main">
+<div class="section">
+    <div class="container">
+        <div class="level">
+            <div class="level-item">
+                <figure class="image is-128x128">
+                    <img class="is-rounded" src="/avatar.jpg"/>
+                </figure>
+            </div>
+        </div>
+
+        <div class="level">
+            <div class="level-item has-text-centered">
+            <span class="icon has-text-info">
+                <a href="https://github.com/ezhov-da">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
+            </span>
+                <span class="icon has-text-info has-text-centered">
+                <a href="https://www.linkedin.com/in/ezhovda">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                </a>
+            </span>
+                <span class="icon has-text-info has-text-centered">
+              <a href="https://twitter.com/ezhov_da">
+                  <i class="fab fa-twitter" aria-hidden="true"></i>
+              </a>
+          </span>
+            </div>
+        </div>
+
+        <div class="tabs is-centered">
+            <ul>
+                <li><a href="/">Обо мне</a></li>
+                <li><a href="/posts">Статьи</a></li>
+                <li><a href="/books">Книги</a></li>
+                <li><a href="/gists">Gists</a></li>
+                <li><a href="/tools">Инструменты</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="container">
+
+        <div class="content">
+            <h1>Логи? Логи!</h1>
+
+            <p>Created: 17 Apr 2021
+                
+                
+            </p>
+
+            <br>
+
+            <!-- перевести на свойства -->
+<p><img src="/resources/logs/logs.png" alt="LOGS" /><br />
+Оригинальный <a href="https://devman.org/encyclopedia/logs/about-logging/">текст</a> изображения.</p>
+
+<hr />
+
+<p>Несмотря на <a href="#полезные-ссылки">большое</a> количество статей о работе с логами, 
+принципах написания и использования, вопросы продолжают возникать:</p>
+<ul>
+  <li>для чего нужны</li>
+  <li>кто читает</li>
+  <li>кто и как на них реагирует</li>
+  <li>почему ревьюер просит добавить логирование, если код работает</li>
+</ul>
+
+<p>Для того, чтоб понять, а нужны ли логи, стоит ответить на единственный вопрос: “Для кого логируем?”</p>
+
+<h2 id="для-кого-логируем">Для кого логируем</h2>
+
+<p>Потребители логов:</p>
+
+<ul>
+  <li>Разработка</li>
+  <li>Служба поддержки</li>
+  <li>Бизнес</li>
+  <li>Служба безопасности</li>
+</ul>
+
+<h3 id="разработка">Разработка</h3>
+
+<h4 id="обязанность">Обязанность</h4>
+
+<p>Устранение проблемы с использованием подробной информации, полученной из логов.</p>
+
+<h4 id="что-интересует">Что интересует</h4>
+
+<ul>
+  <li>Значения переменных в конкретный момент времени</li>
+  <li>Факт входа и выхода из функций</li>
+  <li>Факт перехода по веткам условий</li>
+  <li>Состояние приложения в момент возникновения проблем в  работе</li>
+</ul>
+
+<h3 id="служба-поддержки">Служба поддержки</h3>
+
+<h4 id="обязанность-1">Обязанность</h4>
+
+<p>Оперативное реагирование на проблему с использованием логов 
+и, возможное, решение проблемы без обращения к разработке.</p>
+
+<h4 id="что-интересует-1">Что интересует</h4>
+
+<ul>
+  <li>Человеко-понятное описание проблемы</li>
+  <li>Описание возможного решения проблемы без обращения к разработке</li>
+</ul>
+
+<h3 id="бизнес">Бизнес</h3>
+
+<h4 id="что-интересует-2">Что интересует</h4>
+
+<ul>
+  <li>Использование функции пользователями</li>
+  <li>Частота использование функции пользователями</li>
+  <li>Доступность функции для пользователей</li>
+</ul>
+
+<h3 id="служба-безопасности">Служба безопасности</h3>
+
+<h4 id="обязанность-2">Обязанность</h4>
+
+<p>Пресечение противоправных действий как со стороны сотрудников, так и со стороны пользователей приложения.</p>
+
+<h4 id="что-интересует-3">Что интересует</h4>
+
+<ul>
+  <li>Кто обращается к сервису</li>
+  <li>После чьего обращения, приложение начало вести себя нестабильно</li>
+  <li>Как часто обращаются к сервису</li>
+</ul>
+
+<p>Исходя из понимания того, для кого логируем - приходим к пониманию - как логируем.</p>
+
+<h2 id="как-логируем">Как логируем</h2>
+
+<h3 id="уровни-логирования">Уровни логирования</h3>
+
+<h4 id="trace">TRACE</h4>
+
+<p>Самый подробный уровень логирования.</p>
+
+<ul>
+  <li>Разработка
+    <ul>
+      <li>Вся доступная информация в момент логирования
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  logger.trace(
+      "method='register' action='start new user register' ip={} username={} action={} head={} response={} requestId={}", 
+      ip, username, action, head, response, requestId
+  )
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>Служба поддержки
+    <ul>
+      <li>не использует</li>
+    </ul>
+  </li>
+  <li>Бизнес
+    <ul>
+      <li>не использует</li>
+    </ul>
+  </li>
+  <li>Служба безопасности
+    <ul>
+      <li>не использует</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="debug">DEBUG</h4>
+
+<p>Подробный диагностический уровень.</p>
+
+<ul>
+  <li>Разработка
+    <ul>
+      <li>Значение переменных критичных для системы
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  logger.debug(
+      "method='register' action='start new user register' username={} action={} requestId={}", 
+      username, action, requestId
+  )
+</code></pre></div>        </div>
+      </li>
+      <li>Вход и выход из функции
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  logger.debug(
+      "method='register' action='start register new user' username={} action={} requestId={}", 
+      username, action, requestId
+  )     
+  logger.debug(
+      "method='register' action='register new user success' username={} action={} requestId={} result={}", 
+      username, action, requestId, result
+  )
+</code></pre></div>        </div>
+      </li>
+      <li>Выполнение условий перехода по веткам и сам переход
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  logger.debug(
+      "method='register' action='user authenticated' isAuthenticated={},
+      isAuthenticated
+  )     
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>Служба поддержки
+    <ul>
+      <li>не использует</li>
+    </ul>
+  </li>
+  <li>Бизнес
+    <ul>
+      <li>не использует</li>
+    </ul>
+  </li>
+  <li>Служба безопасности
+    <ul>
+      <li>данные запросов, такие как IP, пользователь, устройство
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  logger.debug(
+      "method='register' action='user authenticated' isAuthenticated={} ip={} agent={},
+      isAuthenticated, ip, agent
+  )     
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="info">INFO</h4>
+
+<p>Информация о важных шагах работы приложения.</p>
+
+<ul>
+  <li>Разработка
+    <ul>
+      <li>инициализация функционала
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  logger.info(
+      action='subscription service enabled'"
+  )     
+</code></pre></div>        </div>
+      </li>
+      <li>доступность функционала
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  logger.info(
+      action='sms service avalible'"
+  )     
+</code></pre></div>        </div>
+      </li>
+      <li>нормальное завершение работы
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  logger.info(
+      action='sinhronization service stopped'"
+  )     
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>Служба поддержки
+    <ul>
+      <li>пользуется данными для разработки</li>
+      <li>если есть особенные пожелания логирования
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  logger.info(
+      action='subscription service enabled. User who launched={}'", username
+  )     
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>Бизнес
+    <ul>
+      <li>обращение к функциональности
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  logger.info(
+      action='sms service usage'"
+  )     
+</code></pre></div>        </div>
+      </li>
+      <li>работоспособность функциональности
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  logger.info(
+      action='sms service available and usage'"
+  )     
+</code></pre></div>        </div>
+      </li>
+      <li>завершение работы функциональности
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  logger.info(
+      action='sms service stopped because engineering works'"
+  )     
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>Служба безопасности
+    <ul>
+      <li>обращение к функциональности авторизованным пользователем или нет
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  logger.info(
+      action='service was called not authorized user'"
+  )     
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="warn">WARN</h4>
+
+<p>В случае некорректного поведения или состояния приложения, которое не влечёт за собой отказ в работоспособности, 
+но в перспективе может повлечь за собой негативные последствия.
+Требуется внимание со стороны сопровождения.</p>
+
+<ul>
+  <li>Разработка
+    <ul>
+      <li>Детализация сообщения с состоянием приложения и причиной возникновения некорректного поведения
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  logger.warn(
+      method='showInfo' action='name for user must not be null. " + 
+          "Perhaps the data was not added to the questionnaire' username={}", username"
+  )     
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>Служба поддержки
+    <ul>
+      <li>Детализация сообщения в человеко-понятном виде с причинами возникновения 
+  некорректного поведения и описанием (если возможно) устранения причин такого поведения
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  logger.warn(
+      method='showInfo' action='name for user must not be null. " + 
+          "Perhaps the data was not added to the questionnaire' username={}", username"
+  )     
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>Бизнес
+    <ul>
+      <li>не использует</li>
+    </ul>
+  </li>
+  <li>Служба безопасности
+    <ul>
+      <li>Детализация сообщения в виде добавления важных для безопасности значений (авторизован ли пользователь, IP, агент и т.д)
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  logger.warn(
+      method='showInfo' action='name for user '{}' must not be null. " + 
+          "Perhaps the data was not added to the questionnaire. Last edited username ={}'", username, editedUsername
+  )     
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="error">ERROR</h4>
+
+<p>В случае некорректного поведения приложения, которое нарушает привычный поток обработки и требует немедленного 
+вмешательства для восстановления работоспособности.</p>
+
+<ul>
+  <li>Разработка
+    <ul>
+      <li>Подробная детализация сообщения с состоянием приложения и причиной возникновения некорректного поведения
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  logger.error(
+      method='editProfile' action='it is impossible to edit the profile. The user's service is not available'" + 
+          "url={} username={}", url, username
+  )     
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>Служба поддержки
+    <ul>
+      <li>Подробная детализация сообщения в человеко-понятном виде с причинами возникновения 
+  некорректного поведения и описанием (если возможно) устранения причин такого поведения
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  logger.error(
+      method='editProfile' action='it is impossible to edit the profile. The user's service is not available'" + 
+          "url={} username={}", url, username
+  )     
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>Бизнес
+    <ul>
+      <li>Могут быть интересны причины инцидента</li>
+    </ul>
+  </li>
+  <li>Служба безопасности
+    <ul>
+      <li>Детализация сообщения в виде добавления существенных для безопасности значений (авторизован ли пользователь, IP, агент и т.д)
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  logger.error(
+      method='editProfile' action='the action cannot be performed because no agent is specified. There is a possibility of unauthorized access.'" + 
+          "ip={}", ip
+  )     
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><br />
+<br />
+Иногда сообщения пересекаются, это допустимо, сообщение обязано учитывать потребителей и потребности.<br />
+Если при формировании сообщения сложно учесть потребности потребителей - 
+сообщение стоит разделить на отдельные тексты для каждого потребителя.</p>
+
+<h3 id="схема">Схема</h3>
+
+<p><img src="http://www.plantuml.com/plantuml/svg/TPBHJeCm58Rl-nJDxlSEcr8DDrj2C5mZDiPaJWBbNhOds1EeRy3K3U8YUuNJD_AdfGaaCmJwvJ__-JbjEijLdAdYUSMOUb8hoUcDMhtHhtIWFJLwW_L43SUdfI-ydunbCb7n-X7coMNtXCSvJyV6TwgeXh624ItqGvMrPIyZtmUTz9QES5MSplZXDvu36ezeiSbvaOvQTjHGJRzmbQP-N-J_H-unOetOCrMwH5EhIqpJ1yjaD7GOpA-5gOH3sHDNTxT6zeQolxXP6jKVgj4yM1Wr6geY29Q1aGLZAPzEpJaOw7PdeDk6LRgnKEyuTE0vy1r43X2942lr81puZ27NKW-TNIOsimVVGUG0ffbSF-2Y_040" alt="PUML" /></p>
+
+<h2 id="полезные-ссылки">Полезные ссылки</h2>
+
+<ul>
+  <li><a href="https://www.scalyr.com/blog/the-10-commandments-of-logging/">https://www.scalyr.com/blog/the-10-commandments-of-logging/</a></li>
+  <li><a href="https://www.loggly.com/blog/30-best-practices-logging-scale/">https://www.loggly.com/blog/30-best-practices-logging-scale/</a></li>
+  <li><a href="https://sematext.com/blog/java-logging-best-practices/">https://sematext.com/blog/java-logging-best-practices/</a></li>
+  <li><a href="https://betterprogramming.pub/application-logging-best-practices-a-support-engineers-perspective-b17d0ef1c5df">https://betterprogramming.pub/application-logging-best-practices-a-support-engineers-perspective-b17d0ef1c5df</a></li>
+  <li><a href="https://www.loomsystems.com/blog/single-post/2017/01/26/9-logging-best-practices-based-on-hands-on-experience">https://www.loomsystems.com/blog/single-post/2017/01/26/9-logging-best-practices-based-on-hands-on-experience</a></li>
+</ul>
+
+<h2 id="заключение">Заключение</h2>
+
+<p>Правильная работа с логами - такая же важная часть разработки приложения, как и написание кода.</p>
+
+<p>Помните - “Много логов - не бывает”.</p>
+
+<p>А как в вашей команде обстоят дела с логами?</p>
+
+<p>Успехов!</p>
+
+
+
+
+        </div>
+
+        
+
+        <div id="disqus_thread"></div>
+        <script>
+            /**
+             *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+             *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+            /*
+            var disqus_config = function () {
+            this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+            */
+            (function () { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://ezhov-da.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+
+        
+    </div>
+</div>
+
+
+<footer class="footer">
+    <div class="content has-text-centered">
+        <p>
+            Спасибо <a href="https://bulma.io/">Bulma</a> и <a href="https://jekyllrb.com/">Jekyll</a>.
+        </p>
+
+        <p>
+            © 2020 - 2021
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>

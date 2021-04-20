@@ -1,4 +1,11 @@
 # Changelog
+## 2021-04-20
+- article about logs *feat*
+## 2021-04-18
+- added logs plant uml file *docs*
+## 2020-12-12
+- forgotten file *fix*
+- gists added *feat*
 ## 2020-12-05
 - added assets *feat*
 - added tech and books *feat*

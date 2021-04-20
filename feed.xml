@@ -1,4 +1,376 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-12-12T22:29:07+03:00</updated><id>/feed.xml</id><title type="html">EzhovDA</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Культура commit-ов</title><link href="/2020/12/04/commit-culture.html" rel="alternate" type="text/html" title="Культура commit-ов" /><published>2020-12-04T18:00:00+03:00</published><updated>2020-12-04T18:00:00+03:00</updated><id>/2020/12/04/commit-culture</id><content type="html" xml:base="/2020/12/04/commit-culture.html">&lt;p&gt;С самого начал работы с &lt;a href=&quot;https://ru.wikipedia.org/wiki/%D0%A1%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0_%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F_%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%8F%D0%BC%D0%B8&quot;&gt;системами контроля версий&lt;/a&gt;, будь то &lt;a href=&quot;https://ru.wikipedia.org/wiki/Subversion#:~:text=Subversion%20(%D1%82%D0%B0%D0%BA%D0%B6%D0%B5%20%D0%B8%D0%B7%D0%B2%D0%B5%D1%81%D1%82%D0%BD%D0%B0%D1%8F%20%D0%BA%D0%B0%D0%BA%20%C2%ABSVN,Subversion%20(%D0%B7%D0%B0%D1%80%D0%B5%D0%B3%D0%B8%D1%81%D1%82%D1%80%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D1%8B%D0%B9%20%D1%82%D0%BE%D0%B2%D0%B0%D1%80%D0%BD%D1%8B%D0%B9%20%D0%B7%D0%BD%D0%B0%D0%BA).&quot;&gt;SVN&lt;/a&gt;, &lt;a href=&quot;https://ru.wikipedia.org/wiki/Mercurial#:~:text=Mercurial%20(%D1%81%20%D0%B0%D0%BD%D0%B3%D0%BB.,%D0%BE%D1%87%D0%B5%D1%80%D0%B5%D0%B4%D1%8C%20%D0%BE%D0%BD%D0%B0%20%D1%8F%D0%B2%D0%BB%D1%8F%D0%B5%D1%82%D1%81%D1%8F%20%D0%BA%D0%BE%D0%BD%D1%81%D0%BE%D0%BB%D1%8C%D0%BD%D0%BE%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%BE%D0%B9.&quot;&gt;Mercurial&lt;/a&gt; или &lt;a href=&quot;https://ru.wikipedia.org/wiki/Git#:~:text=Git%20(%D0%BF%D1%80%D0%BE%D0%B8%D0%B7%D0%BD%D0%BE%D1%81%D0%B8%D1%82%D1%81%D1%8F%20%C2%AB%D0%B3%D0%B8%D1%82%C2%BB)%20%E2%80%94%20%D1%80%D0%B0%D1%81%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D1%91%D0%BD%D0%BD%D0%B0%D1%8F%20%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0%20%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F%20%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%8F%D0%BC%D0%B8.&quot;&gt;Git&lt;/a&gt;, 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-04-20T06:43:51+03:00</updated><id>/feed.xml</id><title type="html">EzhovDA</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Логи? Логи!</title><link href="/2021/04/17/logs.html" rel="alternate" type="text/html" title="Логи? Логи!" /><published>2021-04-17T14:22:00+03:00</published><updated>2021-04-17T14:22:00+03:00</updated><id>/2021/04/17/logs</id><content type="html" xml:base="/2021/04/17/logs.html">&lt;!-- перевести на свойства --&gt;
+&lt;p&gt;&lt;img src=&quot;/resources/logs/logs.png&quot; alt=&quot;LOGS&quot; /&gt;&lt;br /&gt;
+Оригинальный &lt;a href=&quot;https://devman.org/encyclopedia/logs/about-logging/&quot;&gt;текст&lt;/a&gt; изображения.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Несмотря на &lt;a href=&quot;#полезные-ссылки&quot;&gt;большое&lt;/a&gt; количество статей о работе с логами, 
+принципах написания и использования, вопросы продолжают возникать:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;для чего нужны&lt;/li&gt;
+  &lt;li&gt;кто читает&lt;/li&gt;
+  &lt;li&gt;кто и как на них реагирует&lt;/li&gt;
+  &lt;li&gt;почему ревьюер просит добавить логирование, если код работает&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Для того, чтоб понять, а нужны ли логи, стоит ответить на единственный вопрос: “Для кого логируем?”&lt;/p&gt;
+
+&lt;h2 id=&quot;для-кого-логируем&quot;&gt;Для кого логируем&lt;/h2&gt;
+
+&lt;p&gt;Потребители логов:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Разработка&lt;/li&gt;
+  &lt;li&gt;Служба поддержки&lt;/li&gt;
+  &lt;li&gt;Бизнес&lt;/li&gt;
+  &lt;li&gt;Служба безопасности&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;разработка&quot;&gt;Разработка&lt;/h3&gt;
+
+&lt;h4 id=&quot;обязанность&quot;&gt;Обязанность&lt;/h4&gt;
+
+&lt;p&gt;Устранение проблемы с использованием подробной информации, полученной из логов.&lt;/p&gt;
+
+&lt;h4 id=&quot;что-интересует&quot;&gt;Что интересует&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Значения переменных в конкретный момент времени&lt;/li&gt;
+  &lt;li&gt;Факт входа и выхода из функций&lt;/li&gt;
+  &lt;li&gt;Факт перехода по веткам условий&lt;/li&gt;
+  &lt;li&gt;Состояние приложения в момент возникновения проблем в  работе&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;служба-поддержки&quot;&gt;Служба поддержки&lt;/h3&gt;
+
+&lt;h4 id=&quot;обязанность-1&quot;&gt;Обязанность&lt;/h4&gt;
+
+&lt;p&gt;Оперативное реагирование на проблему с использованием логов 
+и, возможное, решение проблемы без обращения к разработке.&lt;/p&gt;
+
+&lt;h4 id=&quot;что-интересует-1&quot;&gt;Что интересует&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Человеко-понятное описание проблемы&lt;/li&gt;
+  &lt;li&gt;Описание возможного решения проблемы без обращения к разработке&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;бизнес&quot;&gt;Бизнес&lt;/h3&gt;
+
+&lt;h4 id=&quot;что-интересует-2&quot;&gt;Что интересует&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Использование функции пользователями&lt;/li&gt;
+  &lt;li&gt;Частота использование функции пользователями&lt;/li&gt;
+  &lt;li&gt;Доступность функции для пользователей&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;служба-безопасности&quot;&gt;Служба безопасности&lt;/h3&gt;
+
+&lt;h4 id=&quot;обязанность-2&quot;&gt;Обязанность&lt;/h4&gt;
+
+&lt;p&gt;Пресечение противоправных действий как со стороны сотрудников, так и со стороны пользователей приложения.&lt;/p&gt;
+
+&lt;h4 id=&quot;что-интересует-3&quot;&gt;Что интересует&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Кто обращается к сервису&lt;/li&gt;
+  &lt;li&gt;После чьего обращения, приложение начало вести себя нестабильно&lt;/li&gt;
+  &lt;li&gt;Как часто обращаются к сервису&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Исходя из понимания того, для кого логируем - приходим к пониманию - как логируем.&lt;/p&gt;
+
+&lt;h2 id=&quot;как-логируем&quot;&gt;Как логируем&lt;/h2&gt;
+
+&lt;h3 id=&quot;уровни-логирования&quot;&gt;Уровни логирования&lt;/h3&gt;
+
+&lt;h4 id=&quot;trace&quot;&gt;TRACE&lt;/h4&gt;
+
+&lt;p&gt;Самый подробный уровень логирования.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Разработка
+    &lt;ul&gt;
+      &lt;li&gt;Вся доступная информация в момент логирования
+        &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  logger.trace(
+      &quot;method='register' action='start new user register' ip={} username={} action={} head={} response={} requestId={}&quot;, 
+      ip, username, action, head, response, requestId
+  )
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Служба поддержки
+    &lt;ul&gt;
+      &lt;li&gt;не использует&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Бизнес
+    &lt;ul&gt;
+      &lt;li&gt;не использует&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Служба безопасности
+    &lt;ul&gt;
+      &lt;li&gt;не использует&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;debug&quot;&gt;DEBUG&lt;/h4&gt;
+
+&lt;p&gt;Подробный диагностический уровень.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Разработка
+    &lt;ul&gt;
+      &lt;li&gt;Значение переменных критичных для системы
+        &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  logger.debug(
+      &quot;method='register' action='start new user register' username={} action={} requestId={}&quot;, 
+      username, action, requestId
+  )
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Вход и выход из функции
+        &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  logger.debug(
+      &quot;method='register' action='start register new user' username={} action={} requestId={}&quot;, 
+      username, action, requestId
+  )     
+  logger.debug(
+      &quot;method='register' action='register new user success' username={} action={} requestId={} result={}&quot;, 
+      username, action, requestId, result
+  )
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Выполнение условий перехода по веткам и сам переход
+        &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  logger.debug(
+      &quot;method='register' action='user authenticated' isAuthenticated={},
+      isAuthenticated
+  )     
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Служба поддержки
+    &lt;ul&gt;
+      &lt;li&gt;не использует&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Бизнес
+    &lt;ul&gt;
+      &lt;li&gt;не использует&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Служба безопасности
+    &lt;ul&gt;
+      &lt;li&gt;данные запросов, такие как IP, пользователь, устройство
+        &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  logger.debug(
+      &quot;method='register' action='user authenticated' isAuthenticated={} ip={} agent={},
+      isAuthenticated, ip, agent
+  )     
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;info&quot;&gt;INFO&lt;/h4&gt;
+
+&lt;p&gt;Информация о важных шагах работы приложения.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Разработка
+    &lt;ul&gt;
+      &lt;li&gt;инициализация функционала
+        &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  logger.info(
+      action='subscription service enabled'&quot;
+  )     
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li&gt;доступность функционала
+        &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  logger.info(
+      action='sms service avalible'&quot;
+  )     
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li&gt;нормальное завершение работы
+        &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  logger.info(
+      action='sinhronization service stopped'&quot;
+  )     
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Служба поддержки
+    &lt;ul&gt;
+      &lt;li&gt;пользуется данными для разработки&lt;/li&gt;
+      &lt;li&gt;если есть особенные пожелания логирования
+        &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  logger.info(
+      action='subscription service enabled. User who launched={}'&quot;, username
+  )     
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Бизнес
+    &lt;ul&gt;
+      &lt;li&gt;обращение к функциональности
+        &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  logger.info(
+      action='sms service usage'&quot;
+  )     
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li&gt;работоспособность функциональности
+        &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  logger.info(
+      action='sms service available and usage'&quot;
+  )     
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li&gt;завершение работы функциональности
+        &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  logger.info(
+      action='sms service stopped because engineering works'&quot;
+  )     
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Служба безопасности
+    &lt;ul&gt;
+      &lt;li&gt;обращение к функциональности авторизованным пользователем или нет
+        &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  logger.info(
+      action='service was called not authorized user'&quot;
+  )     
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;warn&quot;&gt;WARN&lt;/h4&gt;
+
+&lt;p&gt;В случае некорректного поведения или состояния приложения, которое не влечёт за собой отказ в работоспособности, 
+но в перспективе может повлечь за собой негативные последствия.
+Требуется внимание со стороны сопровождения.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Разработка
+    &lt;ul&gt;
+      &lt;li&gt;Детализация сообщения с состоянием приложения и причиной возникновения некорректного поведения
+        &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  logger.warn(
+      method='showInfo' action='name for user must not be null. &quot; + 
+          &quot;Perhaps the data was not added to the questionnaire' username={}&quot;, username&quot;
+  )     
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Служба поддержки
+    &lt;ul&gt;
+      &lt;li&gt;Детализация сообщения в человеко-понятном виде с причинами возникновения 
+  некорректного поведения и описанием (если возможно) устранения причин такого поведения
+        &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  logger.warn(
+      method='showInfo' action='name for user must not be null. &quot; + 
+          &quot;Perhaps the data was not added to the questionnaire' username={}&quot;, username&quot;
+  )     
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Бизнес
+    &lt;ul&gt;
+      &lt;li&gt;не использует&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Служба безопасности
+    &lt;ul&gt;
+      &lt;li&gt;Детализация сообщения в виде добавления важных для безопасности значений (авторизован ли пользователь, IP, агент и т.д)
+        &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  logger.warn(
+      method='showInfo' action='name for user '{}' must not be null. &quot; + 
+          &quot;Perhaps the data was not added to the questionnaire. Last edited username ={}'&quot;, username, editedUsername
+  )     
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;error&quot;&gt;ERROR&lt;/h4&gt;
+
+&lt;p&gt;В случае некорректного поведения приложения, которое нарушает привычный поток обработки и требует немедленного 
+вмешательства для восстановления работоспособности.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Разработка
+    &lt;ul&gt;
+      &lt;li&gt;Подробная детализация сообщения с состоянием приложения и причиной возникновения некорректного поведения
+        &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  logger.error(
+      method='editProfile' action='it is impossible to edit the profile. The user's service is not available'&quot; + 
+          &quot;url={} username={}&quot;, url, username
+  )     
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Служба поддержки
+    &lt;ul&gt;
+      &lt;li&gt;Подробная детализация сообщения в человеко-понятном виде с причинами возникновения 
+  некорректного поведения и описанием (если возможно) устранения причин такого поведения
+        &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  logger.error(
+      method='editProfile' action='it is impossible to edit the profile. The user's service is not available'&quot; + 
+          &quot;url={} username={}&quot;, url, username
+  )     
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Бизнес
+    &lt;ul&gt;
+      &lt;li&gt;Могут быть интересны причины инцидента&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Служба безопасности
+    &lt;ul&gt;
+      &lt;li&gt;Детализация сообщения в виде добавления существенных для безопасности значений (авторизован ли пользователь, IP, агент и т.д)
+        &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  logger.error(
+      method='editProfile' action='the action cannot be performed because no agent is specified. There is a possibility of unauthorized access.'&quot; + 
+          &quot;ip={}&quot;, ip
+  )     
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+Иногда сообщения пересекаются, это допустимо, сообщение обязано учитывать потребителей и потребности.&lt;br /&gt;
+Если при формировании сообщения сложно учесть потребности потребителей - 
+сообщение стоит разделить на отдельные тексты для каждого потребителя.&lt;/p&gt;
+
+&lt;h3 id=&quot;схема&quot;&gt;Схема&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.plantuml.com/plantuml/svg/TPBHJeCm58Rl-nJDxlSEcr8DDrj2C5mZDiPaJWBbNhOds1EeRy3K3U8YUuNJD_AdfGaaCmJwvJ__-JbjEijLdAdYUSMOUb8hoUcDMhtHhtIWFJLwW_L43SUdfI-ydunbCb7n-X7coMNtXCSvJyV6TwgeXh624ItqGvMrPIyZtmUTz9QES5MSplZXDvu36ezeiSbvaOvQTjHGJRzmbQP-N-J_H-unOetOCrMwH5EhIqpJ1yjaD7GOpA-5gOH3sHDNTxT6zeQolxXP6jKVgj4yM1Wr6geY29Q1aGLZAPzEpJaOw7PdeDk6LRgnKEyuTE0vy1r43X2942lr81puZ27NKW-TNIOsimVVGUG0ffbSF-2Y_040&quot; alt=&quot;PUML&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;полезные-ссылки&quot;&gt;Полезные ссылки&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.scalyr.com/blog/the-10-commandments-of-logging/&quot;&gt;https://www.scalyr.com/blog/the-10-commandments-of-logging/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.loggly.com/blog/30-best-practices-logging-scale/&quot;&gt;https://www.loggly.com/blog/30-best-practices-logging-scale/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://sematext.com/blog/java-logging-best-practices/&quot;&gt;https://sematext.com/blog/java-logging-best-practices/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://betterprogramming.pub/application-logging-best-practices-a-support-engineers-perspective-b17d0ef1c5df&quot;&gt;https://betterprogramming.pub/application-logging-best-practices-a-support-engineers-perspective-b17d0ef1c5df&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.loomsystems.com/blog/single-post/2017/01/26/9-logging-best-practices-based-on-hands-on-experience&quot;&gt;https://www.loomsystems.com/blog/single-post/2017/01/26/9-logging-best-practices-based-on-hands-on-experience&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;заключение&quot;&gt;Заключение&lt;/h2&gt;
+
+&lt;p&gt;Правильная работа с логами - такая же важная часть разработки приложения, как и написание кода.&lt;/p&gt;
+
+&lt;p&gt;Помните - “Много логов - не бывает”.&lt;/p&gt;
+
+&lt;p&gt;А как в вашей команде обстоят дела с логами?&lt;/p&gt;
+
+&lt;p&gt;Успехов!&lt;/p&gt;</content><author><name></name></author><summary type="html">Оригинальный текст изображения.</summary></entry><entry><title type="html">Культура commit-ов</title><link href="/2020/12/04/commit-culture.html" rel="alternate" type="text/html" title="Культура commit-ов" /><published>2020-12-04T18:00:00+03:00</published><updated>2020-12-04T18:00:00+03:00</updated><id>/2020/12/04/commit-culture</id><content type="html" xml:base="/2020/12/04/commit-culture.html">&lt;p&gt;С самого начал работы с &lt;a href=&quot;https://ru.wikipedia.org/wiki/%D0%A1%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0_%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F_%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%8F%D0%BC%D0%B8&quot;&gt;системами контроля версий&lt;/a&gt;, будь то &lt;a href=&quot;https://ru.wikipedia.org/wiki/Subversion#:~:text=Subversion%20(%D1%82%D0%B0%D0%BA%D0%B6%D0%B5%20%D0%B8%D0%B7%D0%B2%D0%B5%D1%81%D1%82%D0%BD%D0%B0%D1%8F%20%D0%BA%D0%B0%D0%BA%20%C2%ABSVN,Subversion%20(%D0%B7%D0%B0%D1%80%D0%B5%D0%B3%D0%B8%D1%81%D1%82%D1%80%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D1%8B%D0%B9%20%D1%82%D0%BE%D0%B2%D0%B0%D1%80%D0%BD%D1%8B%D0%B9%20%D0%B7%D0%BD%D0%B0%D0%BA).&quot;&gt;SVN&lt;/a&gt;, &lt;a href=&quot;https://ru.wikipedia.org/wiki/Mercurial#:~:text=Mercurial%20(%D1%81%20%D0%B0%D0%BD%D0%B3%D0%BB.,%D0%BE%D1%87%D0%B5%D1%80%D0%B5%D0%B4%D1%8C%20%D0%BE%D0%BD%D0%B0%20%D1%8F%D0%B2%D0%BB%D1%8F%D0%B5%D1%82%D1%81%D1%8F%20%D0%BA%D0%BE%D0%BD%D1%81%D0%BE%D0%BB%D1%8C%D0%BD%D0%BE%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%BE%D0%B9.&quot;&gt;Mercurial&lt;/a&gt; или &lt;a href=&quot;https://ru.wikipedia.org/wiki/Git#:~:text=Git%20(%D0%BF%D1%80%D0%BE%D0%B8%D0%B7%D0%BD%D0%BE%D1%81%D0%B8%D1%82%D1%81%D1%8F%20%C2%AB%D0%B3%D0%B8%D1%82%C2%BB)%20%E2%80%94%20%D1%80%D0%B0%D1%81%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D1%91%D0%BD%D0%BD%D0%B0%D1%8F%20%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0%20%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F%20%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%8F%D0%BC%D0%B8.&quot;&gt;Git&lt;/a&gt;, 
 я задал себе вопрос:&lt;/p&gt;
 &lt;blockquote&gt;
   &lt;p&gt;“Как правильно, а главное &lt;strong&gt;качественно&lt;/strong&gt; писать комментарий к своему изменению кода?”&lt;/p&gt;
