@@ -1,0 +1,37 @@
+---
+title: Tools
+layout: default
+---
+<div class="section">
+    <div class="container">
+        <div class="content">
+            <a name="topPage"></a>
+            <ul>
+                {% for block in site.data.tools.blocks %}
+                <li>
+                    <p>
+                        <a href="#{{ block.name }}">{{ block.name }}</a>
+                    </p>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+
+        {% for tools in site.data.tools.blocks %}
+        <div class="content">
+            <p>
+            <h1><a name="{{ tools.name }}">{{ tools.name }}</a></h1>
+            <a href="#topPage">В начало</a>
+            </p>
+
+            {% for tool in tools.tool %}
+            <p>
+                <a href="{{ tool.link }}">{{ tool.name }}</a>
+            </p>
+            {% endfor %}
+        </div>
+        {% endfor %}
+
+    </div>
+</div>

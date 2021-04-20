@@ -1,0 +1,115 @@
+---
+blocks:
+  - name: "IDE"
+    tool:
+      - name: InteliJ IDEA
+        link: "https://www.jetbrains.com/ru-ru/idea/?host=intellij.co.uk"
+        description: "Среда разработки InteliJ IDEA"
+
+  - name: "Консоль"
+    tool:
+      - name: ConEmu
+        link: "https://conemu.ru/"
+      - name: MSYS2
+        link: "https://www.msys2.org/"
+
+  - name: "Редакторы"
+    tool:
+      - name: Visual Studio Code
+        link: "https://code.visualstudio.com/"
+      - name: Vim
+        link: "https://www.vim.org/"
+      - name: Atom
+        link: "https://atom.io/"
+      - name: Notepad++
+        link: "https://notepad-plus-plus.org/downloads/"
+
+  - name: "Проводники"
+    tool:
+    - name: FreeCommander
+      link: "https://freecommander.com/ru/%d0%b4%d0%be%d0%bc%d0%b0%d1%88%d0%bd%d1%8f%d1%8f/"
+
+  - name: "Хранение паролей"
+    tool:
+    - name: KeePass
+      link: "https://sourceforge.net/projects/keepass/"
+
+  - name: "VCS"
+    tool:
+      - name: Git for Windows
+        link: "https://git-scm.com/download/win"
+
+  - name: "Сравнение файлов"
+    tool:
+      - name: KDiff3
+        link: "http://kdiff3.sourceforge.net/"
+
+  - name: "Сеть"
+    tool:
+    - name: Postman
+      link: "https://www.postman.com/"
+    - name: Putty
+      link: "https://www.putty.org/"
+    - name: WinSCP
+      link: "https://winscp.net/eng/download.php"
+    - name: mRemoteNG
+      link: "https://mremoteng.org/"
+    - name: Angry IP Scanner
+      link: "https://angryip.org/"
+    - name: Wireshark
+      link: "https://www.wireshark.org/"
+
+  - name: "Контейнеры"
+    tool:
+    - name: Docker for Windows
+      link: "https://docs.docker.com/docker-for-windows/"
+    - name: kubectl
+      link: "https://kubernetes.io/ru/docs/tasks/tools/install-kubectl/"
+
+  - name: "Системы сборки"
+    tool:
+      - name: Maven
+        link: "https://maven.apache.org/"
+      - name: Gradle
+        link: "https://gradle.org/"
+
+  - name: "Языки программирования"
+    tool:
+      - name: Java
+        link: "https://openjdk.java.net/"
+      - name: Kotlin
+        link: "https://kotlinlang.org/"
+      - name: Groovy
+        link: "https://groovy-lang.org/"
+      - name: Scala
+        link: "https://www.scala-lang.org/"
+      - name: Golang
+        link: "https://golang.org/"
+      - name: Python
+        link: "https://www.python.org/downloads/windows/"         
+      - name: NodeJS
+        link: "https://nodejs.org/en/"
+      - name: Ruby
+        link: "https://www.ruby-lang.org/ru/about/"
+
+  - name: "Утилиты"
+    tool:
+    - name: jBang
+      link: "https://www.jbang.dev/"
+
+  - name: "Браузеры"
+    tool:
+      - name: Chrome
+        link: "https://www.google.com/intl/ru_ru/chrome/"
+      - name: Firefox
+        link: "https://www.mozilla.org/ru/firefox/new/"
+
+  - name: "Разное"
+    tool:
+    - name: Telegram Desktop
+      link: "https://desktop.telegram.org/"
+    - name: yarn
+      link: "https://yarnpkg.com/"
+    - name: Zoom
+      link: "https://zoom.us/ru-ru/meetings.html"
+...

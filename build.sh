@@ -6,7 +6,7 @@ bundle exec jekyll build
 
 # delete old files
 cd ..
-rm -rf "2020" "about" "assets"
+rm -rf "2020" "2021" "about" "assets"
 rm -f *.html *.jpg *.ico *.xml
 
 # copy new site

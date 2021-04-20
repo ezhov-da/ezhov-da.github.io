@@ -1,0 +1,299 @@
+---
+layout: post
+title:  "Логи? Логи!"
+date:   2021-04-17 14:22:00 +0300
+comments: true
+imageLink: /logs.png
+---
+
+<!-- перевести на свойства -->
+![LOGS](/resources/logs/logs.png)  
+Оригинальный [текст](https://devman.org/encyclopedia/logs/about-logging/) изображения.
+
+---
+
+Несмотря на [большое](#полезные-ссылки) количество статей о работе с логами, 
+принципах написания и использования, вопросы продолжают возникать:
+- для чего нужны
+- кто читает 
+- кто и как на них реагирует
+- почему ревьюер просит добавить логирование, если код работает
+
+Для того, чтоб понять, а нужны ли логи, стоит ответить на единственный вопрос: "Для кого логируем?" 
+
+## Для кого логируем
+
+Потребители логов: 
+
+- Разработка
+- Служба поддержки
+- Бизнес
+- Служба безопасности
+
+### Разработка
+
+#### Обязанность
+
+Устранение проблемы с использованием подробной информации, полученной из логов.   
+
+#### Что интересует
+
+- Значения переменных в конкретный момент времени
+- Факт входа и выхода из функций
+- Факт перехода по веткам условий
+- Состояние приложения в момент возникновения проблем в  работе
+
+### Служба поддержки
+
+#### Обязанность
+
+Оперативное реагирование на проблему с использованием логов 
+и, возможное, решение проблемы без обращения к разработке.
+
+#### Что интересует
+
+- Человеко-понятное описание проблемы
+- Описание возможного решения проблемы без обращения к разработке 
+
+### Бизнес
+
+#### Что интересует
+
+- Использование функции пользователями
+- Частота использование функции пользователями
+- Доступность функции для пользователей
+
+### Служба безопасности
+
+#### Обязанность
+
+Пресечение противоправных действий как со стороны сотрудников, так и со стороны пользователей приложения.
+
+#### Что интересует
+
+- Кто обращается к сервису
+- После чьего обращения, приложение начало вести себя нестабильно
+- Как часто обращаются к сервису
+
+Исходя из понимания того, для кого логируем - приходим к пониманию - как логируем.
+
+## Как логируем
+
+### Уровни логирования
+
+#### TRACE
+
+Самый подробный уровень логирования.
+
+- Разработка
+    - Вся доступная информация в момент логирования  
+    ```
+        logger.trace(
+            "method='register' action='start new user register' ip={} username={} action={} head={} response={} requestId={}", 
+            ip, username, action, head, response, requestId
+        )
+    ```    
+- Служба поддержки
+    - не использует
+- Бизнес
+    - не использует
+- Служба безопасности
+    - не использует
+
+#### DEBUG
+
+Подробный диагностический уровень.
+
+- Разработка
+    - Значение переменных критичных для системы
+    ```
+        logger.debug(
+            "method='register' action='start new user register' username={} action={} requestId={}", 
+            username, action, requestId
+        )
+    ```
+    - Вход и выход из функции
+      ```
+        logger.debug(
+            "method='register' action='start register new user' username={} action={} requestId={}", 
+            username, action, requestId
+        )     
+        logger.debug(
+            "method='register' action='register new user success' username={} action={} requestId={} result={}", 
+            username, action, requestId, result
+        )
+      ```
+    - Выполнение условий перехода по веткам и сам переход
+      ```
+        logger.debug(
+            "method='register' action='user authenticated' isAuthenticated={},
+            isAuthenticated
+        )     
+      ```
+- Служба поддержки
+    - не использует
+- Бизнес
+    - не использует
+- Служба безопасности
+    - данные запросов, такие как IP, пользователь, устройство
+      ```
+        logger.debug(
+            "method='register' action='user authenticated' isAuthenticated={} ip={} agent={},
+            isAuthenticated, ip, agent
+        )     
+      ```
+
+#### INFO
+
+Информация о важных шагах работы приложения. 
+
+- Разработка
+    - инициализация функционала
+      ```
+        logger.info(
+            action='subscription service enabled'"
+        )     
+      ```
+    - доступность функционала
+      ```
+        logger.info(
+            action='sms service avalible'"
+        )     
+      ```
+    - нормальное завершение работы
+      ```
+        logger.info(
+            action='sinhronization service stopped'"
+        )     
+      ```
+- Служба поддержки
+    - пользуется данными для разработки
+    - если есть особенные пожелания логирования
+      ```
+        logger.info(
+            action='subscription service enabled. User who launched={}'", username
+        )     
+      ``` 
+- Бизнес
+    - обращение к функциональности
+      ```
+        logger.info(
+            action='sms service usage'"
+        )     
+      ``` 
+    - работоспособность функциональности
+      ```
+        logger.info(
+            action='sms service available and usage'"
+        )     
+      ``` 
+    - завершение работы функциональности
+      ```
+        logger.info(
+            action='sms service stopped because engineering works'"
+        )     
+      ``` 
+- Служба безопасности
+    - обращение к функциональности авторизованным пользователем или нет
+      ```
+        logger.info(
+            action='service was called not authorized user'"
+        )     
+      ``` 
+
+#### WARN
+
+В случае некорректного поведения или состояния приложения, которое не влечёт за собой отказ в работоспособности, 
+но в перспективе может повлечь за собой негативные последствия.
+Требуется внимание со стороны сопровождения. 
+
+- Разработка
+    - Детализация сообщения с состоянием приложения и причиной возникновения некорректного поведения 
+      ```
+        logger.warn(
+            method='showInfo' action='name for user must not be null. " + 
+                "Perhaps the data was not added to the questionnaire' username={}", username"
+        )     
+      ``` 
+- Служба поддержки
+    - Детализация сообщения в человеко-понятном виде с причинами возникновения 
+    некорректного поведения и описанием (если возможно) устранения причин такого поведения
+      ```
+        logger.warn(
+            method='showInfo' action='name for user must not be null. " + 
+                "Perhaps the data was not added to the questionnaire' username={}", username"
+        )     
+      ``` 
+- Бизнес
+    - не использует
+- Служба безопасности
+    - Детализация сообщения в виде добавления важных для безопасности значений (авторизован ли пользователь, IP, агент и т.д)
+      ```
+        logger.warn(
+            method='showInfo' action='name for user '{}' must not be null. " + 
+                "Perhaps the data was not added to the questionnaire. Last edited username ={}'", username, editedUsername
+        )     
+      ``` 
+
+#### ERROR
+
+В случае некорректного поведения приложения, которое нарушает привычный поток обработки и требует немедленного 
+вмешательства для восстановления работоспособности.
+
+- Разработка
+    - Подробная детализация сообщения с состоянием приложения и причиной возникновения некорректного поведения
+      ```
+        logger.error(
+            method='editProfile' action='it is impossible to edit the profile. The user's service is not available'" + 
+                "url={} username={}", url, username
+        )     
+      ```  
+- Служба поддержки
+    - Подробная детализация сообщения в человеко-понятном виде с причинами возникновения 
+    некорректного поведения и описанием (если возможно) устранения причин такого поведения       
+      ```
+        logger.error(
+            method='editProfile' action='it is impossible to edit the profile. The user's service is not available'" + 
+                "url={} username={}", url, username
+        )     
+      ```  
+- Бизнес
+    - Могут быть интересны причины инцидента
+- Служба безопасности
+    - Детализация сообщения в виде добавления существенных для безопасности значений (авторизован ли пользователь, IP, агент и т.д)
+      ```
+        logger.error(
+            method='editProfile' action='the action cannot be performed because no agent is specified. There is a possibility of unauthorized access.'" + 
+                "ip={}", ip
+        )     
+      ``` 
+      
+<br/>
+<br/>
+Иногда сообщения пересекаются, это допустимо, сообщение обязано учитывать потребителей и потребности.  
+Если при формировании сообщения сложно учесть потребности потребителей - 
+сообщение стоит разделить на отдельные тексты для каждого потребителя.
+
+### Схема
+
+![PUML]
+
+## Полезные ссылки
+
+- [https://www.scalyr.com/blog/the-10-commandments-of-logging/](https://www.scalyr.com/blog/the-10-commandments-of-logging/)
+- [https://www.loggly.com/blog/30-best-practices-logging-scale/](https://www.loggly.com/blog/30-best-practices-logging-scale/)
+- [https://sematext.com/blog/java-logging-best-practices/](https://sematext.com/blog/java-logging-best-practices/)
+- [https://betterprogramming.pub/application-logging-best-practices-a-support-engineers-perspective-b17d0ef1c5df](https://betterprogramming.pub/application-logging-best-practices-a-support-engineers-perspective-b17d0ef1c5df)
+- [https://www.loomsystems.com/blog/single-post/2017/01/26/9-logging-best-practices-based-on-hands-on-experience](https://www.loomsystems.com/blog/single-post/2017/01/26/9-logging-best-practices-based-on-hands-on-experience)
+
+## Заключение
+
+Правильная работа с логами - такая же важная часть разработки приложения, как и написание кода.
+
+Помните - "Много логов - не бывает".
+
+А как в вашей команде обстоят дела с логами?
+
+Успехов!
+
+[PUML]: http://www.plantuml.com/plantuml/svg/TPBHJeCm58Rl-nJDxlSEcr8DDrj2C5mZDiPaJWBbNhOds1EeRy3K3U8YUuNJD_AdfGaaCmJwvJ__-JbjEijLdAdYUSMOUb8hoUcDMhtHhtIWFJLwW_L43SUdfI-ydunbCb7n-X7coMNtXCSvJyV6TwgeXh624ItqGvMrPIyZtmUTz9QES5MSplZXDvu36ezeiSbvaOvQTjHGJRzmbQP-N-J_H-unOetOCrMwH5EhIqpJ1yjaD7GOpA-5gOH3sHDNTxT6zeQolxXP6jKVgj4yM1Wr6geY29Q1aGLZAPzEpJaOw7PdeDk6LRgnKEyuTE0vy1r43X2942lr81puZ27NKW-TNIOsimVVGUG0ffbSF-2Y_040
