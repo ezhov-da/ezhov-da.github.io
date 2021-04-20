@@ -1,5 +1,7 @@
 # Changelog
 ## 2021-04-20
+- typo *docs*
+- publication article about logs *feat*
 - article about logs *feat*
 ## 2021-04-18
 - added logs plant uml file *docs*

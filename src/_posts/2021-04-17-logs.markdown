@@ -163,7 +163,7 @@ imageLink: /logs.png
     - нормальное завершение работы
       ```
         logger.info(
-            action='sinhronization service stopped'"
+            action='synchronization service stopped'"
         )     
       ```
 - Служба поддержки
