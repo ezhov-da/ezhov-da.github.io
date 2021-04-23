@@ -3,6 +3,7 @@ layout: post
 title:  "Культура commit-ов"
 date:   2020-12-04 18:00:00 +0300
 update: 2020-12-05 14:09:00 +0300
+type: статья
 comments: true
 ---
 С самого начал работы с [системами контроля версий][VCS], будь то [SVN][SVN], [Mercurial][ML] или [Git][GIT], 

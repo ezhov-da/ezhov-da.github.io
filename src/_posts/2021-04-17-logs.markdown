@@ -3,7 +3,7 @@ layout: post
 title:  "Логи? Логи!"
 date:   2021-04-17 14:22:00 +0300
 comments: true
-imageLink: /logs.png
+type: статья
 ---
 
 <!-- перевести на свойства -->

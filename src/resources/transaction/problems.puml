@@ -1,0 +1,15 @@
+@startuml
+
+rectangle "Проблемы" as 0
+
+rectangle "Потерянное обновление" as 1
+rectangle "«Грязное» чтение" as 2
+rectangle "Неповторяющееся чтение" as 3
+rectangle "Фантомное чтение" as 4
+
+0 -- 1
+0 -- 2
+0 -- 3
+0 -- 4
+
+@enduml

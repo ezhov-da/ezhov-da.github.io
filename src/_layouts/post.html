@@ -6,7 +6,7 @@ layout: default
     <div class="container">
 
         <div class="content">
-            <h1>{{ page.title }}</h1>
+            <h1>{{ page.title }}</h1><span class="tag is-light">{{ page.type }}</span>
 
             <p>Created: {{ page.date | date_to_string }}
                 {% assign date = page.update | date_to_string %}
