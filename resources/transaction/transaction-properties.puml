@@ -1,0 +1,15 @@
+@startuml
+
+rectangle "Свойства" as S
+
+rectangle "A - Atomicity\n(Атомарность)" as A
+rectangle "C - Consistency\n(Согласованность)" as C
+rectangle "I - Isolation\n(Изоляция)" as I
+rectangle "D - Durabilitty\n(Долговечность)" as D
+
+S -- A
+S -- C
+S -- I
+S -- D
+
+@enduml

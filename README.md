@@ -22,6 +22,8 @@ sh ./build.sh
 
 https://shopify.github.io/liquid/
 
+Install Ruby: https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.7.8-1/rubyinstaller-devkit-2.7.8-1-x64.exe
+
 ## File for checklist:
 
 - checklist.html
