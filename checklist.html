@@ -1,0 +1,237 @@
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!--https://www.npmjs.com/package/js-base64-->
+    <script src="https://cdn.jsdelivr.net/npm/js-base64@3.7.5/base64.min.js"></script>
+    <script src="checklist.js"></script>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const base64 = urlParams.get('base64');
+        log(base64)
+
+        let checkList = null
+        let originPlainText = null
+        if (base64) {
+            originPlainText = toPlainTextFromBase64(base64)
+            log(originPlainText)
+            checkList = parseCheckListFromSimpleText(originPlainText)
+            log(checkList)
+        }
+    </script>
+</head>
+
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="https://ezhov-da.github.io/checklist">
+            <img src="checklist_64x64.png">
+        </a>
+        <h2 class="title is-2">Checklist</h2>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+            <a class="navbar-item" href="#ABOUT"> About </a>
+            <a class="navbar-item" href="#CREATE"> Create </a>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container">
+    <template x-data="{
+        isShowOriginText: false,
+        dataCheckList: checkList,
+        textAreaModel: originPlainText,
+        link: null,
+
+        generate() {
+            this.link = generateLink(this.textAreaModel);
+            log(this.link);
+        }
+    }" x-if="dataCheckList !== null"> <!--section of checklist-->
+        <section class="section">
+
+            <div class="block">
+                <button class="button is-success" @click="isShowOriginText = !isShowOriginText">Show original text
+                </button>
+            </div>
+
+            <div class="block" x-show="isShowOriginText" x-transition>
+                <h1 class="title">Original text</h1>
+                <div class="block">
+                    <textarea class="textarea" x-model="textAreaModel" rows="10"></textarea>
+                </div>
+
+                <!-- Main container -->
+                <nav class="level">
+                    <!-- Left side -->
+                    <div class="level-left">
+                        <div class="level-item">
+                            <button class="button is-link" @click="generate()">Create</button>
+                        </div>
+                    </div>
+
+                    <!-- Right side -->
+                    <div class="level-right">
+                        <div class="level-item">
+                            <a x-show="link != null" :href="link">Created link</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="block" x-data="{
+                showCheckListBlocks: false
+            }"> <!--base data from checklist-->
+                <template x-if="dataCheckList.blocks.length > 0">
+                    <h1 class="title has-text-link-dark" x-text="dataCheckList.title"
+                        @click="showCheckListBlocks = !showCheckListBlocks"></h1>
+                </template>
+                <template x-if="dataCheckList.blocks.length === 0">
+                    <h1 class="title" x-text="dataCheckList.title"></h1>
+                </template>
+                <template x-for="block in dataCheckList.blocks" :key="block">
+                    <pre x-text="block" x-show="showCheckListBlocks"></pre>
+                </template>
+
+
+                <template x-for="item in dataCheckList.items" :key="item.text">
+                    <div class="box" x-data="{
+                        showSectionBlock: false
+                    }">
+                        <template x-if="item.blocks.length > 0">
+                            <h3 class="title is-3 has-text-link-dark" x-text="item.text"
+                                @click="showSectionBlock = !showSectionBlock"></h3>
+                        </template>
+                        <template x-if="item.blocks.length === 0">
+                            <h1 class="title" x-text="item.text"></h1>
+                        </template>
+                        <template x-for="itemBlock in item.blocks" :key="itemBlock">
+                            <pre x-text="itemBlock" x-show="showSectionBlock"></pre>
+                        </template>
+
+                        <template x-for="itemI in item.items" :key="itemI.text">
+                            <div x-data="{
+                                showItemBlock: false
+                            }">
+                                <input type="checkbox" x-model="itemI.isComplete"/>
+
+                                <template x-if="itemI.blocks.length > 0">
+                                    <label class="has-text-link-dark" x-text="itemI.text"
+                                           @click="showItemBlock = !showItemBlock"></label>
+                                </template>
+                                <template x-if="itemI.blocks.length === 0">
+                                    <label x-text="itemI.text"></label>
+                                </template>
+                                <template x-for="itemIBlock in itemI.blocks" :key="itemIBlock">
+                                    <pre x-text="itemIBlock" x-show="showItemBlock"></pre>
+                                </template>
+                            </div>
+                        </template>
+                    </div>
+                </template>
+            </div>
+        </section>
+
+    </template>
+
+    <section class="section" id="ABOUT">
+        <h3 class="title is-3">About</h3>
+        <div class="content">
+            <p>This application supports the checklist format described by <a
+                    href="https://github.com/ezhov-da/checklist">here</a>.</p>
+            <p>For any issues with the app, file <a href="https://github.com/ezhov-da/checklist-js/issues">issue</a> to
+                help improve the app.</p>
+            <p></p>
+            <p>Home <a href="https://github.com/ezhov-da/checklist-js">page</a> of the project.</p>
+            <p></p>
+            <blockquote>
+                <p><strong>Important!</strong> The application does not interact with the server, which means that no
+                    information is transmitted over the network.</p>
+                <p>The application works with data by converting it to <a href="https://en.wikipedia.org/wiki/Base64">Base64</a>&nbsp;and
+                    passing it as a query parameter.</p>
+                <p>This means that any checklist link you send contains this data almost in the clear. Therefore, do not
+                    add passwords or any other information to the checklists that you do not want to be compromised.</p>
+            </blockquote>
+        </div>
+    </section>
+
+    <section id="CREATE" class="section" x-data="{
+            inputText: '',
+            link: null,
+
+            generate() {
+                this.link = generateLink(this.inputText);
+                log(this.link);
+            },
+
+            pasteExample() {
+                this.inputText = example()
+            }
+
+        }">
+        <h3 class="title is-3">Create link</h3>
+
+        <!-- Main container -->
+        <nav class="level">
+            <!-- Left side -->
+            <div class="level-left">
+                <div class="level-item">
+                    <label class="label">Checklist plain text format</label>
+                </div>
+            </div>
+
+            <!-- Right side -->
+            <div class="level-right">
+                <div class="level-item">
+                    <button class="button is-primary" @click="pasteExample()">Paste example</button>
+                </div>
+            </div>
+        </nav>
+
+        <div class="field">
+            <div class="control">
+                    <textarea class="textarea" placeholder="Paste or type checklist plain text format"
+                              x-model="inputText" rows="10"></textarea>
+            </div>
+        </div>
+
+        <!-- Main container -->
+        <nav class="level">
+            <!-- Left side -->
+            <div class="level-left">
+                <div class="level-item">
+                    <button class="button is-link" @click="generate()">Create</button>
+                </div>
+            </div>
+
+            <!-- Right side -->
+            <div class="level-right">
+                <div class="level-item">
+                    <a x-show="link != null" :href="link">Created link</a>
+                </div>
+            </div>
+        </nav>
+    </section>
+</div>
+
+<footer class="footer">
+    <div class="content has-text-centered">
+        <p>
+            <strong>Checklist</strong> by <a href="https://github.com/ezhov-da">Denis Ezhov</a>. The <a
+                href="https://github.com/ezhov-da/checklist-js">source</a> code is
+            licensed
+            <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+        </p>
+    </div>
+</footer>
+</body>
+</html>

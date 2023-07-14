@@ -1,14 +1,15 @@
 # ezhov-da.github.io
 
-
 Created with [https://jekyllrb.com/](https://jekyllrb.com/)
 
-Run local
+## Run local
+
 ```
 cd src && bundle exec jekyll serve
 ```
 
-Build
+##Build
+
 ```
 sh ./build.sh
 ```
@@ -20,3 +21,9 @@ sh ./build.sh
 [https://gist.github.com/JJediny/a466eed62cee30ad45e2](https://gist.github.com/JJediny/a466eed62cee30ad45e2)
 
 https://shopify.github.io/liquid/
+
+## File for checklist:
+
+- checklist.html
+- checklist.js
+- checklist_64x64.png
