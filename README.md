@@ -8,7 +8,7 @@ Created with [https://jekyllrb.com/](https://jekyllrb.com/)
 cd src && bundle exec jekyll serve
 ```
 
-##Build
+## Build
 
 ```
 sh ./build.sh
