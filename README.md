@@ -26,6 +26,9 @@ Install Ruby: https://github.com/oneclick/rubyinstaller2/releases/download/RubyI
 
 ## File for checklist:
 
-- checklist.html
+- checklist.html (renamed index.html)
 - checklist.js
 - checklist_64x64.png
+- checklist_flag_russia_48x48.png
+- checklist_flag_united_kingdom_48x48.png
+- checklist.css

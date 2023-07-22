@@ -4,6 +4,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="checklist.css">
 
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <!--https://www.npmjs.com/package/js-base64-->
@@ -23,29 +24,71 @@
             checkList = parseCheckListFromSimpleText(originPlainText)
             log(checkList)
         }
+
+        document.addEventListener('alpine:init', () => {
+            initLangCookie()
+            let currentLang = selectedLang()
+
+            // global lang store
+            Alpine.store('language', {
+                availableLangs: AVAILABLE_LANGS,
+                current: currentLang,
+
+                setCurrentLang(newlang) {
+                    let found = this.availableLangs.find(({lang}) => lang === newlang)
+                    saveLangCookie(newlang)
+                    this.current = found
+                }
+            })
+        })
     </script>
 </head>
 
 <body>
-
+<!--MENU-->
 <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
         <a class="navbar-item" href="https://ezhov-da.github.io/checklist">
             <img src="checklist_64x64.png">
         </a>
-        <h2 class="title is-2">Checklist</h2>
+        <h2 x-data class="title is-2" x-text="$store.language.current.translate.title"></h2>
     </div>
 
     <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
-            <a class="navbar-item" href="#ABOUT"> About </a>
-            <a class="navbar-item" href="#CREATE"> Create </a>
+            <a class="navbar-item" href="#about" x-data x-text="$store.language.current.translate.aboutMenu"></a>
+            <a class="navbar-item" href="#create" x-data x-text="$store.language.current.translate.createMenu"></a>
         </div>
+    </div>
+
+    <div class="navbar-end">
+        <div x-data class="navbar-item has-dropdown is-hoverable">
+            <span class="navbar-link" class="icon-text">
+                <span class="icon">
+                    <img :src="$store.language.current.icon">
+                </span>
+                <label x-data x-text="$store.language.current.lang"></label>
+            </span>
+
+            <div class="navbar-dropdown">
+                <template x-data x-for="lang in $store.language.availableLangs">
+                    <span class="navbar-item" class="icon-text">
+                        <span class="icon">
+                            <img :src="lang.icon">
+                        </span>
+                        <label x-text="lang.lang" @click="$store.language.setCurrentLang(lang.lang)"></label>
+                     </span>
+                </template>
+            </div>
+        </div>
+    </div>
     </div>
 </nav>
 
 
 <div class="container">
+
+    <!--    CHECKLIST-->
     <template x-data="{
         isShowOriginText: false,
         dataCheckList: checkList,
@@ -60,12 +103,13 @@
         <section class="section">
 
             <div class="block">
-                <button class="button is-success" @click="isShowOriginText = !isShowOriginText">Show original text
+                <button class="button is-success" @click="isShowOriginText = !isShowOriginText"
+                        x-data x-text="$store.language.current.translate.showOriginalTextButton">
                 </button>
             </div>
 
             <div class="block" x-show="isShowOriginText" x-transition>
-                <h1 class="title">Original text</h1>
+                <h1 class="title" x-data x-text="$store.language.current.translate.originalText"></h1>
                 <div class="block">
                     <textarea class="textarea" x-model="textAreaModel" rows="10"></textarea>
                 </div>
@@ -75,14 +119,16 @@
                     <!-- Left side -->
                     <div class="level-left">
                         <div class="level-item">
-                            <button class="button is-link" @click="generate()">Create</button>
+                            <button class="button is-link" @click="generate()" x-data
+                                    x-text="$store.language.current.translate.originalTextCreateButton"></button>
                         </div>
                     </div>
 
                     <!-- Right side -->
                     <div class="level-right">
                         <div class="level-item">
-                            <a x-show="link != null" :href="link">Created link</a>
+                            <a x-show="link != null" :href="link" x-data
+                               x-text="$store.language.current.translate.originalTextCreatedLink"></a>
                         </div>
                     </div>
                 </nav>
@@ -99,7 +145,7 @@
                     <h1 class="title" x-text="dataCheckList.title"></h1>
                 </template>
                 <template x-for="block in dataCheckList.blocks" :key="block">
-                    <pre x-text="block" x-show="showCheckListBlocks"></pre>
+                    <pre x-text="block" x-show="showCheckListBlocks" x-transition></pre>
                 </template>
 
 
@@ -115,24 +161,33 @@
                             <h1 class="title" x-text="item.text"></h1>
                         </template>
                         <template x-for="itemBlock in item.blocks" :key="itemBlock">
-                            <pre x-text="itemBlock" x-show="showSectionBlock"></pre>
+                            <pre x-text="itemBlock" x-show="showSectionBlock" x-transition></pre>
                         </template>
 
                         <template x-for="itemI in item.items" :key="itemI.text">
                             <div x-data="{
                                 showItemBlock: false
                             }">
-                                <input type="checkbox" x-model="itemI.isComplete"/>
 
                                 <template x-if="itemI.blocks.length > 0">
-                                    <label class="has-text-link-dark" x-text="itemI.text"
-                                           @click="showItemBlock = !showItemBlock"></label>
+                                    <p>
+                                        <input type="checkbox" x-model="itemI.isComplete"/>
+                                        <label :class="itemI.isComplete ? 'strike-txt' : ''" x-text="itemI.text"
+                                               @click="itemI.isComplete = !itemI.isComplete"></label>
+                                        <label class="has-text-link-dark"
+                                               @click="showItemBlock = !showItemBlock" x-data
+                                               x-text="$store.language.current.translate.blockText"></label>
+                                    </p>
                                 </template>
                                 <template x-if="itemI.blocks.length === 0">
-                                    <label x-text="itemI.text"></label>
+                                    <p>
+                                        <input type="checkbox" x-model="itemI.isComplete"/>
+                                        <label x-text="itemI.text" :class="itemI.isComplete ? 'strike-txt' : ''"
+                                               @click="itemI.isComplete = !itemI.isComplete"></label>
+                                    </p>
                                 </template>
                                 <template x-for="itemIBlock in itemI.blocks" :key="itemIBlock">
-                                    <pre x-text="itemIBlock" x-show="showItemBlock"></pre>
+                                    <pre x-text="itemIBlock" x-show="showItemBlock" x-transition></pre>
                                 </template>
                             </div>
                         </template>
@@ -140,31 +195,18 @@
                 </template>
             </div>
         </section>
-
     </template>
 
-    <section class="section" id="ABOUT">
-        <h3 class="title is-3">About</h3>
-        <div class="content">
-            <p>This application supports the checklist format described by <a
-                    href="https://github.com/ezhov-da/checklist">here</a>.</p>
-            <p>For any issues with the app, file <a href="https://github.com/ezhov-da/checklist-js/issues">issue</a> to
-                help improve the app.</p>
-            <p></p>
-            <p>Home <a href="https://github.com/ezhov-da/checklist-js">page</a> of the project.</p>
-            <p></p>
-            <blockquote>
-                <p><strong>Important!</strong> The application does not interact with the server, which means that no
-                    information is transmitted over the network.</p>
-                <p>The application works with data by converting it to <a href="https://en.wikipedia.org/wiki/Base64">Base64</a>&nbsp;and
-                    passing it as a query parameter.</p>
-                <p>This means that any checklist link you send contains this data almost in the clear. Therefore, do not
-                    add passwords or any other information to the checklists that you do not want to be compromised.</p>
-            </blockquote>
+    <!--    ABOUT-->
+    <section class="section" id="about">
+        <h3 class="title is-3" x-data x-text="$store.language.current.translate.aboutMenu"></h3>
+        <div class="content" x-data x-html="$store.language.current.translate.aboutContent">
         </div>
     </section>
 
-    <section id="CREATE" class="section" x-data="{
+
+    <!--    CREATE-->
+    <section id="create" class="section" x-data="{
             inputText: '',
             link: null,
 
@@ -173,33 +215,36 @@
                 log(this.link);
             },
 
-            pasteExample() {
-                this.inputText = example()
+            pasteExample(text) {
+                this.inputText = text
             }
 
         }">
-        <h3 class="title is-3">Create link</h3>
+        <h3 class="title is-3" x-data x-text="$store.language.current.translate.createMenu"></h3>
 
         <!-- Main container -->
         <nav class="level">
             <!-- Left side -->
             <div class="level-left">
                 <div class="level-item">
-                    <label class="label">Checklist plain text format</label>
+                    <label class="label" x-data x-text="$store.language.current.translate.createText"></label>
                 </div>
             </div>
 
             <!-- Right side -->
             <div class="level-right">
                 <div class="level-item">
-                    <button class="button is-primary" @click="pasteExample()">Paste example</button>
+                    <button class="button is-primary"
+                            @click="pasteExample($store.language.current.translate.pasteExample)" x-data
+                            x-text="$store.language.current.translate.createPasteButton"></button>
                 </div>
             </div>
         </nav>
 
         <div class="field">
             <div class="control">
-                    <textarea class="textarea" placeholder="Paste or type checklist plain text format"
+                    <textarea class="textarea" x-data
+                              :placeholder="$store.language.current.translate.createTextareaPlaceholder"
                               x-model="inputText" rows="10"></textarea>
             </div>
         </div>
@@ -209,28 +254,26 @@
             <!-- Left side -->
             <div class="level-left">
                 <div class="level-item">
-                    <button class="button is-link" @click="generate()">Create</button>
+                    <button class="button is-link" @click="generate()" x-data
+                            x-text="$store.language.current.translate.createButtonText"></button>
                 </div>
             </div>
 
             <!-- Right side -->
             <div class="level-right">
                 <div class="level-item">
-                    <a x-show="link != null" :href="link">Created link</a>
+                    <a x-show="link != null" :href="link" x-data
+                       x-text="$store.language.current.translate.createdLinkText"></a>
                 </div>
             </div>
         </nav>
     </section>
 </div>
 
+
+<!--FOOTER-->
 <footer class="footer">
-    <div class="content has-text-centered">
-        <p>
-            <strong>Checklist</strong> by <a href="https://github.com/ezhov-da">Denis Ezhov</a>. The <a
-                href="https://github.com/ezhov-da/checklist-js">source</a> code is
-            licensed
-            <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
-        </p>
+    <div class="content has-text-centered" x-data x-html="$store.language.current.translate.footerContent">
     </div>
 </footer>
 </body>
